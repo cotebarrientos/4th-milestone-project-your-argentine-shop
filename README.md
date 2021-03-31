@@ -1,45 +1,185 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Your Argentine Shop
+## Code Institute: Milestone Project 4
 
-Welcome USER_NAME,
+This website aims to be a 100% **E commerce Platform**, where shoppers can buy a **wide variety of Argentine products in Ireland**, whose main purpose is to make users feel mainly of that nationality at home, offering quality products and providing a great service through a friendly user interface.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This project is part of my **Code Institute Full Stack Software Development** studies, and at the same time is my last project of this, so I decided to make a website 100% E commerce with Argentine products, using all the knowledge acquired throughout this course, hoping to bring this great idea to reality in the future.
 
-## Gitpod Reminders
+## Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+1. [**UX**](#ux)
+   * [Main Aims](#main-aims)
+   * [Ideal User](#ideal-user)
+   * [User Stories](#user-stories)
+   * [Design Process](#design-process)
+       * [Strategy Plane:](#strategy-plane)
+       * [Scope](#scope)
+       * [Structure](#structure)
+       * [Skeleton](#skeleton)
+       * [Surface](#surface)
+2. [**Features**](#features)
+   * [Existing Features](#existing-features)
+   * [Features Left to Implement](#features-left-to-implement)
+3. [**Technologies Used**](#technologies-used)
+4. [**Testing**](#testing)
+5. [**Deployment**](#deployment)
+6. [**Credits**](#credits)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## UX
 
-A blue button should appear to click: *Make Public*,
+### Main Aims
 
-Another blue button should appear to click: *Open Browser*.
+1. To Provide a 100% E Commerce Platform with a wide variety of Argentine products in Ireland.
+2. To make the website interactive and easy to navigate for prospective shoppers.
+3. To make the website simple to use for potential shoppers, allowing easy checkout, in which the shopper will be able to create their shopping list, review it, edit it or remove items. At the same time allow customers to shop with or without a user account.
+4. To make a platform that allows potential customers to create a user account, where they can save their data for future purchases, facilitating the purchase time.
+5. To make a website that has a good payment system, secure and bug free.
+6. To create a design that would be fully responsive on all devices and screen sizes.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Ideal User
 
-A blue button should appear to click: *Make Public*,
+#### The Ideal User for this website is:
 
-Another blue button should appear to click: *Open Browser*.
+1. Who is Argentinean or South American and likes to consume the products offered by the website.
+2. Who lives in the Republic of Ireland.
+3. Who likes to shop online.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### The Occasional User:
 
-## Updates Since The Instructional Video
+1. Who is not Argentinean or South American, but would like to try the products offered on the web site.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### This Project is the best way to help them achieve these things because:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. This is a great platform to buy Argentine products, because it shows the items in an orderly way and this one is simple to use.
+2. This platform allows customers to create their shopping lists, review the items within it, edit or delete them as appropriate, in an intuitive and user-friendly way.
+3. This platform allows customers to create a user account in a simple way, allowing them to save their shopping lists and personal data, resulting in less time spent making a purchase.
+4. The website contains a wide variety of products, as well as a secure payment system.
+5. The website has a beautiful design, very intuitive and easily adapts to any mobile device and screen size.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### User Stories
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### “As a Shopper, I would like to .....”
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* View the website from any device (mobile phone, tablet or desktop)
+* View a list of products and select one to buy.
+* View an individual product details, being able to see its price, description and product image.
+* Select the quantity of a product.
+* View the total of my purchases at any time.
+* Sort the list of available products by price.
+* Sort the list of available products by category.
+* Search for a product by name or description.
+* Create my own account.
+* Be able to log in and log out.
+* Receive an email confirmation after registering.
+* Be able to recover my password in case I forget it.
+* Have my own profile.
+* View information about the platform (About us, shipping, contact)
+* View information about website policies (Privacy Policy, Refund Policy and Terms of service)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### “As a Store Owner , I would like to .....”
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* Add a new product.
+* Edit/update a product.
+* Delete a product.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Design Process
 
---------
+#### Strategy Plane
+#### Scope
+#### Structure
+#### Skeleton
 
-Happy coding!
+1. Home page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/001-d_home-page.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/019-t_home-page.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/037-p_home-page.png)
+2. All Products view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/002-d_all-products-view.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/020-t_all-products-view.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/038-p_all-products-view.png)
+3. Product view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/003-d_product-view.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/021-t_product-view.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/039-p_product-view%20.png)
+4. Empty Cart view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/004-d_empty-cart.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/022-t_empty-cart.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/040-p_empty-cart.png)
+5. Shopping Cart view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/005-d_shopping-cart.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/023-t_shopping-cart.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/041-p_shopping-cart.png)
+6. Checkout view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/006-d_checkout.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/024-t_checkout.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/042-p_checkout.png)
+7. Checkout user logged view wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/007-d_checkout-logged.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/025-t_checkout-logged.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/043-p_checkout-logged.png)
+8. Order confirmation wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/008-d_order-confirmation.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/026-t_order-confirmation.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/044-p_order-confirmation.png)
+9. Register page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/009-d_register.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/027-t_register.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/045-p_register.png)
+10. Sign In page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/010-d_signin.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/028-t_sign-in.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/046-p_sign-in.png)
+11. Password reset page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/011-d_password_reset.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/029-t_reset-password.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/047-p_reset-password.png)
+12. Profile page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/012-d_profile.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/030-t_profile.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/048-p_profile.png)
+13. Contact page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/013-d_contact.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/031-t_contact.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/049-p_contact.png)
+14. About Us page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/014-d_about-us.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/032-t_about-us.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/050-p_about-us.png)
+15. Shipping page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/015-d_shipping.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/033-t_shipping.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/051-p_shipping.png)
+16. Privacy Policy page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/016-d_privacy-policy.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/034-t_privacy-policy.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/052-p_privacy-policy.png)
+17. Refund Policy page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/017-d_refund-policy.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/035-t_refund-policy.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/053-p_refund-policy.png)
+18. Terms of Service page wireframe
+    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/018-d_terms-of-service.png)
+    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/036-t_terms-of-service.png)
+    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/054-p_terms-of-service.png)
+
+#### Surface
+
+## Features
+### Existing Features
+### Features Left to Implement
+
+## Technologies Used
+
+## Testing
+
+## Deployment
+
+## Credits
+#### Content
+#### Media
+#### Acknowledgements
+
+> **Note**: Project in process.
