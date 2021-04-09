@@ -1,0 +1,76 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+#top-bar-info {
+    background-color: #317ece;
+    color: #ffffff;
+    padding-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+#top-bar-info li a i {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+  #top-bar-info i {
+    font-size: 20px;
+    padding-right: 5px;
+    color: #ffc107;
+}
+
+#top-bar-info li a i:hover,
+#top-bar-info li a i:focus {
+  color: #ffc107;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+#website-logo{
+    max-height: 80px;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+}
+
