@@ -5,17 +5,19 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Header and Footer */
+
 #top-bar-info {
     background-color: #317ece;
     color: #ffffff;
     padding-top: 0.625rem;
     font-family: 'Oswald', sans-serif;
-    font-weight: 300;
     letter-spacing: 0.094rem;
-    font-size: 15px;
+    font-size: 0.938rem;
 }
 
-#top-bar-info li a i {
+#top-bar-info li a i,
+#f-copyright li a i {
     color: #ffffff;
     font-size: 1.25rem;
 }
@@ -76,7 +78,8 @@ html {
     margin: auto;
 }
 
-.nav-style {
+.nav-style,
+.footer-color-2 {
     background-color: #001c40;
 }
 
@@ -97,8 +100,65 @@ nav li a i:focus,
 #top-bar-info li a i:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active,
-.navbar-dark .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:focus,
+#f-info a:hover,
+#f-info a:active,
+#f-info a:focus,
+#f-copyright li a i:hover,
+#f-copyright li a i:active,
+#f-copyright li a i:focus,
+#accordion-info a:hover,
+#accordion-info a:active,
+#accordion-info a:hover {
     color: #ffc107;
+}
+
+.footer-color-1,
+#accordion-info,
+footer .accordion .card {
+    background-color: #183153;
+    color: #ffffff;
+}
+
+#f-info h4,
+#accordion-info h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.063rem;
+    text-align: center;
+    color: #fafafa;
+    padding: 1.25rem 0.938rem;
+}
+
+#f-info a,
+#accordion-info a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#f-info a p,
+#accordion-info p,
+#accordion-info a p {
+    padding-left: 0.625rem;
+}
+
+#f-info p {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: 0.313rem;
+}
+
+#f-info i,
+#accordion-info li i,
+#collapseThree i {
+    padding-right: 0.313rem;
+    color: #ffc107;
+}
+
+#f-copyright {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 0.625rem;
+    letter-spacing: 0.063rem;
 }
 
 
@@ -132,5 +192,18 @@ nav li a i:focus,
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
+    }
+}
+
+/* Adjusts the size of elements within the footer when collapsed on mobile devices */
+
+@media (max-width: 575.98px) {
+    #accordion-info h4 {
+        font-size: 1.125rem;
+        padding: 0.313rem;
+    }
+
+    #accordion-info p{
+        font-size: 0.875rem;
     }
 }

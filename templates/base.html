@@ -35,7 +35,7 @@
     <title>Your Argentine Shop {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid ">
+    <header class="container-fluid">
       <!-- Web site info + social media icons -->
       <div id="top-bar-info" class="row">
         <div class="col-12 col-lg-4 my-auto py-lg-0 text-center">
@@ -72,11 +72,13 @@
       <!-- end -->
 
       <div  id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <!-- Website logo -->
         <div class="col-12 col-lg-4 my-auto py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <img id="website-logo" src="/media/logo_project_transparent.png" alt="logo">
           </a>
         </div>
+        <!-- Search bar -->
         <div class="col-12 col-lg-4 my-auto py-1 pu-lg-0">
           <form method="GET" action="">
             <div class="input-group w-100">
@@ -91,6 +93,7 @@
             </div>
           </form>
         </div>
+        <!-- Account -->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-o">
             <li class="list-inline-item dropdown">
@@ -130,6 +133,7 @@
           </ul>
         </div>
       </div>
+      <!-- Navbar -->
       {% include 'includes/logo-mobile-phone.html' %}
       <div class="row bg-dark">
         <nav class="navbar navbar-expand-lg navbar-dark nav-style w-100">
@@ -155,6 +159,61 @@
     {% block postloadjs %}
     {% endblock %}
 
-    <footer class="container-fluid"></footer>
+    
+    <footer>
+      {% include 'includes/mobile-footer.html' %}
+      <div class="container-fluid">
+        <!-- Information, About Us and Contact Us message container -->
+        <div id="f-info" class="row footer-color-1 d-none d-lg-flex">
+          <div class="col-12 col-lg-4 py-1 py-lg-0">
+            <h4>Information</h4>
+            <a target="_blank" href="#"><p>Privacy Policy</p></a>
+            <a target="_blank" href="#"><p>Refund Policy</p></a>
+            <a target="_blank" href="#"><p>Terms of Service</p></a>
+          </div>
+          <div class="col-12 col-lg-4 py-1 py-lg-0">
+            <h4>About Us</h4>
+            <p class="text-justify">Our goal is to make you feel that despite being away from our country we can continue enjoying the exquisite products that we miss so much.</p>
+          </div>
+          <div class="col-12 col-lg-4 py-1 py-lg-0">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> Dublin, Ireland</p>
+            <p><i class="fas fa-phone-alt"></i><strong>Phone:</strong> +353 (0) 89 9757275</p>
+            <p><i class="fas fa-envelope"></i><strong>Email:</strong> yourargentineshop@gmail.com</p>
+          </div>
+        </div>
+        <!-- Copyright and Social Media -->
+        <div id="f-copyright" class="row footer-color-2 d-lg-flex">
+          <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
+            <p>Copyright © 2021, Your Argentine Shop, All Rights Reserved</p>
+          </div>
+          <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.youtube.com/">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.facebook.com/">
+                  <i class="fab fa-facebook-square"></i>                 
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.instagram.com/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://twitter.com/">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
