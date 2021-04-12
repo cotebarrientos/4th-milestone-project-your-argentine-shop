@@ -241,7 +241,7 @@
         "pk": 18,
         "model": "products.product",
         "fields": {
-            "product_code": "",
+            "product_code": "ALF-12U-CHO-660",
             "name": "Alfajor HAVANNA Chocolate x12 660g",
             "description": "Havanna is one of the most famous alfajores manufacturers known for their luxury and high-quality products. The box contains 12 milk chocolate units. ",
             "price": 19.50,
