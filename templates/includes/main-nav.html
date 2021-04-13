@@ -22,15 +22,15 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-                <a href="" class="dropdown-item">Dulce de Leche</a>
-                <a href="" class="dropdown-item">Yerba Mate</a>
-                <a href="" class="dropdown-item">Alfajores</a>
-                <a href="" class="dropdown-item">Cookies</a>
-                <a href="" class="dropdown-item">Candies</a>
-                <a href="" class="dropdown-item">Empanadas</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">Misc</a>
-                <a href="" class="dropdown-item">Combos</a>
+                <a href="{% url 'products' %}?category=dulce_de_leche" class="dropdown-item">Dulce de Leche</a>
+                <a href="{% url 'products' %}?category=yerba_mate" class="dropdown-item">Yerba Mate</a>
+                <a href="{% url 'products' %}?category=alfajores" class="dropdown-item">Alfajores</a>
+                <a href="{% url 'products' %}?category=cookies" class="dropdown-item">Cookies</a>
+                <a href="{% url 'products' %}?category=candies" class="dropdown-item">Candies</a>
+                <a href="{% url 'products' %}?category=empanadas" class="dropdown-item">Empanadas</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=misc" class="dropdown-item">Misc</a>
+                <a href="{% url 'products' %}?category=combos" class="dropdown-item">Combos</a>
             </div>
         </li>
 
