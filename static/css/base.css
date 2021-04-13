@@ -180,6 +180,20 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+/* Scroll button */
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* Home page  */
 
 .carousel-indicators li {
