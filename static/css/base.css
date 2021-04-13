@@ -57,6 +57,10 @@ html {
     color: white;
 }
 
+.text-navy-blue {
+    color: #183153 !important;
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -161,6 +165,16 @@ footer .accordion .card {
     letter-spacing: 0.063rem;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* Home page  */
 
 .carousel-indicators li {
@@ -213,10 +227,6 @@ footer .accordion .card {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
     body {
         height: calc(100vh - 116px);
     }
