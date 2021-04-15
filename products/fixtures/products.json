@@ -774,7 +774,7 @@
         "model": "products.product",
         "fields": {
             "product_code": "DUL-1UN-CHI-980",
-            "name": "Dulce de Chimbote 980g",
+            "name": "Dulce de Leche Chimbote 980g",
             "description": "Chimbote is a Spanish brand and is one of the most popular among its competitors. It's almost 1kg of dulce de leche!",
             "price": 10.50,
             "category": 6,

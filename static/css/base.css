@@ -235,6 +235,13 @@ a.category-badge > span.badge:hover {
     font-size: 3.75rem;
 }
 
+#no-results img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 15px;
+  }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -40,6 +40,15 @@
                     </p>
                 </div>
             </div>
+            {% if products|length == 0 %}
+            <div id="no-results" class="col-12  mx-auto my-auto">
+                <img src="/media/no-results-found.png" class="img-fluid" alt="Ups, no results"/>
+                <h3 class="text-center">Sorry! No result found :(</h3>
+                <hr>
+                <h5 class="text-center text-muted pb-2">We're sorry what you were looking for. Please try searching with another word</h5>
+            </div>
+            
+            {% else %}
             <div class="row">
                 {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -88,6 +97,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
