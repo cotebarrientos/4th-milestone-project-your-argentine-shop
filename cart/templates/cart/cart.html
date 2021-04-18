@@ -69,8 +69,16 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                        <a class="update-link text-info">
+                                            <small>Update<span class="icon">
+                                                <i class="fas fa-edit"></i>
+                                            </span></small>
+                                        </a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">
+                                            <small>Remove<span class="icon">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </span></small>
+                                        </a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -79,7 +87,19 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
+                                    <div class="row col mt-1 mb-4 justify-content-end pl-0 pr-0">
+                                        <div class="col-6 col-md-4 pl-0 pr-0">
+                                            <div class="sort-select-wrapper">
+                                                <select id="delivery-selector" class="custom-select custom-select-sm rounded-0 border border">
+                                                    <option value="">Delivery method</option>
+                                                    <option value="">Standard</option>
+                                                    <option value="">High Quality</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <h6><strong> Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
+                                    <h6><strong> Delivery: €0.00 </strong></h6>
                                     <h4 class="mt-4"><strong>Total: €{{ total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
@@ -114,6 +134,45 @@
             </div>
         </div>
     </div>
+
+    <!-- Information Box -->
+    <section id="box-shopping-cart" class="container-fluid text-black">
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-lg-0 text-center my-auto">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img class="my-auto pb-3 bb-1" src="/media/shield.png" width="60px">
+                    </li>
+                    <li class="list-inline-item">
+                        <h5 class="text-left">Your personal data</h5>
+                        <p class="text-left">is 100% secure</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-lg-0 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img class="my-auto pb-3" src="/media/argentina.png" width="60px">
+                    </li>
+                    <li class="list-inline-item">
+                        <h5 class="text-left">100% Argentine</h5>
+                        <br>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-lg-0 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img class="my-auto pb-3" src="/media/quality.png" width="60px">
+                    </li>
+                    <li class="list-inline-item">
+                        <h5 class="text-left">We only offer</h5>
+                        <p class="text-left">top quality products</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block postloadjs %}

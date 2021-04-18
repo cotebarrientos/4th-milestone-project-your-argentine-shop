@@ -242,6 +242,15 @@ a.category-badge > span.badge:hover {
     font-family: 'Oswald', sans-serif;
 }
 
+#box-shopping-cart {
+    background-color: #ececec;
+    min-height: 5rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+}
+
 #box-info li i {
     font-size: 3.75rem;
 }
