@@ -90,16 +90,17 @@
                                     <div class="row col mt-1 mb-4 justify-content-end pl-0 pr-0">
                                         <div class="col-6 col-md-4 pl-0 pr-0">
                                             <div class="sort-select-wrapper">
-                                                <select id="delivery-selector" class="custom-select custom-select-sm rounded-0 border border">
-                                                    <option value="">Delivery method</option>
-                                                    <option value="">Standard</option>
-                                                    <option value="">High Quality</option>
+                                                <select id="delivery-selector" class="custom-select custom-select-sm rounded-0 border border" required>
+                                                    <option selected disabled>Delivery method</option>
+                                                    <option value="standard_delivery#charge={{standard_delivery|floatformat:2}}"{% if delivery_type == 'standard_delivery' %}selected{% endif %}>Standard €{{standard_delivery|floatformat:2}}</option>
+                                                    <option value="high_quality_delivery#charge={{high_quality_delivery|floatformat:2}}"{% if delivery_type == 'high_quality_delivery' %}selected{% endif %}>High Quality €{{high_quality_delivery|floatformat:2}}</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
+                                    <h6><strong> Weight: {{ product_count_weight|floatformat:3 }}KG</strong></h6>
                                     <h6><strong> Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
-                                    <h6><strong> Delivery: €0.00 </strong></h6>
+                                    <h6><strong> Delivery: €{{ delivery|floatformat:2 }}</strong></h6>
                                     <h4 class="mt-4"><strong>Total: €{{ total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
@@ -120,8 +121,8 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    
+                    </div> 
+
                 {% else %}
                     <p class="lead mb-5">Your Shopping Cart is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -197,6 +198,24 @@
          .done(function() {
              location.reload();
          });
+    })
+
+    // To select the delivery method
+    $('#delivery-selector').change(function() {
+        var selector = $(this);
+        var selectedVal = selector.val().split("#charge=");
+        var delivery_type = selectedVal[0];
+        var delivery_charge = selectedVal[1];
+
+        var csrfToken = "{{ csrf_token }}";
+        var url = `set_delivery/delivery_charge/${delivery_charge}/delivery_type/${delivery_type}`;
+        var data = {'csrfmiddlewaretoken': csrfToken };
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+
     })
 </script>
 {% endblock %}

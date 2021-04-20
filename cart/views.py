@@ -70,3 +70,19 @@ def remove_from_cart(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+def calculate_delivery(request, delivery_charge, delivery_type):
+    """Calculate delivery based on user selection"""
+
+    try:
+        delivery = request.session.get('delivery', {})
+
+        delivery["delivery_type"] = delivery_type
+        delivery["delivery_charge"] = delivery_charge
+
+        request.session['delivery'] = delivery
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
