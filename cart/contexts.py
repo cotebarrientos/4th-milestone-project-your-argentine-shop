@@ -9,9 +9,6 @@ def cart_contents(request):
     subtotal = 0
     product_count = 0
     product_count_weight = 0
-    # standard_delivery = 0
-    # high_quality_delivery = 0
-    # calculated_delivery = 0
     cart = request.session.get('cart', {})
     delivery = request.session.get('delivery', {})
 
@@ -33,10 +30,8 @@ def cart_contents(request):
     if delivery.get("delivery_type") != None:
         if delivery.get("delivery_type") == 'standard_delivery':
             delivery["delivery_charge"] = standard_delivery
-            # calculated_delivery = standard_delivery
         elif delivery.get("delivery_type") == 'high_quality_delivery':
             delivery["delivery_charge"] = high_quality_delivery
-            # calculated_delivery = high_quality_delivery
         elif delivery.get("delivery_type") == 'free_delivery':
             delivery["delivery_charge"] = free_delivery
 
