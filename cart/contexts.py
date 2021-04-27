@@ -9,9 +9,9 @@ def cart_contents(request):
     subtotal = 0
     product_count = 0
     product_count_weight = 0
-    standard_delivery = 0
-    high_quality_delivery = 0
-    calculated_delivery = 0
+    # standard_delivery = 0
+    # high_quality_delivery = 0
+    # calculated_delivery = 0
     cart = request.session.get('cart', {})
     delivery = request.session.get('delivery', {})
 
@@ -26,61 +26,28 @@ def cart_contents(request):
             'product': product,
         })
 
+    standard_delivery = 2.00
+    high_quality_delivery = 4.00
+    free_delivery = 0.00
 
-    # Standard delivery logic
-    if product_count_weight > 0:
-
-        standard_delivery_weight = product_count_weight
-
-        if standard_delivery_weight <= 1:
-            rate = 0.50
-        elif standard_delivery_weight <= 2:
-            rate = 1.00
-        elif standard_delivery_weight <= 5:
-            rate = 2.00
-        elif standard_delivery_weight <= 10:
-            rate = 3.50
-        else:
-            rate = 5.00
-
-        charge = Decimal(rate) * standard_delivery_weight
-        standard_delivery = charge
-    else:
-        charge = 0.00
-    
-    # High Quality delivery logic
-    if product_count_weight > 0:
-
-        high_quality_delivery_weight = product_count_weight
-
-        if high_quality_delivery_weight <= 1:
-            rate = 1.00
-        elif high_quality_delivery_weight <= 2:
-            rate = 2.00
-        elif high_quality_delivery_weight <= 5:
-            rate = 3.50
-        elif high_quality_delivery_weight <= 10:
-            rate = 5.00
-        else:
-            rate = 6.00
-
-        charge = Decimal(rate) * high_quality_delivery_weight
-        high_quality_delivery = charge
-    else:
-        charge = 0.00
-
-
-    if delivery.get("delivery_type") is not None:
-        if delivery.get("delivery_type") is 'standard_delivery':
+    if delivery.get("delivery_type") != None:
+        if delivery.get("delivery_type") == 'standard_delivery':
             delivery["delivery_charge"] = standard_delivery
-            calculated_delivery = standard_delivery
-        elif delivery.get("delivery_type") is 'high_quality_delivery':
+            # calculated_delivery = standard_delivery
+        elif delivery.get("delivery_type") == 'high_quality_delivery':
             delivery["delivery_charge"] = high_quality_delivery
-            calculated_delivery = high_quality_delivery
+            # calculated_delivery = high_quality_delivery
+        elif delivery.get("delivery_type") == 'free_delivery':
+            delivery["delivery_charge"] = free_delivery
 
     request.session['delivery'] = delivery
 
-    total = subtotal + Decimal(delivery.get("delivery_charge"))
+    delivery_value = 0
+
+    if delivery.get("delivery_charge"):
+        delivery_value = Decimal(delivery.get("delivery_charge"))
+
+    total = subtotal + delivery_value
 
     context = {
         'cart_items': cart_items,
@@ -89,6 +56,7 @@ def cart_contents(request):
         'product_count_weight': product_count_weight,
         'standard_delivery': standard_delivery,
         'high_quality_delivery': high_quality_delivery,
+        'free_delivery' : free_delivery,
         'delivery_type' : delivery.get("delivery_type"),
         'delivery': delivery.get("delivery_charge"),
         'total': total,

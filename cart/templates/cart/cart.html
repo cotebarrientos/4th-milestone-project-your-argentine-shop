@@ -92,15 +92,19 @@
                                             <div class="sort-select-wrapper">
                                                 <select id="delivery-selector" class="custom-select custom-select-sm rounded-0 border border" required>
                                                     <option selected disabled>Delivery method</option>
+                                                    {% if subtotal > 60.00 %}
+                                                    <option value="free_delivery#charge={{free_delivery|floatformat:2}}"{% if delivery_type == 'free_delivery' %}selected{% endif %}>Free Delivery €{{free_delivery|floatformat:2}}</option>
+                                                    {% endif %}
                                                     <option value="standard_delivery#charge={{standard_delivery|floatformat:2}}"{% if delivery_type == 'standard_delivery' %}selected{% endif %}>Standard €{{standard_delivery|floatformat:2}}</option>
                                                     <option value="high_quality_delivery#charge={{high_quality_delivery|floatformat:2}}"{% if delivery_type == 'high_quality_delivery' %}selected{% endif %}>High Quality €{{high_quality_delivery|floatformat:2}}</option>
+                                                    
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <h6><strong> Weight: {{ product_count_weight|floatformat:3 }}KG</strong></h6>
+                                    <h6><strong> Weight: {{ product_count_weight|floatformat:2 }}KG</strong></h6>
                                     <h6><strong> Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
-                                    <h6><strong> Delivery: €{{ delivery|floatformat:2 }}</strong></h6>
+                                    <h6 id="current_delivery"><strong> Delivery: €{{ delivery|floatformat:2 }}</strong></h6>
                                     <h4 class="mt-4"><strong>Total: €{{ total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
@@ -164,7 +168,7 @@
             <div class="col-12 col-lg-4 my-auto py-lg-0 text-center">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <img class="my-auto pb-3" src="/media/quality.png" width="60px">
+                        <img onload="loadDelivery()" class="my-auto pb-3" src="/media/quality.png" width="60px">
                     </li>
                     <li class="list-inline-item">
                         <h5 class="text-left">We only offer</h5>
@@ -181,6 +185,21 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
+
+    // Update delivery price
+    function loadDelivery() {
+        var url = `/cart/update_delivery/`;
+        var csrfToken = "{{ csrf_token }}";
+        var data = {'csrfmiddlewaretoken': csrfToken };
+
+        $.post(url, data)
+         .done(function(response) {
+            let integer = response.delivery_charge.toString().split(".")[0]
+            let decimal = response.delivery_charge.toString().split(".")[1].substring(0,2)
+            $('#current_delivery').html(`<strong> Delivery: €${ `${integer}.${decimal}` }</strong>`)
+         });
+    }
+
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
