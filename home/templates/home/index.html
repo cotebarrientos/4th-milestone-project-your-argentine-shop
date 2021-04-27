@@ -18,8 +18,8 @@
                 <img src="/media/img-000_slide.png" class="d-block w-100" alt="slide 1"/>
                 <div class="carousel-caption">
                     <h2>The very best from Argentina</h2>
-                    <h6>Yerba Mate, Afajores and more products</h6>
-                    <a href="#" class="btn btn-black btn-lg uppercase active" role="button" aria-pressed="true">Shop Now</a>
+                    <h6>Yerba Mate, Alfajores and more products</h6>
+                    <a href="{% url 'products' %}" class="btn btn-black btn-lg text-uppercase active" role="button" aria-pressed="true">Shop Now</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -27,7 +27,7 @@
                 <div class="carousel-caption">
                     <h2>Yerba Mate specialist</h2>
                     <h6>We love Yerba Mate</h6>
-                    <a href="#" class="btn btn-black btn-lg uppercase active" role="button" aria-pressed="true">Shop Now</a>
+                    <a href="{% url 'products' %}?category=yerba_mate" class="btn btn-black btn-lg text-uppercase active" role="button" aria-pressed="true">Shop Now</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -35,7 +35,7 @@
                 <div class="carousel-caption">
                     <h2>Why not an Empanada?</h2>
                     <h6>Try our discs for baking and frying</h6>
-                    <a href="#" class="btn btn-black btn-lg uppercase active" role="button" aria-pressed="true">Shop Now</a>
+                    <a href="{% url 'products' %}?category=empanadas" class="btn btn-black btn-lg text-uppercase active" role="button" aria-pressed="true">Shop Now</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -43,7 +43,7 @@
                 <div class="carousel-caption">
                     <h2>Enjoy our delicious Alfajores</h2>
                     <h6>What are you waiting to get yours?</h6>
-                    <a href="#" class="btn btn-black btn-lg uppercase active" role="button" aria-pressed="true">Shop Now</a>
+                    <a href="{% url 'products' %}?category=alfajores" class="btn btn-black btn-lg text-uppercase active" role="button" aria-pressed="true">Shop Now</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -51,7 +51,7 @@
                 <div class="carousel-caption">
                     <h2>Dulce de Leche</h2>
                     <h6>Mmmmm, dulce de leche, delicious...</h6>
-                    <a href="#" class="btn btn-black btn-lg uppercase active" role="button" aria-pressed="true">Shop Now</a>
+                    <a href="{% url 'products' %}?category=dulce_de_leche" class="btn btn-black btn-lg text-uppercase active" role="button" aria-pressed="true">Shop Now</a>
                 </div>
             </div>
         </div>
@@ -68,14 +68,14 @@
 
 <!-- Featured Products -->
 <section class="container-fluid mt-3">
-    <h1 class="uppercase text-center">Featured Products</h1>
+    <h1 class="text-uppercase text-center">Featured Products</h1>
     <h3 class="text-secondary text-center">Recommended this week</h3>
     <hr>
 </section>
 
 <!-- Combos -->
 <section class="container-fluid">
-    <h1 class="uppercase text-center">Combos</h1>
+    <h1 class="text-uppercase text-center">Combos</h1>
     <h3 class="text-secondary text-center">Recommended for you</h3>
     <hr>
 </section>

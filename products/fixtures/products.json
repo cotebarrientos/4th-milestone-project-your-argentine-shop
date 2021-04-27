@@ -1,0 +1,1150 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "product_code": "THE-1LI-STA-ACC",
+            "name": "Stainless Steel Thermos Flask with Precision Red Spout",
+            "description": "Ideal thermos flask to keep your water warm for your mates. The red spout will make it much easier and smooth to pour your water. Stainless steel is a perfect material for temperature isolation, and it will keep the temperature of the water for a long period of time. It has capacity for 1 litre.",
+            "price": 23.50,
+            "category": 1,
+            "weight": 0.700,
+            "weight_unit": "kilogram",
+            "image": "001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "product_code": "SIM-19C-STA-ACC",
+            "name": "Simple Straw (Slim Spoon Filter)",
+            "description": "This 19cm-long stainless steel straw is ideal if you are on a budget or if you're not sure which straw to go for. Its made of the best material for straw or bombillas to drink make, as stainless steel won't oxidate.",
+            "price": 5.80,
+            "category": 1,
+            "weight": 0.050,
+            "weight_unit": "kilogram",
+            "image": "002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "product_code": "LON-195-STA-ACC",
+            "name": "Long Stainless Steel Straw (Removable Filter)",
+            "description": "A top-entry metal straw or bombilla to drink your mate. It's made of stainless steel, a very good material that will not oxidate with the time. You can also remove its filter for easier cleaning.",
+            "price": 8.50,
+            "category": 1,
+            "weight": 0.070,
+            "weight_unit": "kilogram",
+            "image": "003.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "product_code": "TOP-193-ALP-ACC",
+            "name": "Top Alpaca Straw (Bombilla)",
+            "description": "One of our top selling mate straws. This one is 19.3cm long and it's made of alpaca, a really resistant and noble metal also found in jewelry. Its size makes it better for big mates, and as it is hand-made, it also has some nice patter around it. The curve at the top makes it really comfortable to drink from.",
+            "price": 18.50,
+            "category": 1,
+            "weight": 0.050,
+            "weight_unit": "kilogram",
+            "image": "004.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "product_code": "WOO-65X-ALU-ACC",
+            "name": "Wooden Mate Cup (Palo Santo and Aluminium wrap)",
+            "description": "Simple and nice mate gourd made of palo santo, a type of wood found in the tropical regions of the Americas, which contributes to the flavour of your mate. It's covered with aluminium and it's for those who prefer smaller mate gourds rather than a big one. This mate cup is hand turned and the size can therefore vary slightly, but the average dimensions of this mate cup are: Diameter at the widest point – 6.5cm, height – 9.9cm and volume – 110ml.",
+            "price": 17.50,
+            "category": 1,
+            "weight": 0.200,
+            "weight_unit": "kilogram",
+            "image": "005.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "product_code": "LEA-8X1-CER-ACC",
+            "name": "Leather Ceramic Mate Cup (Stainless Steel Rim)",
+            "description": "A ceramic-made mate gourd with a classic style. Wrapped in leather and with a stainless steel rim at the top. This hand mate mate cup will give your the best quality possible. The dimensions of this mate cup are: Diameter at the widest point – 8cm, height – 10cm and volume – 200ml",
+            "price": 25.50,
+            "category": 1,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "006.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "product_code": "LEA-95X-MET-ACC",
+            "name": "Leather Mate Cup With Metal Rim",
+            "description": "The best quality for a mate cup can be found on this product. This mate gourd is made with the fruit of the calabash plant, the most used material to make these cups. This makes the flavour last for longer and impregnates the walls of your gourd, making it taste better with time. The metal rim at the top stops it from getting cracks and offers some nice style. The average dimensions of this mate cup are: Diameter at the widest point – 9.5cm, height – 10.5cm, and volume – 270ml.",
+            "price": 26.00,
+            "category": 1,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "007.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "product_code": "LAR-85X-CER-ACC",
+            "name": "Large Ceramic Mate Cup Natural Shape with Bombilla",
+            "description": "This ceramic mate cup is perfect for those who don’t want to use a traditional gourd. This cup is perfect if you suffer from acid indigestion (a natural gourd adds flavour and acidity to the brew) and is also more simple to care for, and more durable. Very stylish and made in a similar style to a natural gourd. The approximate dimensions of this mate cup are: Diameter at the widest point – 8.5cm, height – 11cm and Volume – 400ml.",
+            "price": 10.00,
+            "category": 1,
+            "weight": 0.420,
+            "weight_unit": "kilogram",
+            "image": "008.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-UNI-CHO-40G",
+            "name": "Alfajor BON O BON 40g",
+            "description": "Delicious alfajor with milk chocolate coating and peanut filling. Perfect if you are looking for a tasty snack.",
+            "price": 1.50,
+            "category": 2,
+            "weight": 0.040,
+            "weight_unit": "kilogram",
+            "image": "009.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-UNI-CHO-45G",
+            "name": "Alfajor GEORGALOS Full Peanut 45g",
+            "description": "Milk chocolate with peanuts. Perfect if you are looking for a tasty snack.",
+            "price": 2.00,
+            "category": 2,
+            "weight": 0.045,
+            "weight_unit": "kilogram",
+            "image": "010.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-3UN-WHI-160",
+            "name": "White Chocolate Alfajor Mardel x3 160g",
+            "description": "Two crumbly cookies covered in delicious white chocolate filled with creamy dulce de leche caramel. Perfect as a gift or to treat yourself.",
+            "price": 3.50,
+            "category": 2,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "011.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-3UN-CHO-160",
+            "name": "Chocolate Alfajor Mardel x3 160g",
+            "description": "Two crumbly cookies covered in delicious milk chocolate filled with creamy dulce de leche caramel. Perfect as a gift or to treat yourself.",
+            "price": 3.50,
+            "category": 2,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "012.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-6UN-MIX-300",
+            "name": "Luxury Alfajor Havanna x6 Mix 300g",
+            "description": "Havanna is one of the most famous alfajores manufacturers known for their luxury and high-quality products. The box contains 3 milk chocolate units and 3 meringue units with individual packaging.",
+            "price": 12.50,
+            "category": 2,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "013.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-4UN-COC-260",
+            "name": "Luxury Alfajor Havanna 70% Cocoa x4 260g",
+            "description": "The traditional alfajor with extra cacao, a double dark chocolate layer and extra premium dulce de leche. Alfajores to the maximum level. Extra quality and a must-try for chocolate lovers.",
+            "price": 13.00,
+            "category": 2,
+            "weight": 0.260,
+            "weight_unit": "kilogram",
+            "image": "014.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-6UN-CHO-300",
+            "name": "Luxury Alfajor Havanna x6 300g",
+            "description": "Havanna is one of the most famous alfajores manufacturers know for their luxury and high-quality products. The box contains 6 units with individual packaging.",
+            "price": 12.50,
+            "category": 2,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "015.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-9UN-COC-600",
+            "name": "Luxury Alfajor Havanna 70% Cocoa x9 600g",
+            "description": "The traditional alfajor with extra cacao, a double dark chocolate layer and extra premium dulce de leche. Alfajores to the maximum level. Extra quality and a must-try for chocolate lovers. Havanna is one of the most famous alfajores manufacturers known for their luxury and high-quality products.",
+            "price": 22.00,
+            "category": 2,
+            "weight": 0.600,
+            "weight_unit": "kilogram",
+            "image": "016.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-12U-MIX-612",
+            "name": "Luxury Alfajor Havanna x12 Mix 612g",
+            "description": "Havanna is one of the most famous alfajores manufacturers known for their luxury and high-quality products. The box contains 6 milk chocolate units and 6 meringue units with individual packaging.",
+            "price": 22.50,
+            "category": 2,
+            "weight": 0.612,
+            "weight_unit": "kilogram",
+            "image": "017.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "product_code": "ALF-12U-CHO-660",
+            "name": "Alfajor HAVANNA Chocolate x12 660g",
+            "description": "Havanna is one of the most famous alfajores manufacturers known for their luxury and high-quality products. The box contains 12 milk chocolate units. ",
+            "price": 19.50,
+            "category": 2,
+            "weight": 0.660,
+            "weight_unit": "kilogram",
+            "image": "018.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MAN-3UN-PEA-110",
+            "name": "Mantecol Classic Flavor x3 110g",
+            "description": "Typical dessert of Argentina, a semi-soft peanut butter nougat. It was originally created and marketed in the 1940s by the confectionery company Georgalos. Founded by a Greek immigrant family, his main reference, Miguel Georgalos, took the inspiration in a typical Mediterranean dessert, the halva.",
+            "price": 6.50,
+            "category": 3,
+            "weight": 0.110,
+            "weight_unit": "kilogram",
+            "image": "019.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "product_code": "BON-30U-CHO-450",
+            "name": "Bon o Bon Traditional Chocolate Bite x30 450g",
+            "description": "BON O BON. Delicious snack, a bonbon made in the Argentine style. This bon o bon is perfect to be given and given away. For young and old.",
+            "price": 8.50,
+            "category": 3,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "020.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "product_code": "BON-30U-WHI-450",
+            "name": "Bon o Bon White Chocolate Bite x30 450g",
+            "description": "BON O BON. Delicious snack, a bonbon made in the Argentine style. This bon o bon is perfect to be given and given away. For young and old.",
+            "price": 8.50,
+            "category": 3,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "021.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "product_code": "HAV-12U-CHO-460",
+            "name": "Havanna Havannets Chocolate Cones x12 460g",
+            "description": "The Havannets are perfect for an occasional gift, as they also come in a really good-looking box. But you can also have them for yourself as an every-day treat! Perfects for dessert or as a snack.",
+            "price": 22.00,
+            "category": 3,
+            "weight": 0.460,
+            "weight_unit": "kilogram",
+            "image": "022.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "product_code": "PIC-48U-TUT-672",
+            "name": "Pico Dulce Chupetín Fruit Rainbow Lollipop x48 672g",
+            "description": "The Pico dulce lollipop is a modern makeover of the classic sugar lollipop you can find in the parks around Buenos Aires. Its characteristic swirl of colors and shape, along with a subtle tutti-frutti flavour, makes it the perfect and favorite candy for kids and adults.",
+            "price": 8.00,
+            "category": 3,
+            "weight": 0.672,
+            "weight_unit": "kilogram",
+            "image": "023.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "product_code": "TUR-10U-PEA-180",
+            "name": "Turrón de maní ARCOR x10 180g",
+            "description": "The turrón, quite similar to the nougat, is a traditional dessert found in Spain and the Middle East. In Argentina, we don’t keep the tradition of eating turrón outside holiday season. However, the turrón maní is, for its price and convenience, sold in kiosks as a go-to, almost like a cereal bar. This turrón contains peanuts and a hard nougat filling in between two thick, waffle-like wafers.",
+            "price": 5.00,
+            "category": 3,
+            "weight": 0.180,
+            "weight_unit": "kilogram",
+            "image": "024.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "product_code": "VAU-18U-DUL-450",
+            "name": "Vauquita Classic Dulce de Leche Bar x18 450g",
+            "description": "The Argentinians favorite dulce de leche candy. A unique recipe, crunchy on the outside and soft on the inside.",
+            "price": 9.00,
+            "category": 3,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "025.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "product_code": "SOF-50U-RAS-650",
+            "name": "Lengüetazo Pinta La Lengua Long Raspberry Soft Sour Candy x50 650g",
+            "description": "Lengüetazo is a brand of soft, chewy candy produced by Cadbury Stani Adams Argentina since the 1950s. It is one of the most popular and iconic confections in Argentina.",
+            "price": 7.00,
+            "category": 3,
+            "weight": 0.650,
+            "weight_unit": "kilogram",
+            "image": "026.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-3UN-HAV-160",
+            "name": "Combo Havanna Simple",
+            "description": "Get the most of this top brand in a nice package. Beautiful taste from Havanna, one of the best known brands when it comes to sweet treats. This combo includes: 1 box of 12 Mix Havanna Alfajores, 1 box of 12 Havanna Havannets Black Cones and 1 dulce de leche Havanna 450g.",
+            "price": 45.00,
+            "category": 4,
+            "weight": 1.600,
+            "weight_unit": "kilogram",
+            "image": "027.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-4UN-VAR-33G",
+            "name": "Combo Variety",
+            "description": "Three units of Taragüí 1kg and a box of 6 black Havanna alfajores.",
+            "price": 35.00,
+            "category": 4,
+            "weight": 3.300,
+            "weight_unit": "kilogram",
+            "image": "028.jpg"
+        }
+    }, 
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-3UN-HAV-17G",
+            "name": "Combo Havanna Plus",
+            "description": "Get the most of this top brand in a nice package. Beautiful taste from Havanna, one of the best known brands when it comes to sweet treats. This combo includes: 1 box of 12 mixed Havanna Alfajores, 1 box of 9 70% Cocoa Premium Havanna Alfajores and 1 dulce de leche Havanna 450g.",
+            "price": 45.50,
+            "category": 4,
+            "weight": 1.700,
+            "weight_unit": "kilogram",
+            "image": "029.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-4UN-GOU-152",
+            "name": "Combo Gourmet",
+            "description": "It's all sweet, tasty and GOURMET! Enjoy the best quality of the sweet world which two boxes of luxury black alfajores, gourmet dulce de leche from Mardel and a squeeze bottle ideal for desserts, toasts or more. This combo includes: 2 box of 6 Black Havanna Alfajores, 1 flask of Gourmet Mardel Dulce de Leche 450g and 1 squeeze bottle Mardel Dulce de Leche 370g.",
+            "price": 30.90,
+            "category": 4,
+            "weight": 1.520,
+            "weight_unit": "kilogram",
+            "image": "030.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-3UN-SWE-26G",
+            "name": "Combo Sweet",
+            "description": "A perfect combination for sweet lovers and also a nice idea for a present. Get a box of 12 Havanna premium mixed alfajores, and two big flasks of Dulce de Leche Chimbote of 980g each. That'll be sweet!",
+            "price": 40.50,
+            "category": 4,
+            "weight": 2.600,
+            "weight_unit": "kilogram",
+            "image": "031.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-4UN-TAR-4KG",
+            "name": "Combo Taragüí",
+            "description": "Traditional Argentinian yerba mate with stems. Perfect for a light and long-lasting mate. This combo includes 4 Taragüí Yerba Mate 1kg.",
+            "price": 28.00,
+            "category": 4,
+            "weight": 4.000,
+            "weight_unit": "kilogram",
+            "image": "032.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COM-4UN-AMA-4KG",
+            "name": "Combo Amanda",
+            "description": "This brand, Amanda, is one of the most popular ones in Argentina. It offers you a classic taste with a slight amount of bitterness, perfect for those who find other yerba mates to soft but don't want a really strong one either. This combo includes 4 Amanda Yerba Mate 1kg",
+            "price": 32.00,
+            "category": 4,
+            "weight": 4.000,
+            "weight_unit": "kilogram",
+            "image": "033.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "product_code": "KIT-3UN-TAR-1KG",
+            "name": "Kit Taragüí",
+            "description": "This amazing kit includes 1 mate gourd cap, 1 straw and 1 Yerba Mate 500g.",
+            "price": 25.00,
+            "category": 4,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "034.jpg"
+        }
+    }, 
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "product_code": "KIT-3UN-AMA-1KG",
+            "name": "Kit Amanda",
+            "description": "This amazing kit includes 1 mate gourd cap, 1 straw and 1 Yerba Mate 500g.",
+            "price": 25.00,
+            "category": 4,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "035.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-CHO-170",
+            "name": "Cookies CHOCOLINAS 170g",
+            "description": "Chocolinas are a traditional chocolate sandwich biscuit from Argentina. They are famous for their use in preparing Chocotortas with dulce de leche!! Not for the calorie-conscious!!",
+            "price": 2.00,
+            "category": 5,
+            "weight": 0.170,
+            "weight_unit": "kilogram",
+            "image": "036.jpg"
+        }
+    }, 
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-SWE-160",
+            "name": "Mini Pitusas Mousse Sweet Cookies Filled Chocolate Mousse 160g",
+            "description": "Delicious cookies to share or eat alone. Their splendid flavor will make you eat every last one.",
+            "price": 1.50,
+            "category": 5,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "037.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-CHO-160",
+            "name": "Mini Pitusas Chocolate Sweet Cookies Filled with Cream 160g",
+            "description": "Delicious cookies to share or eat alone. Their splendid flavor will make you eat every last one.",
+            "price": 1.50,
+            "category": 5,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "038.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-SAN-112",
+            "name": "Rumba Sandwich Cookies with Chocolate and Coconut Cream Original Flavor 112g",
+            "description": "Chocolate cookies filled with the most delicious coconut original flavor. Bagley has been a leading company of Argentine cookies since more than 150 years ago. It has shared breakfasts and “meriendas” with every generation and keeps growing more and more. It is highly known by multiple and famous cookies brands such as Chocolinas, Sonrisas, Opera, Criollitas, Rex, etc.",
+            "price": 1.50,
+            "category": 5,
+            "weight": 0.112,
+            "weight_unit": "kilogram",
+            "image": "039.jpg"
+        }
+    },  
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-STR-93G",
+            "name": "Merengadas Cookies with Strawberry Gummy Filling 93g",
+            "description": "Merengadas are one of the most famous argentine cookies. Their distinct strawberry flavored meringue with gummy consistency between the two vanilla cookies will lighten your day anytime.",
+            "price": 2.50,
+            "category": 5,
+            "weight": 0.093,
+            "weight_unit": "kilogram",
+            "image": "040.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-MEM-400",
+            "name": "Terepin Membrillo Pepas Mermelada Quince Jelly Pepas Sweet Cookies 400g",
+            "description": "Terepin was born sharing and to share. Along these years they have shared plenty of emotions and moments with you and thousands of argentinians. These soft and sweet cookies are the cookies everyone loves and choose when sharing the classic mate or even tea or coffee.",
+            "price": 4.00,
+            "category": 5,
+            "weight": 0.400,
+            "weight_unit": "kilogram",
+            "image": "041.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-LEM-160",
+            "name": "Galletitas Boca de Dama Sweet 160g",
+            "description": "Classic argentinian cookies, it's perfect to pair with milk. Ideal for breakfast or merienda.",
+            "price": 1.00,
+            "category": 5,
+            "weight": 0.160,
+            "weight_unit": "kilogram",
+            "image": "042.jpg"
+        }
+    },  
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-ORA-92G",
+            "name": "Opera Thin Sweet Orange Flavored Cream Wafers 92 g",
+            "description": "These vanilla wafer cookies are an Argentine favorite that need almost no introduction. The recipe for filled vanilla wafer cookies, with its characteristic rectangular shape, has been in the market for more than a hundred years. The compact packaging makes it harder for the cookies to crumble and is the paperback-book version of larger cookies: portable and addictive. Wafers with orange flavored filling.",
+            "price": 1.00,
+            "category": 5,
+            "weight": 0.092,
+            "weight_unit": "kilogram",
+            "image": "043.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-OBL-140",
+            "name": "Bridge Obleas Rellenas Classic Chocolate-Filled Wafers 140 g",
+            "description": "Sweet wafer cookies perfect to have with Mate or Tea. El Trigal is the brand that distinguished cookies in Uruguay since it was founded in the year 1984 by Don Luis Lagorio. The trajectory of the company has always been one of passion, criteria, responsibility and innovation built through half a century of hard work. Effort and dedication have always been constant, without a pause but also without rushing, because the elaboration of the best goods deserve the best care, attention and love.",
+            "price": 1.80,
+            "category": 5,
+            "weight": 0.140,
+            "weight_unit": "kilogram",
+            "image": "044.jpg"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-CHE-125",
+            "name": "Kesitas Cheese Snack Crackers Hex Shape 125g",
+            "description": "Cheesy and salty crunchy crackers.  Ideal to have on breaks, picnics or while on fun road-trips!",
+            "price": 2.00,
+            "category": 5,
+            "weight": 0.125,
+            "weight_unit": "kilogram",
+            "image": "045.jpg"
+        }
+    },  
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-CLA-140",
+            "name": "Don Satur Classic Talitas Long Crackers 140g",
+            "description": "The savory, classic version of Don Satur cookies is perfect for mate. They’re so rich you’ll be sure to keep them close by for having with your next hot drink. These “bizcochitos de grasa” are famous for a reason.",
+            "price": 2.30,
+            "category": 5,
+            "weight": 0.140,
+            "weight_unit": "kilogram",
+            "image": "046.jpg"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "product_code": "COO-1UN-LEM-300",
+            "name": "Havanna Lemon Cookies Filled With Creme Lemon 12 cookies 300g ",
+            "description": "Delicious cookie sandwich with lemon creme filling inside.",
+            "price": 10.00,
+            "category": 5,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "047.jpg"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-MAR-250",
+            "name": "Dulce de Leche Mardel Clásico 250g",
+            "description": "The Classic Dulce de Leche has an easy-spread homogeneous consistency, and a bright-looking light brown colour. Ideal to accompany fruits, puddings, waffles, toasts, yogurts, desserts and crepes.",
+            "price": 3.00,
+            "category": 6,
+            "weight": 0.250,
+            "weight_unit": "kilogram",
+            "image": "048.jpg"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-MAR-370",
+            "name": "Dulce de Leche Mardel Squeeze Bottle 370g",
+            "description": "The Classic Dulce de Leche in a squeeze no-drop bottle. Ideal for topping ice creams, creppes, waffles, cakes, toasts and desserts. Keep it easy and clean while enjoying the well-known Mardel quality.",
+            "price": 4.20,
+            "category": 6,
+            "weight": 0.370,
+            "weight_unit": "kilogram",
+            "image": "049.jpg"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-MAR-450",
+            "name": "Dulce de Leche Mardel Clásico 450g",
+            "description": "The Classic Dulce de Leche has an easy-spread homogeneous consistency, and a bright-looking light brown colour. Ideal to accompany fruits, puddings, waffles, toasts, yogurts, desserts and crepes.",
+            "price": 4.20,
+            "category": 6,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "050.jpg"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-HAV-250",
+            "name": "Dulce de Leche Havanna 250g",
+            "description": "Delicious dulce de leche caramel spread perfect for toasts, cakes, pancakes or ice cream. Why not on its own?",
+            "price": 4.50,
+            "category": 6,
+            "weight": 0.250,
+            "weight_unit": "kilogram",
+            "image": "051.jpg"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-HAV-450",
+            "name": "Dulce de Leche Havanna 450g",
+            "description": "Delicious dulce de leche caramel spread perfect for toasts, cakes, pancakes or ice cream. Why not on its own?",
+            "price": 6.90,
+            "category": 6,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "052.jpg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-OND-350",
+            "name": "Dulce de Leche Onda-Onda 350g",
+            "description": "This is a gourmet dulce de leche and will bring you a smooth felling in your mouth combined with an accurate flavour from the perfect ingredients and recipe.",
+            "price": 4.20,
+            "category": 6,
+            "weight": 0.350,
+            "weight_unit": "kilogram",
+            "image": "053.jpg"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-GOU-450",
+            "name": "Dulce de Leche Mardel Gourmet 450g",
+            "description": "The Dulce de Leche Gourmet is soft and creamy, elaborated with the traditional recipe and a touch of vanilla scent, which just makes everything better. Ideal to accompany fruits, puddings, waffles, toasts, yogurts, desserts and crepes.",
+            "price": 5.50,
+            "category": 6,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "054.jpg"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-SAN-450",
+            "name": "Dulce de Leche San Ignacio 450g",
+            "description": "San Ignacio is one of the most popular Dulce de Leche brands in South America. It offers a really nice balance of taste and texture, perfect for all purposes.",
+            "price": 6.50,
+            "category": 6,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "055.jpg"
+        }
+    }, 
+    {
+        "pk": 56,
+        "model": "products.product",
+        "fields": {
+            "product_code": "DUL-1UN-CHI-980",
+            "name": "Dulce de Leche Chimbote 980g",
+            "description": "Chimbote is a Spanish brand and is one of the most popular among its competitors. It's almost 1kg of dulce de leche!",
+            "price": 10.50,
+            "category": 6,
+            "weight": 0.980,
+            "weight_unit": "kilogram",
+            "image": "056.jpg"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "products.product",
+        "fields": {
+            "product_code": "EMP-1UN-FRI-350",
+            "name": "Di Carlo Pastry for fried turnovers (13cm) 350g",
+            "description": "Di Carlo circular pastry discs for making traditional Argentine turnovers (empanadas) in the frying pan. 12 discs 13cm.",
+            "price": 6.50,
+            "category": 7,
+            "weight": 0.350,
+            "weight_unit": "kilogram",
+            "image": "057.jpg"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "products.product",
+        "fields": {
+            "product_code": "EMP-1UN-BAK-350",
+            "name": "Di Carlo Pastry for baked turnovers (13cm) 350g",
+            "description": "Di Carlo circular pastry discs for making traditional Argentine turnovers (empanadas) in the oven. 12 discs 13cm.",
+            "price": 6.50,
+            "category": 7,
+            "weight": 0.350,
+            "weight_unit": "kilogram",
+            "image": "058.jpg"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "products.product",
+        "fields": {
+            "product_code": "EMP-1UN-DIC-450",
+            "name": "Di Carlo Pastry for baked & fried turnovers (14cm) 450g",
+            "description": "Di Carlo circular pastry discs for making traditional Argentine turnovers (empanadas) in the oven or the frying pan. 12 discs 14cm.",
+            "price": 7.00,
+            "category": 7,
+            "weight": 0.450,
+            "weight_unit": "kilogram",
+            "image": "059.jpg"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "products.product",
+        "fields": {
+            "product_code": "EMP-1UN-DON-410",
+            "name": "Tapas for turnovers Doña Petrona (14cm) 410g",
+            "description": "Doña Petrona tapas for making traditional Argentine turnovers (empanadas) in the oven or the frying pan. 12 discs 14cm.",
+            "price": 4.50,
+            "category": 7,
+            "weight": 0.410,
+            "weight_unit": "kilogram",
+            "image": "060.jpg"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-CRU-100",
+            "name": "Cruz de Malta Mate Cocido 100g",
+            "description": "Instant brew mate in tea bags, it includes 25 tea bags.",
+            "price": 2.50,
+            "category": 8,
+            "weight": 0.100,
+            "weight_unit": "kilogram",
+            "image": "061.jpg"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-POW-200",
+            "name": "Leche Descremada En Polvo La Serenísima 200g",
+            "description": "Delicious skim milk powder, this yields about 2 liters.",
+            "price": 3.00,
+            "category": 8,
+            "weight": 0.200,
+            "weight_unit": "kilogram",
+            "image": "062.jpg"
+        }
+    },  
+    {
+        "pk": 63,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-POW-400",
+            "name": "Leche Descremada En Polvo La Serenísima 400g",
+            "description": "Delicious skim milk powder, this yields about 4 liters.",
+            "price": 5.00,
+            "category": 8,
+            "weight": 0.400,
+            "weight_unit": "kilogram",
+            "image": "063.jpg"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-LAS-200",
+            "name": "Leche Entera En Polvo La Serenísima 200g",
+            "description": "Delicious milk powder, this yields about 1.5 liters.",
+            "price": 3.00,
+            "category": 8,
+            "weight": 0.200,
+            "weight_unit": "kilogram",
+            "image": "064.jpg"
+        }
+    }, 
+    {
+        "pk": 65,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-LAS-400",
+            "name": "Leche Entera En Polvo La Serenísima 400g",
+            "description": "Delicious milk powder, this yields about 3 liters.",
+            "price": 5.00,
+            "category": 8,
+            "weight": 0.400,
+            "weight_unit": "kilogram",
+            "image": "065.jpg"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-ALI-25G",
+            "name": "Alicante Condimento Para Milanesas 25g",
+            "description": "Classic mixed spices ready to use seasoning powder ideal for classic breaded beef milanesas",
+            "price": 1.00,
+            "category": 8,
+            "weight": 0.025,
+            "weight_unit": "kilogram",
+            "image": "066.jpg"
+        }
+    },  
+    {
+        "pk": 67,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-LAP-300",
+            "name": "La Parmesana Chimichurri Classic Argentinian Sauce 300g",
+            "description": "If you don’t know where to start with Argentine sauces or condiments, this is it. It’s the literal recipe for success for your next barbecue, asado or gathering. You can even combine it with your chips of choice. The “chimichurri” is one of the most popular dressings in Argentina, along with the salsa criolla. It is especially good for chorizo (a fermented and smoked pork sausage). It consists of a—slightly spicy!—chilli herb sauce: parsley, garlic, oregano and red wine vinegar.",
+            "price": 4.00,
+            "category": 8,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "067.jpg"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-CHI-300",
+            "name": "La Parmesana Chimichurri Ahumado Smoked Classic Argentinian Sauce 300g",
+            "description": "If you don’t know where to start with Argentine sauces or condiments, this is it. It’s the literal recipe for success for your next barbecue, asado or gathering. You can even combine it with your chips of choice.",
+            "price": 4.00,
+            "category": 8,
+            "weight": 0.300,
+            "weight_unit": "kilogram",
+            "image": "068.jpg"
+        }
+    }, 
+    {
+        "pk": 69,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-HIL-250",
+            "name": "Hileret Classic 1-to-10 Sweetener 250ml",
+            "description": "Liquid sweetener perfect for use in hot and cold foods and beverages. It's the perfect replacement for sugar, you'll love it for sure!",
+            "price": 2.50,
+            "category": 8,
+            "weight": 0.250,
+            "weight_unit": "kilogram",
+            "image": "069.jpg"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-DOS-500",
+            "name": "Dos Anclas Sal Parrillera 500g",
+            "description": "Especially thought up for barbecues or “parrilladas” (that is, cooking on the grill), this salt will enhance even the simplest meat cuts. No need to put much of anything else, just massage the salt into the meat and you're good to go. It is also great for roasting veggies or cooking in big quantities. Dos Anclas is a brand of Argentine condiments specializing in flavor and flair for your meals.",
+            "price": 3.50,
+            "category": 8,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "070.jpg"
+        }
+    },  
+    {
+        "pk": 71,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-CHU-500",
+            "name": "Chuker Liquid Sweetener Zero Calories 500ml",
+            "description": "Liquid sweetener perfect for use in hot and cold foods and beverages. It's the perfect replacement for sugar, you'll love it for sure!",
+            "price": 4.80,
+            "category": 8,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "071.jpg"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "products.product",
+        "fields": {
+            "product_code": "MIS-1UN-EME-500",
+            "name": "Emeth Dulce de Membrillo 500g",
+            "description": "This quince jelly flavor is a trip back to the best pastries of Argentina. Emeth started in 1963 as a company whose products were destined to supply bakeries and coffee places and grew slowly until making itself a place and becoming a leader brand. That is when it started to expand their products and insert them into the mass consumer market.",
+            "price": 4.90,
+            "category": 8,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "072.jpg"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-TAR-1KG",
+            "name": "Taragüí Yerba Mate 1kg",
+            "description": "Traditional Argentinian yerba mate with stems. Perfect for a light and long-lasting mate.",
+            "price": 8.30,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "073.jpg"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-AMA-1KG",
+            "name": "Amanda Yerba Mate 1kg",
+            "description": "This brand, Amanda, is one of the most popular ones in Argentina. It offers you a classic taste with a slight amount of bitterness, perfect for those who find other yerba mates to soft but don't want a really strong one either.",
+            "price": 9.50,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "074.jpg"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-PLA-1KG",
+            "name": "Playadito Yerba Mate 1kg",
+            "description": "Traditional Argentinian yerba mate with stems. Perfect for a light and long-lasting mate.",
+            "price": 8.00,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "075.jpg"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-CBS-500",
+            "name": "CbSé Yerba Mate Hierbas Serranas 500g",
+            "description": "Want to add some extra flavour to the normal yerba mate? Then this product is for you. Enjoy all the natural flavour of yerba mate blended with a fresh sorting of valley mints.",
+            "price": 4.00,
+            "category": 9,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "076.jpg"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-UNI-1KG",
+            "name": "Unión Suave Yerba Mate 1kg",
+            "description": "Traditional Argentinian yerba mate with stems. Unión Suave (which means smooth) is perfect for those who prefer a lighter flavour on their mate. This brand, one of the most popular ones in Argentina, is produced by Las Marias, and they´ve been in the industry for almost 100 years.",
+            "price": 7.50,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "077.jpg"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-LAM-500",
+            "name": "La Merced Original del Campo Yerba Mate 500g",
+            "description": "Being matured for over a year, this yerba mate extract are specially selected to get the best quality possible.  They grow meadows and on the red hills on an Argentinian region called Corrientes, which has forcer them to adapt to new environments while growing.",
+            "price": 6.50,
+            "category": 9,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "078.jpg"
+        }
+    },
+    {
+        "pk": 79,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-TAR-500",
+            "name": "Taragüí Yerba Mate Classic Sin Palo 500g",
+            "description": "Traditional Argentinian yerba mate with stems. Perfect for a light and long-lasting mate.",
+            "price": 6.00,
+            "category": 9,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "079.jpg"
+        }
+    },
+    {
+        "pk": 80,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-ELA-1KG",
+            "name": "El Avá Yerba Mate Elaborada con Palo 1kg",
+            "description": " It is a classical, high standard yerba mate, and is a bestseller. This original blend is with stems (con palos).",
+            "price": 7.50,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "080.jpg"
+        }
+    },
+    {
+        "pk": 81,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-CRU-1KG",
+            "name": "Cruz de Malta Yerba Mate 1Kg",
+            "description": "Cruz de Malta Yerba Mate is an important brand in Argentina. It is a classical, high standard yerba mate, and is a bestseller. This original blend is with stems (con palos). Cruz de Malta yerba mate now boasts a new tri-laminated packet to keep the yerba fresher than ever before.",
+            "price": 8.00,
+            "category": 9,
+            "weight": 1.000,
+            "weight_unit": "kilogram",
+            "image": "081.jpg"
+        }
+    },
+    {
+        "pk": 82,
+        "model": "products.product",
+        "fields": {
+            "product_code": "YER-1UN-NOB-500",
+            "name": "Yerba Mate Nobleza Gaucha Azul 500g",
+            "description": "500g loose leaf Yerba Mate Nobleza Gaucha Azul with stems (con palos) an Argentinian Classic. Nobleza Gaucha is an important Argentinian brand of Yerba Mate, with a few classical blends. You will love the robust, classical flavour.",
+            "price": 5.50,
+            "category": 9,
+            "weight": 0.500,
+            "weight_unit": "kilogram",
+            "image": "082.jpg"
+        }
+    }   
+]
