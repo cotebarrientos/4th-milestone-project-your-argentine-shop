@@ -1,10 +1,19 @@
 core.Microsoft*
 core.mongo*
 core.python*
+
+# environmental variables
 env.py
+env
+.env
+
+# python
 __pycache__/
 *.py[cod]
 node_modules/
-env
+
+# VS Code
 .vscode
+
+# local database
 *.sqlite3
