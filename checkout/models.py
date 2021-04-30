@@ -37,8 +37,8 @@ class Order(models.Model):
         Update total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_subtotal = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        self.delivery_cost = Decimal(delivery.get("delivery_charge"))
+        self.order_subtotal = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.delivery_cost = Decimal(self.delivery.get("delivery_charge"))
 
         # if self.order_subtotal < settings.FREE_DELIVERY_THRESHOLD:
         #     self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
