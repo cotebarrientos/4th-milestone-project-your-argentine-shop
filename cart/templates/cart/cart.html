@@ -87,28 +87,9 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <div class="row col mt-1 mb-4 justify-content-end pl-0 pr-0">
-                                        <div class="col-6 col-md-4 pl-0 pr-0">
-                                            <div class="sort-select-wrapper">
-                                                <select id="delivery-selector" class="custom-select custom-select-sm rounded-0 border border" required>
-                                                    <option selected disabled>Delivery method</option>
-                                                    {% if subtotal > 60.00 %}
-                                                    <option value="free_delivery#charge={{free_delivery|floatformat:2}}"{% if delivery_type == 'free_delivery' %}selected{% endif %}>Free Delivery €{{free_delivery|floatformat:2}}</option>
-                                                    {% endif %}
-                                                    <option value="standard_delivery#charge={{standard_delivery|floatformat:2}}"{% if delivery_type == 'standard_delivery' %}selected{% endif %}>Standard €{{standard_delivery|floatformat:2}}</option>
-                                                    <option value="high_quality_delivery#charge={{high_quality_delivery|floatformat:2}}"{% if delivery_type == 'high_quality_delivery' %}selected{% endif %}>High Quality €{{high_quality_delivery|floatformat:2}}</option>
-                                                    
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <h6><strong> Weight: {{ product_count_weight|floatformat:2 }}KG</strong></h6>
                                     <h6><strong> Subtotal: €{{ subtotal|floatformat:2 }}</strong></h6>
-                                    {% if delivery == free_delivery %}
                                     <h6 id="current_delivery"><strong> Delivery: €{{ delivery|floatformat:2 }}</strong></h6>
-                                    {% else %}
-                                    <h6 id="current_delivery"><strong> Delivery: €{{ delivery|floatformat:2 }}</strong></h6>
-                                    {% endif %}
                                     <h4 class="mt-4"><strong>Total: €{{ total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
@@ -172,7 +153,7 @@
             <div class="col-12 col-lg-4 my-auto py-lg-0 text-center">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <img onload="loadDelivery()" class="my-auto pb-3" src="/media/quality.png" width="60px">
+                        <img class="my-auto pb-3" src="/media/quality.png" width="60px">
                     </li>
                     <li class="list-inline-item">
                         <h5 class="text-left">We only offer</h5>
@@ -189,21 +170,6 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-
-    // Update delivery price
-    function loadDelivery() {
-        var url = `/cart/update_delivery/`;
-        var csrfToken = "{{ csrf_token }}";
-        var data = {'csrfmiddlewaretoken': csrfToken };
-
-        $.post(url, data)
-         .done(function(response) {
-            let integer = response.delivery_charge.toString().split(".")[0]
-            let decimal = response.delivery_charge.toString().split(".")[1].substring(0,2)
-            $('#current_delivery').html(`<strong> Delivery: €${ `${integer}.${decimal}` }</strong>`)
-         });
-    }
-
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
@@ -223,22 +189,5 @@
          });
     })
 
-    // To select the delivery method
-    $('#delivery-selector').change(function() {
-        var selector = $(this);
-        var selectedVal = selector.val().split("#charge=");
-        var delivery_type = selectedVal[0];
-        var delivery_charge = selectedVal[1];
-
-        var csrfToken = "{{ csrf_token }}";
-        var url = `set_delivery/delivery_charge/${delivery_charge}/delivery_type/${delivery_type}`;
-        var data = {'csrfmiddlewaretoken': csrfToken };
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-
-    })
 </script>
 {% endblock %}
