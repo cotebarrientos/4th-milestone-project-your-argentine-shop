@@ -1,8 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
-from django.http import JsonResponse
-# from decimal import Decimal
-
 
 from products.models import Product
 
@@ -73,58 +70,3 @@ def remove_from_cart(request, item_id):
     except Exception as e:
         messages.error(request, f"Error removing item: {e}")
         return HttpResponse(status=500)
-
-
-def calculate_delivery(request, delivery_charge, delivery_type):
-    """Set a type of delivery based on user selection"""
-
-    try:
-        delivery = request.session.get("delivery", {})
-
-        delivery["delivery_type"] = delivery_type
-        delivery["delivery_charge"] = delivery_charge
-
-        request.session["delivery"] = delivery
-
-        return HttpResponse(status=200)
-    except Exception as e:
-        messages.error(request, f"Error calculating delivery for item: {e}")
-        return HttpResponse(status=500)
-
-
-def update_products_delivery(request):
-    cart = request.session.get("cart", {})
-#     cart_weight = get_cart_weight(cart)
-
-#     standard_delivery = calculate_standard_delivery(cart_weight)
-#     high_quality_delivery = calculate_high_quality_delivery(cart_weight)
-    standard_delivery = 2.00
-    high_quality_delivery = 4.00
-    free_delivery = 0.00
-
-    delivery = request.session.get("delivery", {})
-    delivery_response = {}
-
-    if delivery.get("delivery_type") != None:
-        if delivery.get("delivery_type") == "standard_delivery":
-            delivery["delivery_charge"] = standard_delivery
-            delivery_response["delivery_type"] = "standard_delivery"
-            delivery_response["delivery_charge"] = float(standard_delivery)
-        elif delivery.get("delivery_type") == "high_quality_delivery":
-            delivery["delivery_charge"] = high_quality_delivery
-            delivery_response["delivery_type"] = "high_quality_delivery"
-            delivery_response["delivery_charge"] = float(high_quality_delivery)
-        elif delivery.get("delivery_type") == "free_delivery":
-            delivery["delivery_charge"] = free_delivery
-            delivery_response["delivery_type"] = "free_delivery"
-            delivery_response["delivery_charge"] = float(free_delivery)
-    request.session["delivery"] = delivery
-
-    # return delivery
-    # return HttpResponse({"hello": "thing"}, status=200)
-    # print("######")
-    # print(delivery_response)
-    # print(type(delivery_response["delivery_charge"]))
-    # print(delivery_response["delivery_charge"])
-    # print("######")
-    return JsonResponse(delivery_response, status=200)
