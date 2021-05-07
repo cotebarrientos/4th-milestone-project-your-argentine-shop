@@ -42,7 +42,7 @@
             {% if products|length == 0 %}
             <div id="no-results" class="col-12  mx-auto my-auto">
                 <img src="/media/no-results-found.png" class="img-fluid" alt="Ups, no results"/>
-                <h3 class="text-center">Sorry! No result found :(</h3>
+                <h3 class="text-center">Sorry! No result found</h3>
                 <hr>
                 <h5 class="text-center text-muted pb-2">We're sorry what you were looking for. Please try searching with another word</h5>
             </div>
@@ -67,8 +67,14 @@
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col text-center">
                                         <p class="lead mb-0 text-left font-weight-bold pb-2 text-center text-navy-blue">€{{ product.price }}</p>
+                                        {% if request.user.is_superuser %}
+                                        <small>
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger confirmation" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -136,5 +142,10 @@
                 window.location.replace(currentUrl);
             }
         })
+
+        // Delete link confirmation
+        $('.confirmation').on('click', function () {
+        return confirm('Are you sure you want to delete this product? This action cannot be undone.');
+        });
     </script>
 {% endblock %}
