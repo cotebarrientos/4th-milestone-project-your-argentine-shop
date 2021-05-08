@@ -1,15 +1,41 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col">
                 <hr>
                 <h2 class="text-center text-uppercase mb-4">Blog</h2>
-                <hr>
+                <h5 class="text-muted text-center">
+                    Welcome to our blog, here you will find the most interesting topics related to our products and argentine culture.
+                </h5>
+                <hr class="mb-5">
             </div>
         </div>
-        {{posts}}
+        <!-- Blog Posts column -->
+        <div class="row border border-muted shadow ml-2 mr-2 pl-3 pr-3 mb-4">
+            <div class="col-12 bg-light mb-1 rounded">
+                {% for post in posts %}
+                    <h3 class="text-uppercase text-center blog-title-color mt-4 pb-3">{{ post.title }}</h3>
+                    <hr>    
+                    <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.created_on}}</p>
+                    <img class="img-fluid rounded" alt="Blog post image" src="{{ MEDIA_URL }}{{ post.image }}">
+                    <hr> 
+                    <p class="lead text-justify text-secondary mt-3 mb-5">{{ post.content|truncatewords:50 }}</p>
+                    <p class="text-center"><a href="{% url 'post_detail' post.id %}"  class="btn btn-secondary rounded-1 mb-4 text-uppercase">
+                        <span class="text-uppercase">Read more</span> 
+                        <span class="icon ml-2">
+                            <i class="fab fa-readme"></i>
+                        </span> 
+                    </a></p>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}
