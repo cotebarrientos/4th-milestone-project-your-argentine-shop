@@ -67,17 +67,75 @@
 </section>
 
 <!-- Featured Products -->
-<section class="container-fluid mt-3">
+<section class="container mt-3">
+    <hr>
     <h1 class="text-uppercase text-center">Featured Products</h1>
     <h3 class="text-secondary text-center">Recommended this week</h3>
     <hr>
+    <div class="row">
+        {% for product in FeaturedProducts %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0 text-center pb-2 text-navy-blue small"><i class="fas fa-tag mr-1"></i><em>{{ product.category.friendly_name }}</em></p>
+                    <h5 class="mb-0 pb-2">{{ product.name }}</h5>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="lead mb-0 text-left font-weight-bold pb-2 text-center text-navy-blue">€{{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}        
+    </div>
 </section>
 
 <!-- Combos -->
-<section class="container-fluid">
+<section class="container">
+    <hr>
     <h1 class="text-uppercase text-center">Combos</h1>
     <h3 class="text-secondary text-center">Recommended for you</h3>
     <hr>
+    <div class="row">
+        {% for product in ComboProducts %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0 text-center pb-2 text-navy-blue small"><i class="fas fa-tag mr-1"></i><em>{{ product.category.friendly_name }}</em></p>
+                    <h5 class="mb-0 pb-2">{{ product.name }}</h5>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="lead mb-0 text-left font-weight-bold pb-2 text-center text-navy-blue">€{{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}        
+    </div>
 </section>
 
 <!-- Information Box -->
