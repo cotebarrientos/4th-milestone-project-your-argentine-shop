@@ -19,7 +19,7 @@
         <hr>
         <div class="row">
             <div class="col-12">
-                <p class="text-justify mt-4 mb-4">{{ post.content }}</p>
+                <p class="text-justify mt-4 mb-4">{{ post.content |safe }}</p>
                 <p class="font-italic text-secondary mb-2 text-center"><i class="fas fa-user mr-2"></i><strong>Created by:</strong> {{ post.author }}</p>
             </div>
             <div class="col-12 mb-5 mt-4 text-center">             

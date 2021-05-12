@@ -24,6 +24,7 @@
             <div class="col-12 col-lg-7 mx-auto my-auto border shadow pl-4 pr-4 pt-3">
                 <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
+                    {{form.media}}
                     {% for field in form %}
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
