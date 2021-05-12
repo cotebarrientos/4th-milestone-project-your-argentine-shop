@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # Other
     'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,16 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'ms4.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# CKEDITOR RESPONSIVE, SOLUTION FROM: 
+# https://stackoverflow.com/questions/21207312/resize-ckeditor-for-responsive-design/22406570#22406570
+CKEDITOR_CONFIGS = {
+'default': {
+    'toolbar': None,
+    'width': 'auto',
+
+    },
+}
 
 TEMPLATES = [
     {
