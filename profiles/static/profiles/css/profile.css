@@ -26,3 +26,24 @@
     height: 30vh;
     min-height: 400px;
   }
+
+.background-test {
+    background-color: burlywood;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.user-bio-card {
+    background-color: #ececec;
+    min-height: 200px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.094rem;
+}
+
+.user-bio-card p {
+    font-size: 20px;
+}

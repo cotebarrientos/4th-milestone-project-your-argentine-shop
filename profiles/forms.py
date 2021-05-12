@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user',)
+        exclude = ('user', 'avatar', 'bio')
 
     def __init__(self, *args, **kwargs):
         """
@@ -34,3 +34,27 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
+
+
+class UserCustomizedProfileForm(forms.ModelForm):
+        class Meta:
+            model = UserProfile
+            exclude = (
+                'user',
+                'default_full_name', 
+                'default_email', 
+                'default_phone_number', 
+                'default_postcode',
+                'default_town_or_city',
+                'default_street_address1',
+                'default_street_address2',
+                'default_county',
+                'default_country',
+            )
+            widgets = {
+            'bio' : forms.Textarea(attrs={
+                'rows': '5',
+                'cols': '90',
+                'maxlength': '500',
+            }),
+        }

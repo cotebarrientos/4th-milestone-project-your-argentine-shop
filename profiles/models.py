@@ -12,9 +12,12 @@ class shippingCountry(Countries):
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
-    delivery information and order history
+    delivery information, order history and other 
+    features
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    avatar = models.ImageField(null=True, blank=True)
+    bio = models.CharField(max_length=500, default='Write a brief about yourself here...')
     default_full_name = models.CharField(max_length=50, null=True, blank=True)
     default_email = models.EmailField(max_length=254, null=True, blank=True)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)

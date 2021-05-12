@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
+from .forms import UserCustomizedProfileForm
 
 from checkout.models import Order
 
@@ -11,7 +12,8 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-
+    customForm = UserCustomizedProfileForm(request.POST, instance=profile)
+    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -26,6 +28,7 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
+        'customForm': customForm,
         'orders': orders,
         'profile': profile,
         'on_profile_page': True
