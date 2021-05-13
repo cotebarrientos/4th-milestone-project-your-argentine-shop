@@ -10,7 +10,7 @@ class UserProfileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        labels
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -24,7 +24,6 @@ class UserProfileForm(forms.ModelForm):
             'default_county': 'County',
         }
 
-        self.fields['default_full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'default_country':
                 if self.fields[field].required:
@@ -36,11 +35,12 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].label = False
 
 
-class UserCustomizedProfileForm(forms.ModelForm):
+class UserCustomizedBioForm(forms.ModelForm):
         class Meta:
             model = UserProfile
             exclude = (
                 'user',
+                'avatar',
                 'default_full_name', 
                 'default_email', 
                 'default_phone_number', 
@@ -58,3 +58,22 @@ class UserCustomizedProfileForm(forms.ModelForm):
                 'maxlength': '500',
             }),
         }
+
+
+class UserCustomizedavatarForm(forms.ModelForm):
+        class Meta:
+            model = UserProfile
+            exclude = (
+                'user',
+                'bio',
+                'default_full_name', 
+                'default_email', 
+                'default_phone_number', 
+                'default_postcode',
+                'default_town_or_city',
+                'default_street_address1',
+                'default_street_address2',
+                'default_county',
+                'default_country',
+            )
+

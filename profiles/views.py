@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
-from .forms import UserCustomizedProfileForm
+from .forms import UserCustomizedBioForm
+from .forms import UserCustomizedavatarForm
 
 from checkout.models import Order
 
@@ -12,8 +13,9 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    customForm = UserCustomizedProfileForm(request.POST, instance=profile)
+    customAvatarForm = UserCustomizedavatarForm(request.POST, instance=profile)
     
+    # Details and shipping information form
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -25,10 +27,20 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    # Edit Bio form
+    if request.method == 'POST':
+        customBioForm = UserCustomizedBioForm(request.POST, instance=profile)
+        if customBioForm.is_valid():
+            customBioForm.save()
+            messages.success(request, 'Your bio has been successfully updated')
+    else:
+        customBioForm = UserCustomizedBioForm(instance=profile)
+
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'customForm': customForm,
+        'customBioForm': customBioForm,
+        'customAvatarForm': customAvatarForm,
         'orders': orders,
         'profile': profile,
         'on_profile_page': True
