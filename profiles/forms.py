@@ -35,12 +35,11 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].label = False
 
 
-class UserCustomizedBioForm(forms.ModelForm):
+class UserCustomizedForm(forms.ModelForm):
         class Meta:
             model = UserProfile
             exclude = (
                 'user',
-                'avatar',
                 'default_full_name', 
                 'default_email', 
                 'default_phone_number', 
@@ -59,21 +58,4 @@ class UserCustomizedBioForm(forms.ModelForm):
             }),
         }
 
-
-class UserCustomizedavatarForm(forms.ModelForm):
-        class Meta:
-            model = UserProfile
-            exclude = (
-                'user',
-                'bio',
-                'default_full_name', 
-                'default_email', 
-                'default_phone_number', 
-                'default_postcode',
-                'default_town_or_city',
-                'default_street_address1',
-                'default_street_address2',
-                'default_county',
-                'default_country',
-            )
 

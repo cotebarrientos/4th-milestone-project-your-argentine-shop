@@ -2,9 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
-from .forms import UserProfileForm
-from .forms import UserCustomizedBioForm
-from .forms import UserCustomizedavatarForm
+from .forms import UserProfileForm, UserCustomizedForm
 
 from checkout.models import Order
 
@@ -12,35 +10,27 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
+
     profile = get_object_or_404(UserProfile, user=request.user)
-    customAvatarForm = UserCustomizedavatarForm(request.POST, instance=profile)
     
-    # Details and shipping information form
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
+        customForm = UserCustomizedForm(request.POST or None, request.FILES, instance=profile)
+        if form.is_valid() or customForm.is_valid():
             form.save()
+            customForm.save()
             messages.success(request, 'Profile updated successfully')
         else:
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
+        customForm = UserCustomizedForm(instance=profile)
     orders = profile.orders.all()
-
-    # Edit Bio form
-    if request.method == 'POST':
-        customBioForm = UserCustomizedBioForm(request.POST, instance=profile)
-        if customBioForm.is_valid():
-            customBioForm.save()
-            messages.success(request, 'Your bio has been successfully updated')
-    else:
-        customBioForm = UserCustomizedBioForm(instance=profile)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'customBioForm': customBioForm,
-        'customAvatarForm': customAvatarForm,
+        'customForm':customForm,
         'orders': orders,
         'profile': profile,
         'on_profile_page': True
