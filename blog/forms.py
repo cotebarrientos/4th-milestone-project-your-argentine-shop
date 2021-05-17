@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInputForPostImage
-from .models import Post
+from .models import Post, Comment
 
 
 class BlogPostForm(forms.ModelForm):
@@ -16,3 +16,22 @@ class BlogPostForm(forms.ModelForm):
         
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'body')
+        widgets = {
+            'body' : forms.Textarea(attrs={
+                'rows': '6',
+                'cols': '90',
+                'maxlength': '1000',
+            }),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'        

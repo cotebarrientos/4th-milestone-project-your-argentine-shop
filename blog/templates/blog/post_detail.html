@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <!-- Blog Post Section -->
+    <section class="container">
         <div class="row">
             <div class="col-12">
                 <hr>
@@ -51,7 +52,50 @@
                 {% endif %}                   
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <h3>{{ comments.count }} comments</h3>
+            </div>
+            <div class="col-12 card mb-4  mt-3 ">
+                <div class="card-body">
+                    <!-- comments -->
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                            </span>
+                        </p>
+                        <p class="text-justify">
+                            {{ comment.body }}
+                        </p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-12 card mb-4  mt-3 ">
+                <div class="card-body">
+                    {% if new_comment %}
+                    <div class="alert alert-success" role="alert">
+                    Your comment is awaiting moderation
+                    </div>
+                    {% else %}
+                    <h3>Leave a comment</h3>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form|crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Delete Button Modal -->
 
