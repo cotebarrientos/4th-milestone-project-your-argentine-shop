@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-center text-uppercase mb-4">Reviews</h2>
+                <h5 class="text-muted text-center">
+                    We love to hear what our customers have to say! That's a way of you to get to know our products and service and for us to improve.
+                </h5>
+                <hr class="mb-5">
+            </div>
+        </div>
+        {{reviews}}
+        {{review_form|crispy}}
+    </div>
+
+
+{% endblock %}

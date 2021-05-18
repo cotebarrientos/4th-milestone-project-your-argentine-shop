@@ -58,7 +58,7 @@
     <section class="container">
         <div class="row">
             <div class="col-12 ">
-                <h3>{{ comments.count }} comments</h3>
+                <h4>({{ comments.count }}) comments</h4>
             </div>
             <div class="col-12 card">
                 <div class="card-body">
@@ -104,12 +104,13 @@
                     {% else %}
                     <h3>Leave a comment</h3>
                     <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form|crispy }}
                         {% csrf_token %}
+                        {{ comment_form|crispy }}
                         {% if request.user.is_authenticated %}
                         <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
                         {% else %}
                         <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase" disabled>Submit</button>
+                        <p class="text-danger">Sorry, but you must be <strong>logged in</strong> to comment this post.</p>
                         {% endif %}
                     </form>
                     {% endif %}
