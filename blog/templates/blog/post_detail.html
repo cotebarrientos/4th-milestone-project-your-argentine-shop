@@ -60,25 +60,42 @@
             <div class="col-12 ">
                 <h3>{{ comments.count }} comments</h3>
             </div>
-            <div class="col-12 card mb-4  mt-3 ">
+            <div class="col-12 card">
                 <div class="card-body">
+                    {% if not post.comments.all %}
+                        <p class="text-muted">No comments yet! <i class="far fa-frown"></i>...</p>
+                    {% else %}
                     <!-- comments -->
-                    {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            {{ comment.name }}
-                            <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                            </span>
-                        </p>
-                        <p class="text-justify">
-                            {{ comment.body }}
-                        </p>
-                    </div>
-                    {% endfor %}
+                        {% for comment in comments %}
+                        <div class="col-12">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    {% if comment.user.userprofile.avatar %}
+                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ comment.user.userprofile.avatar }}">
+                                    {% else %}
+                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}no_avatar_image.jpg">
+                                    {% endif %}
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="font-weight-bold text-left mx-auto my-auto">
+                                        {{ comment.name }}
+                                    </p>
+                                    <small class="text-muted text-left mx-auto my-auto">
+                                        {{ comment.created_on }}
+                                    </small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-justify">
+                                {{ comment.body }}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-12 card mb-4  mt-3 ">
+            <div class="col-12 card mb-4 mt-3 ">
                 <div class="card-body">
                     {% if new_comment %}
                     <div class="alert alert-success" role="alert">
@@ -89,7 +106,11 @@
                     <form method="post" style="margin-top: 1.3em;">
                         {{ comment_form|crispy }}
                         {% csrf_token %}
+                        {% if request.user.is_authenticated %}
                         <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
+                        {% else %}
+                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase" disabled>Submit</button>
+                        {% endif %}
                     </form>
                     {% endif %}
                 </div>

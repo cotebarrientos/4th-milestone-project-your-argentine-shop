@@ -21,11 +21,12 @@ class BlogPostForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('name', 'body')
+        fields = ('name', 'email', 'body')
         widgets = {
             'body' : forms.Textarea(attrs={
                 'rows': '6',
                 'cols': '90',
+                'placeholder': 'Comment here...',
                 'maxlength': '1000',
             }),
         }

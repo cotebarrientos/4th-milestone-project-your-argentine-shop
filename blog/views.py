@@ -19,20 +19,26 @@ def post_detail(request, post_id):
     """ A view to show individual blog post details with its comments"""
 
     post = get_object_or_404(Post, pk=post_id)
-    comments = post.comments.filter(active=True)
+    comments = post.comments.filter(active=True, post=post).order_by('-id')
     new_comment = None
 
     # Comment posted
-    # Code from https://djangocentral.com/creating-comments-system-with-django/
+    # Code based and modified from https://djangocentral.com/creating-comments-system-with-django/
     if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
+        comment_form = CommentForm(data=request.POST or None)
         if comment_form.is_valid():
 
-            # Create Comment object but don't save to database yet
-            new_comment = comment_form.save(commit=False)
-            # Assign the current post to the comment
-            new_comment.post = post
-            # Save the comment to the database
+            name = request.POST.get( 'name')
+            email = request.POST.get( 'email')
+            body = request.POST.get( 'body')
+            new_comment = Comment.objects.create(
+                post=post, 
+                user=request.user, 
+                name=name, 
+                email=email,
+                body=body
+             )
+             
             new_comment.save()
     else:
         comment_form = CommentForm()
