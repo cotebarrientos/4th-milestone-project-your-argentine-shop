@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'reviews/css/review.css' %}">
+{% endblock %}
 
 {% block content %}
 
-    <div class="container">
+    <!-- Image cover -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12 pl-0 pr-0">
+                <img class="d-block w-100" alt="Customer Reviews" src="/media/rating_reviews.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
         <div class="row">
             <div class="col">
                 <hr>
@@ -14,9 +26,85 @@
                 <hr class="mb-5">
             </div>
         </div>
-        {{reviews}}
-        {{review_form|crispy}}
-    </div>
+        <div class="row">
+            <div class="col-12">
+                <h6 class="text-muted text-uppercase">({{ reviews.count }}) comments</h6>
+            </div>
+        </div>
+        <div class="col-12 card mb-4">
+            <div class="card-body">
+                {% if not reviews.all %}
+                <p class="text-muted">No comments yet! <i class="far fa-frown"></i>...</p>
+                {% else %}
+            <!-- Customer Reviews -->
+                {% for review in reviews %}
+                <div class="col-12">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            {% if review.user.userprofile.avatar %}
+                            <img class="review-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ review.user.userprofile.avatar }}">
+                            {% else %}
+                            <img class="review-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}no_avatar_image.jpg">
+                            {% endif %}
+                        </li>
+                        <li class="list-inline-item">
+                            <p class="font-weight-bold text-left mx-auto my-auto">
+                                {{ review.name }}
+                            </p>
+                            <small class="text-muted text-left mx-auto my-auto">
+                                {{ review.created_on }}
+                            </small>
+                            <p>
+                            {% if review.rating == 1 %}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            {%endif%}
+                            {% if review.rating == 2 %}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            {%endif%}
+                            {% if review.rating == 3 %}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            {%endif%}
+                            {% if review.rating == 4 %}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            {%endif%}
+                            {% if review.rating == 5 %}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            {%endif%}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <p class="text-justify">
+                        {{ review.comment }}
+                    </p>
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+        <!-- {{review_form|crispy}} -->
+    </section>
 
 
 {% endblock %}
