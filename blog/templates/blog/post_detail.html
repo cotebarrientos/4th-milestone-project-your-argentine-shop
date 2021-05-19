@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <!-- Blog Post Section -->
+    <section class="container">
         <div class="row">
             <div class="col-12">
                 <hr>
@@ -51,7 +52,72 @@
                 {% endif %}                   
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <h4>({{ comments.count }}) comments</h4>
+            </div>
+            <div class="col-12 card">
+                <div class="card-body">
+                    {% if not post.comments.all %}
+                        <p class="text-muted">No comments yet! <i class="far fa-frown"></i>...</p>
+                    {% else %}
+                    <!-- comments -->
+                        {% for comment in comments %}
+                        <div class="col-12">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    {% if comment.user.userprofile.avatar %}
+                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ comment.user.userprofile.avatar }}">
+                                    {% else %}
+                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}no_avatar_image.jpg">
+                                    {% endif %}
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="font-weight-bold text-left mx-auto my-auto">
+                                        {{ comment.name }}
+                                    </p>
+                                    <small class="text-muted text-left mx-auto my-auto">
+                                        {{ comment.created_on }}
+                                    </small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-justify">
+                                {{ comment.body }}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 card mb-4 mt-3 ">
+                <div class="card-body">
+                    {% if new_comment %}
+                    <div class="alert alert-success" role="alert">
+                    Your comment is awaiting moderation
+                    </div>
+                    {% else %}
+                    <h3>Leave a comment</h3>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {% csrf_token %}
+                        {{ comment_form|crispy }}
+                        {% if request.user.is_authenticated %}
+                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
+                        {% else %}
+                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase" disabled>Submit</button>
+                        <p class="text-danger">Sorry, but you must be <strong>logged in</strong> to comment this post.</p>
+                        {% endif %}
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Delete Button Modal -->
 

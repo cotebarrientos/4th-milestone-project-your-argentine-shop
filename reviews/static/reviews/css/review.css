@@ -1,0 +1,9 @@
+.review-pic {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.checked {
+    color: #317ece;
+}

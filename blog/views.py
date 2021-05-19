@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Post
-from .forms import BlogPostForm
+from .models import Post, Comment
+from .forms import BlogPostForm, CommentForm
 
 
 def post_list(request):
@@ -16,12 +16,39 @@ def post_list(request):
     return render(request, template, context)
 
 def post_detail(request, post_id):
-    """ A view to show individual blog post details """
+    """ A view to show individual blog post details with its comments"""
 
     post = get_object_or_404(Post, pk=post_id)
+    comments = post.comments.filter(active=True, post=post).order_by('-id')
+    new_comment = None
+
+    # Comment posted
+    # Code based and modified from https://djangocentral.com/creating-comments-system-with-django/
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST or None)
+        if comment_form.is_valid():
+
+            name = request.POST.get( 'name')
+            email = request.POST.get( 'email')
+            body = request.POST.get( 'body')
+            new_comment = Comment.objects.create(
+                post=post, 
+                user=request.user, 
+                name=name, 
+                email=email,
+                body=body
+             )
+             
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
     template = 'blog/post_detail.html'
     context = {
         'post': post,
+        'comments':comments,
+        'comment_form':comment_form,
+        'new_comment':new_comment,
     }
 
     return render(request, template, context)
