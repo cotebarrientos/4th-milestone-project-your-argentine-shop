@@ -9,12 +9,10 @@ def review(request):
     """ A view to show all review comments"""
 
     reviews = Review.objects.filter(active=True).order_by('-created_on')
-    review_form = ReviewCommentForm(data=request.POST or None)
 
     template = 'reviews/review.html'
     context = {
         'reviews': reviews,
-        'review_form': review_form,
     }
     return render(request, template, context)
 

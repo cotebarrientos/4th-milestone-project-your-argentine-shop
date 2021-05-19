@@ -14,13 +14,10 @@ class ReviewCommentForm(forms.ModelForm):
                 'placeholder': 'Comment your review here...',
                 'maxlength': '1000',
             }),
-            'rating' : forms.Select(attrs={
-                'placeholder': 'Select Rating',
-            })
         }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'    
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'  
