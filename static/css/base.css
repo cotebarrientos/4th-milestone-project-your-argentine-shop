@@ -262,7 +262,8 @@ a.category-badge > span.badge:hover {
     font-size: 3.75rem;
 }
 
-#no-results img {
+#no-results img,
+#no-shopping-cart-items img {
     width: 500px;
     display: block;
     margin: 0 auto;

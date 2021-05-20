@@ -117,13 +117,19 @@
                     </div> 
 
                 {% else %}
-                    <p class="lead mb-5">Your Shopping Cart is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Continue Shopping</span>
-                    </a>
+                    <div id="no-shopping-cart-items" class="col-12 text-center mx-auto my-auto">
+                        <img src="/media/empty_cart.png" class="img-fluid" alt="Ups, no results"/>
+                        <p class="lead mb-3"><strong>Shopping Cart is empty.</strong></p>
+                        <p class="text-muted">Looks like you have no items in your shopping cart.</p>
+                        <hr class="mb-4">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Continue Shopping</span>
+                        </a>
+                    </div>
+
                 {% endif %}
             </div>
         </div>
