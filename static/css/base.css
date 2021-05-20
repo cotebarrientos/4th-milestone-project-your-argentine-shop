@@ -3,6 +3,13 @@ html {
   margin: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 /* Header and Footer */
