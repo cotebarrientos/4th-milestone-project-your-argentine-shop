@@ -3,6 +3,13 @@ html {
   margin: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 /* Header and Footer */
@@ -255,7 +262,8 @@ a.category-badge > span.badge:hover {
     font-size: 3.75rem;
 }
 
-#no-results img {
+#no-results img,
+#no-shopping-cart-items img {
     width: 500px;
     display: block;
     margin: 0 auto;

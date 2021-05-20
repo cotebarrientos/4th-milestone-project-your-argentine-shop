@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import ProfileClearableFileInput
 from .models import UserProfile
 
 
@@ -58,4 +59,10 @@ class UserCustomizedForm(forms.ModelForm):
             }),
         }
 
+        avatar = forms.ImageField(label='Image', required=False, widget=ProfileClearableFileInput)
 
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            
+            for field in self.fields:
+                self.fields[field].widget.attrs['class'] = 'border-black rounded-0' 
