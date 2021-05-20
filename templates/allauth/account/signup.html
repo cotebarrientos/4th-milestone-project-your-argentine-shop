@@ -15,7 +15,7 @@
   {{ form|crispy }}
   <p class="text-justify">
     Your personal will be used to support your experience throughout this website, to manage access to your account,
-    and other purposes described in our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+    and other purposes described in our <a href="#">Privacy Policy</a> and <a href="{% url 'terms_of_service' %}">Terms of Service</a>.
   </p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
