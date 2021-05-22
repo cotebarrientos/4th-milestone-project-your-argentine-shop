@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Image cover -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12 pl-0 pr-0">
+                <img class="d-block w-100" alt="Contact page" src="/media/contact_page.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-center text-uppercase mb-4">Contact</h2>
+                <h5 class="text-muted text-center">
+                    Contact us directly if you have any questions
+                </h5>
+                <hr class="mb-5">
+                <p class="text-justify">
+                    Please write your name, email address and a message below if you have any questions.
+                    One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
+                </p>
+                {{contact_form|crispy}}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

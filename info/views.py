@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from django.conf import settings
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.core.mail import send_mail, BadHeaderError
+from .forms import ContactForm
+
+
 
 def terms_of_service(request):
      """ A view to return the terms of service of the website"""
@@ -28,3 +34,15 @@ def shipping (request):
     """ A view to return the Shipping page""" 
 
     return render(request,'info/shipping.html')
+
+
+def contact (request):
+    """ A view to return the Contact page"""
+
+    contact_form = ContactForm()
+    template = 'info/contact.html'
+    context = {
+         'contact_form': contact_form
+    }
+
+    return render(request, template, context)
