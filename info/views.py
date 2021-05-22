@@ -16,3 +16,9 @@ def refund_policy (request):
     """ A view to return the refund policy of the website""" 
 
     return render(request,'info/refund_policy.html')
+
+
+def about_us (request):
+    """ A view to return the About Us page""" 
+
+    return render(request,'info/about_us.html')
