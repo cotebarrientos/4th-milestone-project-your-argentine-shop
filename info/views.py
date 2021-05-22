@@ -22,3 +22,9 @@ def about_us (request):
     """ A view to return the About Us page""" 
 
     return render(request,'info/about_us.html')
+
+
+def shipping (request):
+    """ A view to return the Shipping page""" 
+
+    return render(request,'info/shipping.html')

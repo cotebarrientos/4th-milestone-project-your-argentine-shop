@@ -6,4 +6,5 @@ urlpatterns = [
     path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
     path('refund_policy/', views.refund_policy, name='refund_policy'),
     path('about_us/', views.about_us, name='about_us'),
+    path('shipping/', views.shipping, name='shipping'),
 ]
