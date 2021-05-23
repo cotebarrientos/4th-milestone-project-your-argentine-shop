@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Image cover -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12 pl-0 pr-0">
+                <img class="d-block w-100" alt="Shipping information" src="/media/shipping_info.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-center text-uppercase mb-4">Shipping</h2>
+                <hr class="mb-5">
+                <p class="text-justify">
+                    We've carefully worked our shipping prices out in order to offer you the best prices for the amount of products you're buying. We recommend 
+                    you to include as much products as you can in one delivery, it will cost you less money! The more you buy, the less you pay for shipping 
+                    per item.
+                </p>
+                <p class="text-justify">
+                    If you place an order before midday, we aim to process and dispatch it on the same day, if not, next working day. As orders are too large for 
+                    a standard letterbox, someone needs to be present to receive the parcel. If your order is shipped by <strong>An Post</strong>, delivery will 
+                    be attempted once, and if no one is in, they'll leave a note and it is your responsibility to collect it from the post office as instructed 
+                    in the note.
+                </p>
+                <h5 class="text-center text-uppercase pt-2 pb-3">Ireland and UK Shipping</h5>
+                <p class="text-justify">
+                    All our orders are shipped with <strong>An Post</strong>, and once dispatched will take 1-2 working days to arrive into Republic of Ireland, and 
+                    2-4 working days into UK.
+                </p>
+                <p class="text-justify">
+                    If you spend more than <strong>60 euros </strong>on products from our online store, <strong>the delivery of your order will be free of charge</strong>.
+                </p>
+                <p class="text-justify">
+                    Please note that we use third-party companies for shipping and delivery dates we provide are the ones they provide us. Once we've dispatched a 
+                    package, it's on them to deliver it on time. We will provide you with assistance on delivery dates, address change and refunds in case the parcel 
+                    doesn't arrive on time, gets lost or is damaged. 
+                </p>
+                <p class="text-justify">
+                    A parcel is considered lost by the couriers after 20 working days of the dispatched day. If that time has passed and it hasn't been shipped, we 
+                    will send it again free of charge.
+                </p>
+                <p class="text-justify">
+                    Even though it is not our duty to deliver parcels, we understand you want your order to arrive as soon as possible, so if it hasn't arrive after 10 
+                    working days, we will refund the cost of the shipping while we wait for it to arrive.
+                </p>
+                <p class="text-justify">
+                    To find more information regarding returns and refunds, please see our <a href="{% url 'refund_policy' %}" target="_blank">refund policy</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+#box-contact {
+    background-color: #cae1ec;
+    min-height: 5rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.25rem;
+    color: #001c40;
+    font-family: 'Oswald', sans-serif;
+}
+
+#box-contact li i {
+    font-size: 3.75rem;
+}
