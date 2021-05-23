@@ -1,0 +1,12 @@
+Hello Your Argentine Shop
+
+You received a message from {{name}}
+
+Email contact: {{email}}
+
+Message:
+
+"{{message}}"
+
+Remember to answer this message within 48 hours.
+

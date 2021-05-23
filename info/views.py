@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import HttpResponse
 from django.contrib import messages
+from django.template.loader import render_to_string
 from django.core.mail import send_mail, BadHeaderError
 from .forms import ContactForm
 
@@ -37,9 +39,40 @@ def shipping (request):
 
 
 def contact (request):
-    """ A view to return the Contact page"""
+    """ A view to return the Contact page and contact form"""
 
-    contact_form = ContactForm()
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            subject = contact_form.cleaned_data['subject'] 
+            body = {
+                'name': contact_form.cleaned_data['name'], 
+                'email': contact_form.cleaned_data['email_address'], 
+                'message':contact_form.cleaned_data['message'], 
+			}
+
+            message = render_to_string('info/email/contact_email.txt', body)
+
+            try:
+                send_mail(
+                    subject,
+                    message,
+                    settings.DEFAULT_FROM_EMAIL, 
+                    [settings.DEFAULT_FROM_EMAIL],) 
+			
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.') 
+
+            messages.success(
+                request,
+                """Your message was successfully sent. 
+                All email enquiries will be answered within 48 hours. 
+                Thank you very much!""")
+                
+            return redirect('home')
+    else:
+        contact_form = ContactForm()
+
     template = 'info/contact.html'
     context = {
          'contact_form': contact_form
