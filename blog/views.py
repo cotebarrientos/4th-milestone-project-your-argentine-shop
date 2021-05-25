@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import Post, Comment
 from profiles.models import UserProfile
 from .forms import BlogPostForm, CommentForm
@@ -67,13 +67,9 @@ def post_detail(request, post_id):
 
     return render(request, template, context)
 
-@login_required
+@staff_member_required
 def add_post(request):
     """ Add a post to the blog page """
-
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES)
@@ -93,12 +89,9 @@ def add_post(request):
 
     return render(request, template, context)
 
-@login_required
+@staff_member_required
 def edit_post(request, post_id):
     """ Edit a post in the blog page """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)
     if request.method == 'POST':
@@ -121,12 +114,9 @@ def edit_post(request, post_id):
 
     return render(request, template, context)
 
-@login_required
+@staff_member_required
 def delete_post(request, post_id):
     """ Delete a post from the blog page """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
