@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Review
+from profiles.models import UserProfile
 from .forms import ReviewCommentForm
 
 
@@ -41,6 +42,17 @@ def write_review (request):
             return redirect(reverse('review'))
         else:
             messages.error(request, 'Failed to add your review. Please ensure the form is valid.')
+    else:
+        review_form = ReviewCommentForm()
+
+    # Attempt to pre-fill the review form with the information that the user 
+    # maintains in his/her profile.
+    if request.user.is_authenticated:
+            profile = UserProfile.objects.get(user=request.user)
+            review_form = ReviewCommentForm(initial={
+                'name': profile.default_full_name,
+                'email': profile.user.email,
+            })
     else:
         review_form = ReviewCommentForm()
 
