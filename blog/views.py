@@ -2,7 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
+from profiles.models import UserProfile
 from .forms import BlogPostForm, CommentForm
+
 
 
 def post_list(request):
@@ -23,7 +25,8 @@ def post_detail(request, post_id):
     new_comment = None
 
     # Comment posted
-    # Code based and modified from https://djangocentral.com/creating-comments-system-with-django/
+    # Code based and modified from 
+    # https://djangocentral.com/creating-comments-system-with-django/
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST or None)
         if comment_form.is_valid():
@@ -40,6 +43,17 @@ def post_detail(request, post_id):
              )
              
             new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    # Attempt to pre-fill the comment form with the information that the user 
+    # maintains in his/her profile.
+    if request.user.is_authenticated:
+            profile = UserProfile.objects.get(user=request.user)
+            comment_form = CommentForm(initial={
+                'name': profile.default_full_name,
+                'email': profile.user.email,
+            })
     else:
         comment_form = CommentForm()
 

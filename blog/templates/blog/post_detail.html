@@ -21,7 +21,9 @@
         <div class="row">
             <div class="col-12">
                 <p class="text-justify mt-4 mb-4">{{ post.content |safe }}</p>
-                <p class="font-italic text-secondary mb-2 text-center"><i class="fas fa-user mr-2"></i><strong>Created by:</strong> {{ post.author }}</p>
+                <p class="font-italic text-secondary mb-2 text-center">
+                    <i class="fas fa-user mr-2"></i><strong>Created by:</strong> {{ post.author }}
+                </p>
             </div>
             <div class="col-12 mb-5 mt-4 text-center">             
                 <a class="btn btn-outline-black rounded-0 mb-3 mt-3" href="{% url 'blog' %}">
@@ -65,6 +67,7 @@
                     {% if not post.comments.all %}
                         <p class="text-muted">No comments yet! <i class="far fa-frown"></i>...</p>
                     {% else %}
+
                     <!-- comments -->
                         {% for comment in comments %}
                         <div class="col-12">
@@ -90,32 +93,49 @@
                             <p class="text-justify">
                                 {{ comment.body }}
                             </p>
+                            <hr>
                         </div>
                         {% endfor %}
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 card mb-4 mt-3 ">
-                <div class="card-body">
-                    {% if new_comment %}
-                    <div class="alert alert-success" role="alert">
-                    Your comment is awaiting moderation
-                    </div>
-                    {% else %}
-                    <h3>Leave a comment</h3>
-                    <form method="post" style="margin-top: 1.3em;">
-                        {% csrf_token %}
-                        {{ comment_form|crispy }}
-                        {% if request.user.is_authenticated %}
-                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
+
+            <!-- Comment form -->
+            <!-- It will display when the user is logged only -->
+            {% if request.user.is_authenticated %}
+                <div class="col-12 card mb-4 mt-3 ">
+                    <div class="card-body">
+                        {% if new_comment %}
+                        <div class="alert alert-success" role="alert">
+                        Your comment is awaiting moderation
+                        </div>
                         {% else %}
-                        <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase" disabled>Submit</button>
-                        <p class="text-danger">Sorry, but you must be <strong>logged in</strong> to comment this post.</p>
+                        <h3>Leave a comment</h3>
+                        <form method="post" style="margin-top: 1.3em;">
+                            {% csrf_token %}
+                            {{ comment_form|crispy }}
+                            <button type="submit" class="btn btn-black rounded-0 mb-3 mt-3 text-uppercase">Submit</button>
+                        </form>
                         {% endif %}
-                    </form>
-                    {% endif %}
+                    </div>
                 </div>
-            </div>
+
+            {% else %}
+            <!-- Message when a user is not logged -->
+                <div class="col-12 card mb-5 mt-5 pt-2 ">
+                    <div class="card-body">
+                        <p class="lead text-justify">
+                            <span class="icon mr-2">
+                                <i class="fab fa-angellist"></i>
+                            </span>
+                            Would you like to <strong>leave a comment</strong> on this post? We invite you to 
+                            <a class="text-info" href="{% url 'account_login' %}">log in here</a>, 
+                            and if you don't have an account with us yet you can register by
+                            <a class="text-info" href="{% url 'account_signup' %}">clicking here</a>.
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </section>
 
