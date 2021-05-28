@@ -11,13 +11,19 @@ class ReviewCommentForm(forms.ModelForm):
             'comment' : forms.Textarea(attrs={
                 'rows': '6',
                 'cols': '90',
-                'placeholder': 'Comment your review here...',
+                'placeholder': 'Comment your review here, no more than 1000 characters.',
                 'maxlength': '1000',
             }),
         }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Overwrite the field labels into the Reviews Form
+        self.fields['name'].label = "Your Name "
+        self.fields['email'].label = "Your Email "
+        self.fields['comment'].label = "Your Comment "
+        self.fields['rating'].label = "Your Rating "
         
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'  
