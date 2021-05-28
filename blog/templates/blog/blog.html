@@ -30,7 +30,7 @@
                         <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
                     {% endif %}
                     <hr> 
-                    <p class="lead text-justify text-secondary mt-3 mb-5">{{ post.snippet|truncatewords:30 }}</p>
+                    <p class="lead text-justify text-secondary mt-3 mb-5">{{ post.snippet|truncatechars:190}}</p>
                     <p class="text-center"><a href="{% url 'post_detail' post.id %}"  class="btn btn-secondary rounded-1 mb-4 text-uppercase">
                         <span class="text-uppercase">Read more</span> 
                         <span class="icon ml-2">

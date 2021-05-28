@@ -13,6 +13,17 @@ class BlogPostForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Add placeholders into the Blog Form
+        self.fields['title'].widget.attrs['placeholder'] = 'Write the title here, no more than 200 characters. e.g. Blog Post Title'
+        self.fields['slug'].widget.attrs['placeholder'] = 'Write the slug here, no more than 200 characters. e.g. blog-post-title'
+
+        # Overwrite the field labels into the Blog Form
+        self.fields['title'].label = "Title "
+        self.fields['slug'].label = "Slug "
+        self.fields['author'].label = "Author "
+        self.fields['snippet'].label = "Snippet "
+        self.fields['status'].label = "Status "
         
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
@@ -33,6 +44,11 @@ class CommentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Overwrite the field labels into the Comment Form
+        self.fields['name'].label = "Your Name "
+        self.fields['email'].label = "Your Email "
+        self.fields['body'].label = "Your Comment "
         
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'        

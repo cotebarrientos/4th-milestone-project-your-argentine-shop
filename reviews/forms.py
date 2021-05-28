@@ -18,6 +18,12 @@ class ReviewCommentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Overwrite the field labels into the Reviews Form
+        self.fields['name'].label = "Your Name "
+        self.fields['email'].label = "Your Email "
+        self.fields['comment'].label = "Your Comment "
+        self.fields['rating'].label = "Your Rating "
         
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'  
