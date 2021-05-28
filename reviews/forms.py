@@ -11,7 +11,7 @@ class ReviewCommentForm(forms.ModelForm):
             'comment' : forms.Textarea(attrs={
                 'rows': '6',
                 'cols': '90',
-                'placeholder': 'Comment your review here...',
+                'placeholder': 'Comment your review here, no more than 1000 characters.',
                 'maxlength': '1000',
             }),
         }

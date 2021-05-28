@@ -51,7 +51,7 @@ def post_detail(request, post_id):
     if request.user.is_authenticated:
             profile = UserProfile.objects.get(user=request.user)
             comment_form = CommentForm(initial={
-                'name': profile.default_full_name,
+                'name': profile.user.get_full_name(),
                 'email': profile.user.email,
             })
     else:

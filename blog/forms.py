@@ -26,7 +26,7 @@ class CommentForm(forms.ModelForm):
             'body' : forms.Textarea(attrs={
                 'rows': '6',
                 'cols': '90',
-                'placeholder': 'Comment here...',
+                'placeholder': 'Comment here, no more than 1000 characters.',
                 'maxlength': '1000',
             }),
         }

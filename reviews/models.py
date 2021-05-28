@@ -15,7 +15,7 @@ class Review(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()
     comment = models.TextField(max_length=1000)
-    rating = models.IntegerField(choices=RATING_RANGE)
+    rating = models.IntegerField(choices=RATING_RANGE, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
 

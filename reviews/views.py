@@ -50,7 +50,7 @@ def write_review (request):
     if request.user.is_authenticated:
             profile = UserProfile.objects.get(user=request.user)
             review_form = ReviewCommentForm(initial={
-                'name': profile.default_full_name,
+                'name': profile.user.get_full_name(),
                 'email': profile.user.email,
             })
     else:
