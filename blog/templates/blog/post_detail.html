@@ -14,7 +14,12 @@
                 <h2 class="text-center text-uppercase mb-4">{{ post.title }}</h2>
                 <hr>
                 <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
-                <img  class="img-fluid d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
+                {% if post.image%}
+                    <img  class="img-fluid d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
+                {% else %}
+                    <img class="img-fluid d-block mx-auto my-auto" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
+                {% endif %}
+                
             </div>
         </div>
         <hr>
@@ -74,9 +79,9 @@
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     {% if comment.user.userprofile.avatar %}
-                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ comment.user.userprofile.avatar }}">
+                                        <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ comment.user.userprofile.avatar }}" alt="Comment image">
                                     {% else %}
-                                    <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}no_avatar_image.jpg">
+                                        <img class="comment-pic d-block mx-auto my-auto" src="{{ MEDIA_URL }}no_avatar_image.jpg" alt="comment image">
                                     {% endif %}
                                 </li>
                                 <li class="list-inline-item">

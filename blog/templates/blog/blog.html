@@ -24,7 +24,11 @@
                     <h3 class="text-uppercase text-center blog-title-color mt-4 pb-3">{{ post.title }}</h3>
                     <hr>    
                     <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
-                    <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}{{ post.image }}">
+                    {% if post.image%}
+                        <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}{{ post.image }}">
+                    {% else %}
+                        <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
+                    {% endif %}
                     <hr> 
                     <p class="lead text-justify text-secondary mt-3 mb-5">{{ post.snippet|truncatewords:30 }}</p>
                     <p class="text-center"><a href="{% url 'post_detail' post.id %}"  class="btn btn-secondary rounded-1 mb-4 text-uppercase">
