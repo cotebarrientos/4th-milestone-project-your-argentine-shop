@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from PIL import Image
 from django_countries.fields import CountryField
 from django_countries import Countries
 
@@ -27,6 +27,20 @@ class UserProfile(models.Model):
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='(Select country)', countries=shippingCountry, null=True, blank=True)
+
+
+    # Resize image avatar before submiting
+    # Code based from Lara Code YouTube Channel
+    # https://www.youtube.com/channel/UClXcbBNNhFU9ATAcXB6U7eQ
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        SIZE = 300, 300
+
+        if self.avatar:
+            pic = Image.open(self.avatar.path)
+            pic.thumbnail(SIZE, Image.LANCZOS)
+            pic.save(self.avatar.path)
 
     def __str__(self):
         return self.user.username
