@@ -24,6 +24,13 @@ class ProductForm(forms.ModelForm):
         self.fields['price'].widget.attrs['placeholder'] = '19.50'
         self.fields['weight'].widget.attrs['placeholder'] = '0.660'
 
+        # Overwrite the field labels into the Product Form
+        self.fields['name'].label = "Product Name "
+        self.fields['description'].label = "Description "
+        self.fields['price'].label = "Price "
+        self.fields['weight'].label = "Weight "
+        self.fields['weight_unit'].label = "Weight Unit "
+
         # Categories
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
