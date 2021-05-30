@@ -18,6 +18,18 @@ class ContactForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        # Add placeholders
+        self.fields['name'].widget.attrs['placeholder'] = 'Write your name here...'
+        self.fields['email_address'].widget.attrs['placeholder'] = 'Write your email address here...'
+        self.fields['subject'].widget.attrs['placeholder'] = 'Write here, no more than 250 characters'
+        self.fields['message'].widget.attrs['placeholder'] = 'Write your message here, no more than 1000 characters.'
+
+        # Overwrite the field labels into the Contact Form
+        self.fields['name'].label = "Full Name "
+        self.fields['email_address'].label = "Email Address "
+        self.fields['subject'].label = "Subject "
+        self.fields['message'].label = "Message "
             
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0'  

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.template.loader import render_to_string
 from django.core.mail import send_mail, BadHeaderError
+from profiles.models import UserProfile
 from .forms import ContactForm
 
 
@@ -70,6 +71,20 @@ def contact (request):
                 Thank you very much!""")
                 
             return redirect('home')
+    else:
+        contact_form = ContactForm()
+
+    # Attempt to prefill the Contact form if a user is logged
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            contact_form = ContactForm(initial={
+                'name': profile.user.get_full_name(),
+                'email_address': profile.user.email,
+            })
+        except UserProfile.DoesNotExist:
+            contact_form = ContactForm()
+
     else:
         contact_form = ContactForm()
 
