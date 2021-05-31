@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="/media/favicon.png"> 
+        <link rel="shortcut icon" type="image/png" href="https://your-argentine-shop.s3-eu-west-1.amazonaws.com/media/favicon.png"> 
         {% endblock %}
 
     {% block extra_css %}
@@ -79,7 +79,7 @@
         <!-- Website logo -->
         <div class="col-12 col-lg-4 my-auto py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <img id="website-logo" src="/media/logo_project_transparent.png" alt="logo">
+            <img id="website-logo" src="{{ MEDIA_URL }}logo_project_transparent.png" alt="logo">
           </a>
         </div>
         <!-- Search bar -->
