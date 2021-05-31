@@ -32,15 +32,15 @@ class UserProfile(models.Model):
     # Resize image avatar before submiting
     # Code based from Lara Code YouTube Channel
     # https://www.youtube.com/channel/UClXcbBNNhFU9ATAcXB6U7eQ
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
 
-        SIZE = 300, 300
+    #     SIZE = 300, 300
 
-        if self.avatar:
-            pic = Image.open(self.avatar.path)
-            pic.thumbnail(SIZE, Image.LANCZOS)
-            pic.save(self.avatar.path)
+    #     if self.avatar:
+    #         pic = Image.open(self.avatar.path)
+    #         pic.thumbnail(SIZE, Image.LANCZOS)
+    #         pic.save(self.avatar.path)
 
     def __str__(self):
         return self.user.username
