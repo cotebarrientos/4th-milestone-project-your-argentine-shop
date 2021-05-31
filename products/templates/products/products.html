@@ -43,7 +43,7 @@
             </div>
             {% if products|length == 0 %}
             <div id="no-results" class="col-12  mx-auto my-auto text-center">
-                <img src="/media/no-results-found.png" class="img-fluid" alt="Ups, no results"/>
+                <img src="{{ MEDIA_URL }}no-results-found.png" class="img-fluid" alt="Ups, no results"/>
                 <h3>Sorry! No result found</h3>
                 <hr>
                 <h5 class="text-muted pb-5">We're sorry what you were looking for. Please try searching with another word</h5>
