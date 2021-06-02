@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- Page title here -->
+{% block extra_title %} | Internal Server Error{% endblock %}
+
+{% block content %}
+
+<section class="container">
+    <div class="row">
+        <div id="error-500" class="col-12  mx-auto my-auto text-center">
+            <img src="https://your-argentine-shop.s3-eu-west-1.amazonaws.com/media/error_500.png" 
+            class="img-fluid" alt="Error 500"/>
+            <h1 class="text-uppercase">oops!</h1>
+            <h2 class="text-uppercase">Error 500, something went wrong..</h2>
+            <hr>
+            <h5 class="text-muted pb-5">Sorry for the inconvenience, we're working on it.</h5>
+            <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-lg mb-5">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back to home</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %} 
