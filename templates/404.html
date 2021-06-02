@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- Page title here -->
+{% block extra_title %} | Error: Page Not Found{% endblock %}
+
+{% block content %}
+
+<section class="container">
+    <div class="row">
+        <div id="error-404" class="col-12  mx-auto my-auto text-center">
+            <img src="{{ MEDIA_URL }}error_404.png" class="img-fluid" alt="Error 404"/>
+            <h1 class="text-uppercase">oops!</h1>
+            <h2 class="text-uppercase">Error 404, page not found.</h2>
+            <hr>
+            <h5 class="text-muted pb-5">Uh oh, we can't seem to find the page you're looking for.</h5>
+            <a href="{% url 'Home' %}" class="btn btn-outline-black rounded-0 btn-lg mb-5">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back to home</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

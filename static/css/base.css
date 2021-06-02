@@ -263,6 +263,8 @@ a.category-badge > span.badge:hover {
 }
 
 #no-results img,
+#error-404 img,
+#error-500 img,
 #no-shopping-cart-items img {
     width: 500px;
     display: block;
