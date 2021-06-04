@@ -1,10 +1,15 @@
 # Your Argentine Shop
 ## Code Institute: Milestone Project 4
 
-This website aims to be a 100% **E commerce Platform**, where shoppers can buy a **wide variety of Argentine products in Ireland**, whose main purpose is to make users feel mainly of that nationality at home, offering quality products and providing a great service through a friendly user interface.
+This website aims to be a 100% **E commerce Platform**, where shoppers can buy a **wide variety of Argentine products in Ireland**, whose main purpose is to make 
+users feel of that nationality at home, offering quality products and providing a great service through a friendly user interface.
 
-This project is part of my **Code Institute Full Stack Software Development** studies, and at the same time is my last project of this, so I decided to make a website 100% E commerce with Argentine products, using all the knowledge acquired throughout this course, hoping to bring this great idea to reality in the future.
+This project is part of my **Code Institute Full Stack Software Development** studies, and at the same time is my last project of this, so I decided to make a 
+website 100% E commerce with Argentine products, using all the knowledge acquired throughout this course, hoping to bring this great idea to reality in the future.
 
+<a href="https://your-argentine-shop.herokuapp.com/" target="_blank">Click here to view the project live</a>
+
+---
 ## Contents
 
 1. [**UX**](#ux)
@@ -17,6 +22,7 @@ This project is part of my **Code Institute Full Stack Software Development** st
        * [Structure](#structure)
        * [Skeleton](#skeleton)
        * [Surface](#surface)
+    * [Wireframes](#wireframes)
 2. [**Features**](#features)
    * [Existing Features](#existing-features)
    * [Features Left to Implement](#features-left-to-implement)
@@ -28,36 +34,41 @@ This project is part of my **Code Institute Full Stack Software Development** st
     * [Media](#media)
     * [Acknowledgements](#acknowledgements)
 
+---
 ## UX
 
 ### Main Aims
 
-1. To Provide a 100% E Commerce Platform with a wide variety of Argentine products in Ireland.
-2. To make the website interactive and easy to navigate for prospective shoppers.
-3. To make the website simple to use for potential shoppers, allowing easy checkout, in which the shopper will be able to create their shopping list, review it, edit it or remove items. At the same time allow customers to shop with or without a user account.
-4. To make a platform that allows potential customers to create a user account, where they can save their data for future purchases, facilitating the purchase time.
-5. To make a website that has a good payment system, secure and bug free.
-6. To create a design that would be fully responsive on all devices and screen sizes.
+**1.** To Provide a 100% E Commerce Platform with a wide variety of Argentine products in Ireland.
+**2.** To make the website interactive and easy to navigate for prospective shoppers.
+**3.** To make the website simple to use for potential shoppers, allowing easy checkout, in which the shopper will be able to create their shopping list, 
+review it, edit it or remove items. At the same time allow customers to shop with or without a user account.
+**4.** To make a platform that allows potential customers to create a user account, where they can save their data for future purchases, facilitating the 
+purchase time.
+**5.** To make a website that has a good payment system, secure and bug free.
+**6.** To create a design that would be fully responsive on all devices and screen sizes.
 
 ### Ideal User
 
 #### The Ideal User for this website is:
 
-1. Who is Argentinean or South American and likes to consume the products offered by the website.
-2. Who lives in the Republic of Ireland.
-3. Who likes to shop online.
+**1.** Who is Argentinean or South American and likes to consume the products offered by the website.
+**2.** Who lives in the Republic of Ireland.
+**3.** Who likes to shop online.
 
 #### The Occasional User:
 
-1. Who is not Argentinean or South American, but would like to try the products offered on the web site.
+**1.** Who is not Argentinean or South American, but would like to try the products offered on the web site.
 
 #### This Project is the best way to help them achieve these things because:
 
-1. This is a great platform to buy Argentine products, because it shows the items in an orderly way and this one is simple to use.
-2. This platform allows customers to create their shopping lists, review the items within it, edit or delete them as appropriate, in an intuitive and user-friendly way.
-3. This platform allows customers to create a user account in a simple way, allowing them to save their shopping lists and personal data, resulting in less time spent making a purchase.
-4. The website contains a wide variety of products, as well as a secure payment system.
-5. The website has a beautiful design, very intuitive and easily adapts to any mobile device and screen size.
+**1.** This is a great platform to buy Argentine products, because it shows the items in an orderly way and this one is simple to use.
+**2.** This platform allows customers to create their shopping lists, review the items within it, edit or delete them as appropriate, in an intuitive 
+and user-friendly way.
+**3.** This platform allows customers to create a user account in a simple way, allowing them to save their shopping lists and personal data, resulting 
+in less time spent making a purchase.
+**4.** The website contains a wide variety of products, as well as a secure payment system.
+**5.** The website has a beautiful design, very intuitive and easily adapts to any mobile device and screen size.
 
 ### User Stories
 
@@ -71,12 +82,17 @@ This project is part of my **Code Institute Full Stack Software Development** st
 * Sort the list of available products by price.
 * Sort the list of available products by category.
 * Search for a product by name or description.
+* Be able to update or delete an item from the shopping cart.
+* Receive an email confirmation after my purchase.
 * Create my own account.
 * Be able to log in and log out.
 * Receive an email confirmation after registering.
 * Be able to recover my password in case I forget it.
 * Have my own profile.
-* View information about the platform (About us, shipping, contact)
+* Be able to read a blog post or comment on it.
+* Be able to leave a review about the service offered.
+* View information about the platform (About us and shipping)
+* Be able to send a message from the Contact page.
 * View information about website policies (Privacy Policy, Refund Policy and Terms of service)
 
 #### “As a Store Owner , I would like to .....”
@@ -84,89 +100,118 @@ This project is part of my **Code Institute Full Stack Software Development** st
 * Add a new product.
 * Edit/update a product.
 * Delete a product.
+* Add a blog post.
+* Edit/update a blog post.
+* Delete a blog post.
+* Moderate comments on the blog posts or on the review page.
 
 ### Design Process
+---
 
 #### Strategy Plane
+
+Use agile design to lay the foundations of an E commerce website that is attractive to users who want to buy a product. The strategy is to 
+allow users to find the products in a fast and attractive way for the customer by searching by category, price, name, etc.
+
+Offer a variety of Argentinean products, which are not easy to find within the Republic of Ireland, but which are required or desired by
+users of that nationality.
+
+The strategy is to create an easy and intuitive to use online store, in which users can browse and find a variety of Argentinean products without problems 
+or effort. In addition, the user is offered the possibility to create a profile within the website, which allows to save his/her personal data, facilitating 
+the purchase through the E commerce website. It also allows to save the orders placed historically. In addition, the online store has a secure payment system.
+
+In order to make the online store more interesting, we have also implemented a page with blog posts, with really interesting topics about the Argentinean culture.
+
+In addition, to enhance the quality of the service offered, a review page has been implemented, where users can evaluate the service offered.
+
 #### Scope
+
+The scope will be to attract users by offering them simplicity and a quick search of the products offered in the online store with a fast and reliable payment, 
+it will also allow them to create a profile in which they can save their personal data, orders made historically, while allowing them to access extra features 
+of the website such as commenting on blog posts or leave a review evaluating the service offered.
+
+The business user will be able to add his/her products quickly and easily, edit them or delete them when necessary. In addition the business user will be able 
+to add blog posts, edit them or delete them as many times as required. He/she will also be able to moderate comments from blog posts or reviews written by the 
+users of the E commerce website.
+
 #### Structure
+
+The site is structured to assist the user in the search for the desired product. Your Argentine Shop is an E commerce website set with the theme of the Argentine 
+people, for it takes colors of the flag of this country as well as the most emblematic products and loved by all Argentine people. It also has a blog page, which 
+provides interesting information about the argentine culture, arousing interest to learn more about it by users who don't necessarily belong to this country.
+
+The website has a navigation bar with different links, it also has a logo of the website, a search bar on it, 2 icons, one for the users account and another for 
+the shopping cart, and a footer that has some information and website copyright, these are the basic structures of the platform. The website has a home page, whose 
+purpose is to welcome users, and every time the website is reloaded, it changes the products it displays. The online store is created to generate the desire to buy 
+any product offered to the user, for this the importance of showing many images and play with nostalgia in users, since many consumers have been away from Argentina 
+for a long period of time and wish to consume the products offered on the website.
+
 #### Skeleton
 
-1. Home page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/001-d_home-page.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/019-t_home-page.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/037-p_home-page.png)
-2. All Products view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/002-d_all-products-view.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/020-t_all-products-view.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/038-p_all-products-view.png)
-3. Product view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/003-d_product-view.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/021-t_product-view.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/039-p_product-view%20.png)
-4. Empty Cart view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/004-d_empty-cart.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/022-t_empty-cart.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/040-p_empty-cart.png)
-5. Shopping Cart view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/005-d_shopping-cart.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/023-t_shopping-cart.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/041-p_shopping-cart.png)
-6. Checkout view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/006-d_checkout.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/024-t_checkout.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/042-p_checkout.png)
-7. Checkout user logged view wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/007-d_checkout-logged.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/025-t_checkout-logged.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/043-p_checkout-logged.png)
-8. Order confirmation wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/008-d_order-confirmation.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/026-t_order-confirmation.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/044-p_order-confirmation.png)
-9. Register page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/009-d_register.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/027-t_register.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/045-p_register.png)
-10. Sign In page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/010-d_signin.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/028-t_sign-in.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/046-p_sign-in.png)
-11. Password reset page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/011-d_password_reset.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/029-t_reset-password.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/047-p_reset-password.png)
-12. Profile page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/012-d_profile.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/030-t_profile.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/048-p_profile.png)
-13. Contact page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/013-d_contact.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/031-t_contact.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/049-p_contact.png)
-14. About Us page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/014-d_about-us.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/032-t_about-us.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/050-p_about-us.png)
-15. Shipping page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/015-d_shipping.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/033-t_shipping.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/051-p_shipping.png)
-16. Privacy Policy page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/016-d_privacy-policy.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/034-t_privacy-policy.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/052-p_privacy-policy.png)
-17. Refund Policy page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/017-d_refund-policy.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/035-t_refund-policy.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/053-p_refund-policy.png)
-18. Terms of Service page wireframe
-    - [Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/018-d_terms-of-service.png)
-    - [Tablet](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/036-t_terms-of-service.png)
-    - [Mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/wireframe/054-p_terms-of-service.png)
+The link options and drop down buttons guide the user intuitively from the home page to the product purchase stored in the database. Products stored in the database 
+will drive all searches in the search bar. In addition the user will be able to sort his search by category, price, names, etc. In addition to product links, the navbar 
+also contains information about the website (About Us, Shipping), a Contact page, blog and reviews.
+
+The architecture of this website is user friendly and intuitive at the moment the client decides to make the purchase, selects a product, adjusts the shopping cart 
+until the user reaches the checkout and makes the purchase. The information architecture is designed to allow rapid completion of all user objectives.
+
+The images are stored in the AWS S3 bucket, providing a wide variety of images for the online store, and users can also add profile images, creating more identity 
+when commenting on blog posts or leaving a review about the service provided.
 
 #### Surface
 
+In order to design the website we used elements related to the argentine culture as a reference, such as products, patriotic symbols or colors that make allusion to 
+this country.
+
+During the development process we tried to make the logo design as representative and faithful to the argentine culture as possible. For this purpose, an arduous 
+research was done resulting in the creation of the current logo.
+
+The bootstrap button and text colors were respected, signifying success, alert, warning, secondary and muted. Other colors  were also incorporated, looking to make 
+the online store more diverse.
+
+The forms were kept very simple (crispy forms were used), in some cases only with placeholders. The focus was on the information provided and required.
+
+A modern and easy to read font was chosen, creating a user-friendly interface that was pleasing to the eye.
+
+The most popular and loved products by Argentineans were chosen, and the most representative images were selected to create a great experience when making a purchase.
+
+**Color Scheme**
+
+*Palette for Header*
+
+| First Header | Second Header | Navbar | Text 1  | Text 2 | Links | Icons |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |:-----------: |:-----------: |
+|  ![#317ece](https://via.placeholder.com/15/317ece/000000?text=+)| ![#fafafa](https://via.placeholder.com/15/fafafa/000000?text=+) |![#001c40](https://via.placeholder.com/15/001c40/000000?text=+)|![#fafafa](https://via.placeholder.com/15/fafafa/000000?text=+)|![#000000](https://via.placeholder.com/15/000000/000000?text=+)|![#ffc107](https://via.placeholder.com/15/ffc107/000000?text=+)|![#ffc107](https://via.placeholder.com/15/ffc107/000000?text=+) |
+| #317ECE  | #FAFAFA | #001C40  | #FAFAFA | #000000 | #FFC107 | #FFC107 |
+
+*Palette for Information Boxes*
+
+| Box 1  | Box 2 | Text 1  | Text 2 |
+| :-----------: | :-----------: | :-----------: | :-----------: |
+| ![#cae1ec](https://via.placeholder.com/15/cae1ec/000000?text=+)|![#ececec](https://via.placeholder.com/15/ececec/000000?text=+)| ![#183153](https://via.placeholder.com/15/183153/000000?text=+)| ![#000000](https://via.placeholder.com/15/000000/000000?text=+)|
+| #CAE1EC  | #ECECEC | #183153 | #000000 |
+
+*Palette for Footer*
+
+| Color 1  | Color 2 | Text 1  | Text 2 | Links | Icons |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| ![#183153](https://via.placeholder.com/15/183153/000000?text=+)|![#001c40](https://via.placeholder.com/15/001c40/000000?text=+)|![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+)|![#fafafa](https://via.placeholder.com/15/fafafa/000000?text=+) |![#ffc107](https://via.placeholder.com/15/ffc107/000000?text=+) |![#ffc107](https://via.placeholder.com/15/ffc107/000000?text=+)|
+| #183153  | #001C40  | #FFFFFF | #FAFAFA | #FFC107 | #FFC107 |
+
+**Typography**
+
+ 2 Google fonts were used across of this website:
+- Roboto
+- Oswald 
+
+### Wireframes
+
+To make the wireframes for this project, I used Pencil software version 3.1.0. They were made as part of the design process and were saved as a pdf document 
+and stored in the separate folder; wireframes. All pages are shown how the project would look like on different screen sizes (desktop, tablets and mobiles). 
+<a href="" target="_blank">Click here to see the wireframes.</a>
+
+##### [Back to top](#contents)
+---
 ## Features
 ### Existing Features
 ### Features Left to Implement
