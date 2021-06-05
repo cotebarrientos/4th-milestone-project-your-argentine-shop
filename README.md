@@ -32,6 +32,7 @@ website 100% E commerce with Argentine products, using all the knowledge acquire
 6. [**Credits**](#credits)
     * [Content](#content)
     * [Media](#media)
+    * [Code](#code)
     * [Acknowledgements](#acknowledgements)
 
 ---
@@ -40,12 +41,17 @@ website 100% E commerce with Argentine products, using all the knowledge acquire
 ### Main Aims
 
 **1.** To Provide a 100% E Commerce Platform with a wide variety of Argentine products in Ireland.
+
 **2.** To make the website interactive and easy to navigate for prospective shoppers.
+
 **3.** To make the website simple to use for potential shoppers, allowing easy checkout, in which the shopper will be able to create their shopping list, 
 review it, edit it or remove items. At the same time allow customers to shop with or without a user account.
+
 **4.** To make a platform that allows potential customers to create a user account, where they can save their data for future purchases, facilitating the 
 purchase time.
+
 **5.** To make a website that has a good payment system, secure and bug free.
+
 **6.** To create a design that would be fully responsive on all devices and screen sizes.
 
 ### Ideal User
@@ -53,7 +59,9 @@ purchase time.
 #### The Ideal User for this website is:
 
 **1.** Who is Argentinean or South American and likes to consume the products offered by the website.
+
 **2.** Who lives in the Republic of Ireland.
+
 **3.** Who likes to shop online.
 
 #### The Occasional User:
@@ -63,11 +71,15 @@ purchase time.
 #### This Project is the best way to help them achieve these things because:
 
 **1.** This is a great platform to buy Argentine products, because it shows the items in an orderly way and this one is simple to use.
+
 **2.** This platform allows customers to create their shopping lists, review the items within it, edit or delete them as appropriate, in an intuitive 
 and user-friendly way.
+
 **3.** This platform allows customers to create a user account in a simple way, allowing them to save their shopping lists and personal data, resulting 
 in less time spent making a purchase.
+
 **4.** The website contains a wide variety of products, as well as a secure payment system.
+
 **5.** The website has a beautiful design, very intuitive and easily adapts to any mobile device and screen size.
 
 ### User Stories
@@ -223,8 +235,54 @@ and stored in the separate folder; wireframes. All pages are shown how the proje
 ## Deployment
 
 ## Credits
+
 #### Content
+
+The products used, as well as the written content within the blog page, as well as general information were consulted from the following websites:
+
+- <a href="https://southamericanshop.com/" target="_blank"> South American Shop</a>
+- <a href="https://patagoniaonline.co.uk/" target="_blank">Patagonia Online</a>
+- <a href="https://almacenargentino.com/en/" target="_blank">Almacen Argentino</a>
+- <a href="https://pampadirect.com/" target="_blank">Pampa direct</a>
+- <a href="https://urushop.co.uk/" target="_blank">UruShop</a>
+
+
 #### Media
+
+- The pictures used for some images cover (Contact page, Shipping and Profile) were obtained from Google images and were improved using Adobe Photoshop.
+- Some images used (Reviews cover, carousel images, About us, Reviews form cover) were made using Adobe Photoshop.
+- Logotype and images for errors 404 and 500 were made using Adobe Illustrator and Affinity Designer.
+- The images from <a href="https://unsplash.com/" target="_blank">Unsplash</a>  were used to create generic fake profile avatars.
+
+#### Code
+* These websites were really useful to troubleshooting the issues I faced:
+    - <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a>
+    - <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="_blank">Bootstrap Documentation</a>
+    - <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
+    - <a href="https://docs.djangoproject.com/en/3.2/" target="_blank">Django documentation</a>
+* To build the blog page, comments and reviews
+    - <a href="https://djangocentral.com/building-a-blog-application-with-django/" target="_blank">Django Central - Building a Blog</a>
+    - <a href="https://djangocentral.com/creating-comments-system-with-django/" target="_blank">Django Central - Creating Comments</a>
+* To custom Allauth sign up views
+    - <a href="https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/" target="_blank">Geeksforgeeks - Extending and customizing django-allauth</a>
+    - <a href="https://dev.to/danielfeldroy/customizing-django-allauth-signup-forms-2o1m" target="_blank">Dev - Customizing Django Allauth Signup Forms</a>
+
+* The following YouTubers were really helpful in the most difficult moments doing this project:
+    - <a href="https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw" target="_blank">Codemy.com</a>
+    - <a href="https://www.youtube.com/channel/UCAx4nmhI7S1RcPiaG-Uw0tg" target="_blank">Max Goodridge</a>
+    - <a href="https://www.youtube.com/channel/UCTZRcDjjkVajGL6wd76UnGg" target="_blank">Dennis Ivy</a>
+    - <a href="https://www.youtube.com/channel/UClXcbBNNhFU9ATAcXB6U7eQ" target="_blank">Lara Code</a>
+    - <a href="https://www.youtube.com/channel/UCmOpHGj4JRWCdXhllVTZCVw" target="_blank">The Code Creative</a>
+    - <a href="https://www.youtube.com/channel/UC4zS7t0ymP3cqBgDd-e-94A" target="_blank">On Dev</a>
+
 #### Acknowledgements
 
-> **Note**: Project in process.
+Thank you to the following people who helped with support, inspiration and guidance at different stages in the project:
+- My boyfriend.
+- My friends and family.
+- The guidance and support of my mentor Brian Macharia.
+##### [Back to top](#contents)
+---
+
+> Disclaimer: 
+    >> The content of this Website is for educational purposes only.
