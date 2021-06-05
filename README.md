@@ -34,6 +34,9 @@ website 100% E commerce with Argentine products, using all the knowledge acquire
     * [Tools Used](#tools-used)
 4. [**Testing**](#testing)
 5. [**Deployment**](#deployment)
+    * [Clone Project from GitHub](#clone-project-from-github)
+    * [Local Deployment](#local-deployment)
+    * [Remote Deployment](#remote-deployment)
 6. [**Credits**](#credits)
     * [Content](#content)
     * [Media](#media)
@@ -325,6 +328,219 @@ and stored in the separate folder; wireframes. All pages are shown how the proje
 ##### [Back to top](#contents)
 ---
 ## Deployment
+
+### Clone Project from GitHub
+
+1. Follow this link to the <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop" target="_blank">Project GitHub repository</a>.
+2. Scroll to the top of this repository and click on the "clone or download button".
+3. Decide whether you want to clone the project using HTTPS or an SSH key and do the following:
+    - HTTPS: click on the checklist icon to the right of the URL.
+    - SSH key: first click on 'Use SSH' then click on the same icon as above.
+4. Open the 'Terminal'.
+5. Choose the location for the cloned directory.
+6. Type `git clone`, and then paste the clone URL.
+
+    - `git clone https://github.com/USERNAME/REPOSITORY`
+7. Press 'Enter' to create your local clone.
+
+### Local Deployment
+
+For local deployment you must have an IDE, like for example **VS Code** (used in this project) and the following to be installed locally on 
+your machine: Git, PIP and Python 3. Keep in mind that the python commands described below are intended if you are going to deploy the 
+project locally using **Microsoft Windows**, otherwise replace the `python` command with `python3`. Do the same in the case of the `pip` 
+command replace it with `pip3`.
+
+1. After cloning this project, navigate to the correct file location after unpacking the files.
+    - `cd <path to folder>`
+2. Create a `.env` file with your own credentials.
+            
+            STRIPE_PUBLIC_KEY =  "Your Stripe public key here..."
+            STRIPE_SECRET_KEY = "Your Stripe secret key here..."
+            STRIPE_WH_SECRET = "Your Stripe WH secret key here..."
+            SECRET_KEY = "Your Django secret key here..."
+            DEVELOPMENT = True
+3. Go to `settings.py` file and add your environment variables.
+        	
+            import os
+            from dotenv import load_dotenv
+            load_dotenv() # Necessary to load .env file
+
+            DEBUG = 'DEVELOPMENT' in os.environ
+            STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+            STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+            STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+4. Add `.env.py` to `.gitignore` file
+5. Then run this command `pip install -r requirements.txt` to install the required modules.
+6. Then, run the commands to makemigrations and migrate.
+    - `python manage.py makemigrations`
+    - `python manage.py migrate`
+7. This project contains a fixtures folder, in order to read those JSON files, you have to type the following commands:
+    - `python manage.py loaddata categories`
+    - `python manage.py loaddata products`
+8. Now, run the command to create a super user.
+    - `python manage.py createsuperuser` in order to access the *Django Admin Panel*
+4. In the terminal, use the following command to launch this Django project:
+    - `python manage.py runserver` 
+5. After that, this Django project should be running locally on `http//: 127.0.0.1:8000`. 
+
+### Remote Deployment
+
+Once you have the project setup locally, you can proceed to deploy it remotely with the following steps:
+
+1. First, type the command `pip install gunicorn`, which will act as the webserver.
+2. Update the `requirements.txt` file using the `pip freeze > requirements.txt` command in the terminal to make all of the installed packages and 
+libraries to go in to the file.
+3. Then, create a Procfile with the command `echo web: python app.py > Procfile` in the terminal.
+4. In Heroku, create a new app. The app must have a unique name.
+5. In the new Heroku app, Click on Deploy. In the section Deployment method, click on Github, then choose the correct GitHub repository to 
+link it to the Heroku app.
+6. In the section Automatic Deploys, click on Enable automatic deploys, from master branch.
+7. Go to *setting.py* and update the `ALLOWED_HOSTS` as follows:
+
+        ALLOWED_HOSTS = ['your-argentine-shop.herokuapp.com', '127.0.0.1']
+8. Then, we have to temporarily disable collectstatic by using Heroku config set or using the CLI-terminal.  
+    - Heroku config vars
+        
+            DISABLE_COLLECTSTATIC = <1> 
+
+    - CLI-terminal
+
+            $ python manage.py collectstatic
+9. After that, go to Resources, within Add-ons search **Heroku Postgres**, choose Hobby Dev - Free version, then click on Provision button.
+10. Now go to Settings and click on Reveal config vars, and set the following:
+
+        DATABASE_URL = <The database url>
+        DISABLE_COLLECTSTATIC = <1> 
+
+11. Return to terminal  and run `pip install dj_database_url`, and then install `pip install psycopg2`, and update
+the *requirements.txt* file using `pip freeze > requirements.txt`.
+12. Go to *settings.py* and write the following:
+
+        import os
+        import dj_database_url
+        from pathlib import Path
+
+        if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+        else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+         }
+
+
+13. After that, run the following commands:
+
+    - `python manage.py makemigrations`
+    - `python manage.py migrate`
+    - `python manage.py loaddata categories`
+    - `python manage.py loaddata products`
+
+14. Then, create a super user.
+    - `python manage.py createsuperuser`
+
+15. Sign up for a free Amazon AWS account in order to host your staticfiles and media files. 
+16. From the S3 buckets section, you'll need to create a new unique bucket in order to host your
+static files. To do that, you have to follow these next steps:
+    - Permissions > CORS configuration:
+
+            [
+                {
+                    "AllowedHeaders": [
+                    "Authorization"
+                    ],
+                    "AllowedMethods": [
+                    "GET"
+                    ],
+                    "AllowedOrigins": [
+                    "*"
+                    ],
+                    "ExposeHeaders": []
+                }
+            ]
+
+    - Permissions > Bucket Policy:
+
+            {
+                "Version": "2012-10-17",
+                "Id": "PolicyID",
+                "Statement": [
+                    {
+                    "Sid": "PublicReadGetObject",
+                    "Effect": "Allow",
+                    "Principal": "*",
+                    "Action": "s3:GetObject",
+                    "Resource": "arn:aws:s3:::your-bucket-name/*"
+                    }
+                ]
+            }
+
+    - Into  **IAM** section of AWS, you have to create a new group, don't forget to select your existing 
+    S3 Bucket details. 
+    - Then you have to create a *new policy* and *a new user*. After that, you have to attach these to the Group.
+17. Return to terminal and run `pip install django-storages` and `pip install boto3`. Go to settings.py and add 
+storages to INSTALLED_APPS.
+18. Inside *settings.py* type the following:
+
+        if 'USE_AWS' in os.environ:
+        # Cache control
+        AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=94608000',
+        }
+
+        # Bucket Config
+        AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+        AWS_S3_REGION_NAME = 'eu-west-1'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+        # Static and media files
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+        # Override static and media URLs in production
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+19. Return to Heroku, go to Settings and click on Reveal config vars, and set the following:
+
+
+        AWS_ACCESS_KEY_ID = <Your aws access key>
+        AWS_SECRET_ACCESS_KEY = <Your secret aws access key>
+        DATABASE_URL = <The database url>
+        DEFAULT_FROM_EMAIL = <Your default email>
+        DISABLE_COLLECTSTATIC = <1> 
+        EMAIL_HOST_PASS = <Your email password>
+        EMAIL_HOST_USER = <Your email>
+        SECRET_KEY = <Your Django secret key>
+        USE_AWS = <True>
+
+20. Login in your **Stripe** account, navigate to Developers section, and get your API keys. Then
+Type your secret keys  your Heroku config vars.
+
+        AWS_ACCESS_KEY_ID = <Your aws access key>
+        AWS_SECRET_ACCESS_KEY = <Your secret aws access key>
+        DATABASE_URL = <The database url>
+        DEFAULT_FROM_EMAIL = <Your default email>
+        DISABLE_COLLECTSTATIC = <1> 
+        EMAIL_HOST_PASS = <Your email password>
+        EMAIL_HOST_USER = <Your email>
+        SECRET_KEY = <Your Django secret key>
+        STRIPE_PUBLIC_KEY = <Your Stripe public key>
+        STRIPE_SECRET_KEY = <Your Stripe secret key>
+        STRIPE_WH_SECRET = <Your Stripe WH secret key>
+        USE_AWS = <True>
+
+*Note:* Don't forget that before deploying this project to Heroku, you must do a git commit in order to Heroku 
+takes the new changes.
 ##### [Back to top](#contents)
 ---
 ## Credits
