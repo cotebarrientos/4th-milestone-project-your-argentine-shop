@@ -27,6 +27,11 @@ website 100% E commerce with Argentine products, using all the knowledge acquire
    * [Existing Features](#existing-features)
    * [Features Left to Implement](#features-left-to-implement)
 3. [**Technologies Used**](#technologies-used)
+    * [Languages](#languages)
+    * [Databases](#databases)
+    * [Libraries](#libraries)
+    * [Django Libraries](#django-libraries)
+    * [Tools Used](#tools-used)
 4. [**Testing**](#testing)
 5. [**Deployment**](#deployment)
 6. [**Credits**](#credits)
@@ -216,6 +221,8 @@ The most popular and loved products by Argentineans were chosen, and the most re
 - Roboto
 - Oswald 
 
+**Logotype**
+
 ### Wireframes
 
 To make the wireframes for this project, I used Pencil software version 3.1.0. They were made as part of the design process and were saved as a pdf document 
@@ -227,13 +234,99 @@ and stored in the separate folder; wireframes. All pages are shown how the proje
 ## Features
 ### Existing Features
 ### Features Left to Implement
-
+##### [Back to top](#contents)
+---
 ## Technologies Used
 
+### Languages
+* HTML 5
+    - The project uses **HTML5** to define the structure of this website.
+* CSS 3
+    - The project uses **CSS3** to add styling to the website.
+* JavaScript 
+    - The project uses **Javascript** to add interactivity to the website, to update or delete items from shopping cart and other functionalities.
+* <a href="https://www.python.org/" target="_blank">Python</a>
+    - The project uses **Python** 3.9.4 to build the backend of this website
+* <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+    - The project uses **Django** version 3.2 as the framework.
+
+### Databases
+* <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
+    - The project uses **PostgreSQL** version 13.3 database service provided directly by Heroku.
+* <a href="https://www.sqlite.org/index.html" target="_blank">SQlite3</a>
+    - The project uses **SQlite3** to program locally, in addition this database is provided by Django.
+
+### Libraries
+
+* <a href="https://jquery.com/" target="_blank">JQuery</a>
+    - The project uses **jQuery** version 3.6.0 JavaScript library to simplify HTML DOM manipulation.    
+* <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+    - The project uses **Bootstrap** version 4.6.0 , to build responsive website.
+* <a href="https://popper.js.org/" target="_blank">Popper.js</a>
+    - **Popper.js** version 1.16.1 for the Bootstrap components that requires the use of JavaScript to function.
+* <a href="https://fontawesome.com/" target="_blank">FontAwesome</a>
+    - The project uses **FontAwesome** as icon provider.
+* <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+    - **Google Fonts** is used to style the fonts of the website
+
+### Django Libraries
+
+* <a href="https://django-allauth.readthedocs.io/en/latest/" target="_blank">Django Allauth</a>
+    - **Django Allauth** version 0.44.0 to supports multiple authentication schemes, as well as multiple strategies for account verification.
+* <a href="https://pypi.org/project/django-ckeditor/" target="_blank">Django Ckeditor</a>
+    - **Django Ckeditor** version 6.0.0 to provides a RichTextField and CKEditorWidget.
+* <a href="https://pypi.org/project/django-countries/" target="_blank">Django Countries</a>
+    - **Django Countries** version 7.1 to provides country choices for use with forms, and a country field for models.
+* <a href="https://django-crispy-forms.readthedocs.io/en/latest/install.html" target="_blank">Django Crispy Forms</a>
+    - **Django Crispy Forms** version 1.11.2 to style django forms.
+* <a href="https://django-storages.readthedocs.io/en/latest/" target="_blank">Django Storages</a>
+    - **Django Storages** version 1.11.1 to connects Django to S3 Buckets.
+
+### Tools Used
+
+* <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+    - **VS Code** version 1.56.2 to write the code for this website.
+* <a href="https://github.com/" target="_blank">GitHub</a>
+    - **GitHub** is used to host the source code.
+* <a href="https://git-scm.com/" target="_blank">Git</a>
+    - **Git** is used to control the different versions and history of the code.
+* <a href="https://stripe.com/en-se" target="_blank">Stripe API</a>
+    - **Stripe API** was used as the payment platform to validate and accept credit card payments in a secure way.
+* <a href="https://aws.amazon.com/s3/?nc1=h_ls" target="_blank">AWS S3 Bucket</a>
+    - **AWS S3 Bucket** to store images that was entered into the database.
+* <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    - **Heroku** used for "platform as a service" for app hosting.
+* <a href="https://pypi.org/project/psycopg2/" target="_blank">Psycopg2</a>
+    - **Psycopg2** version 2.8.6 as PostgreSQL database adapter for Python
+* <a href="https://pypi.org/project/gunicorn/" target="_blank">Gunicorn</a>
+    - **Gunicorn** version 20.1.0 as WSGI server implementation used to run Python web application
+* <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a>
+    - **Boto3** version 1.17.84 to make use of Amazon S3
+* <a href="https://python-pillow.org/" target="_blank">Pillow</a>
+    - **Pillow** version 8.2.0 to add support for opening, manipulating, and saving many different image file formats
+* <a href="" target="_blank">PIP</a>
+    - **PIP** for installation of tools needed in this project.
+* <a href="https://pypi.org/project/python-dotenv/" target="_blank">Python Dotenv</a>
+    - **Python Dotenv** version 0.17.0 to read key-value pairs from a `.env` file and can set them as environment variables.
+* <a href="https://pypi.org/project/black/" target="_blank">Black</a>
+    - **Black** version 20.8b1 to fix and format python files.
+* <a href="https://www.adobe.com/ie/" target="_blank">Adobe Photoshop</a>
+    - **Adobe Photoshop CS6** portable version 13.0.0, to improve the images used in the website.
+* <a href="https://www.adobe.com/ie/products/illustrator.html?gclid=EAIaIQobChMI7sax79jo6AIVRuztCh1rOgpzEAAYASAAEgJWMPD_BwE&sdid=88X75SKS&mv=search&ef_id=EAIaIQobChMI7sax79jo6AIVRuztCh1rOgpzEAAYASAAEgJWMPD_BwE:G:s&s_kwcid=AL!3085!3!340697722021!e!!g!!adobe%20illustrator" target="_blank">Adobe Illustrator</a>
+    - **Adobe Illustrator CS6** portable version 16.0.0, to draw vectorial images used in the website.
+* <a href="https://affinity.serif.com/en-gb/designer/" target="_blank">Affinity Designer</a>
+    -  **Affinity Designer** version 1.6.5.123, to make the website logo and typography.
+* <a href="https://pencil.evolus.vn/" target="_blank">Pencil</a>
+    - **Pencil** version 3.1.0 to create the wireframes.
+
+##### [Back to top](#contents)
+---
 ## Testing
-
+##### [Back to top](#contents)
+---
 ## Deployment
-
+##### [Back to top](#contents)
+---
 ## Credits
 
 #### Content
@@ -281,8 +374,10 @@ Thank you to the following people who helped with support, inspiration and guida
 - My boyfriend.
 - My friends and family.
 - The guidance and support of my mentor Brian Macharia.
+
+I want to thank **Code Institute**, especially **Student Care** for their support throughout this course, for supporting me in the most difficult moments 
+and for giving me the opportunity to finish my studies, since last year was a very complicated year both in the family and personal sphere.
 ##### [Back to top](#contents)
 ---
 
-> Disclaimer: 
-    >> The content of this Website is for educational purposes only.
+> Disclaimer: The content of this Website is for educational purposes only.
