@@ -181,16 +181,6 @@ footer .accordion .card {
     letter-spacing: 0.063rem;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -447,11 +437,29 @@ a.category-badge > span.badge:hover {
         padding: .6rem .6rem;
         font-size: 1rem;
     }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
 }
 
 /* Adjusts the size of elements within the footer when collapsed on mobile devices */
 
 @media (max-width: 575.98px) {
+
+    h1 {
+        font-size: 2.1875rem;
+    }
+
+    h3 {
+        font-size: 	1.25rem;
+    }
+
     #accordion-info h4 {
         font-size: 1.125rem;
         padding: 0.313rem;
@@ -551,6 +559,10 @@ a.category-badge > span.badge:hover {
 }
 
 @media (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+
     .carousel-caption {
         bottom: 1%;
     }
