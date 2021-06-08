@@ -26,6 +26,7 @@ website 100% E commerce with Argentine products, using all the knowledge acquire
 2. [**Features**](#features)
    * [Existing Features](#existing-features)
    * [Features Left to Implement](#features-left-to-implement)
+   * [Future Features Ideas](#future-features-ideas)
 3. [**Technologies Used**](#technologies-used)
     * [Languages](#languages)
     * [Databases](#databases)
@@ -235,8 +236,329 @@ and stored in the separate folder; wireframes. All pages are shown how the proje
 ##### [Back to top](#contents)
 ---
 ## Features
+The E commerce website has a variety of features designed to create a great shopping experience for the user.This project complies with all the features 
+required in order to complete the latest milestone project, while I have added some extra features in order to create a better experience when shopping 
+or visiting this website.
 ### Existing Features
+
+#### 1. Header and Navbar
+
+The header has a bar at the top of the website, which contains some online store data, such as phone number, email, and 4 icons with some social networks.
+
+Inside the navigation bar, the first part of the navigation bar contains on the left side the website logo, in the central sector there is a search bar 
+and on the right side there are 2 icons, one for the user profiles (which is drop down), which shows the *"Register"* and *"Login"* information, when the 
+user is not logged in and the second icon is a shopping cart, which shows the amount of items added to it.
+
+The second part of the navigation bar contains the following navigation links:
+
+* *Home*
+* *Info*
+    - About Us
+    - Contact
+    - Shipping
+* *Shop*
+    - Dulce de Leche
+    - Yerba Mate
+    - Alfajores
+    - Cookies
+    - Candies
+    - Empanadas
+    - Accessories
+    - Misc
+    - Combos
+* *All Products*
+    - By Price
+    - By Category
+    - All Products
+* *Blog*
+* *Reviews*
+
+In addition, when the website is viewed from mobile devices or tablets, the navbar is fully responsive, adapting all elements to the new 
+screen size. The website logo appears in the middle and the information bar is above it. The search bar is compressed into a magnifying 
+glass icon, which when pressed by a user will show the entire search bar. The user profile and shopping cart icons will appear next to 
+the search bar icon. Navigation links will appear in a toggle button on the left side of the navigation bar.
+
+#### 2. Footer
+
+The footer is composed of 2 parts of different blue shades. The first part consists of 3 components which are:
+
+* *Information*
+    - Privacy Policy
+    - Refund Policy
+    - Terms of Service
+* *About Us*: Contains a brief description of the website.
+* *Contact Us*: Provides information such as address, phone number and email address of the website.
+
+Also, when the footer is viewed from mobile devices or tablets, it is responsive, and the same components can be 
+viewed with accordion folding buttons.
+
+The second part consists of 2 components, the left part contains the website copyright and the right part contains 4 icons 
+with some social networks which are: *YouTube, Facebook, Instagram* and *Twitter*. 
+
+#### 3. Home Page
+
+It is responsible for welcoming future users. It is divided into 4 sections:
+
+* **Carrousel Images:** It is located at top of the page, this has 5 images, which invite customers to buy products from 
+the online store and are changing from time to time.
+
+* **Featured Products:** This section displays 8 random products (except for the combos category products), and these 
+products change every time the website is reloaded.
+* **Combos:** This section shows 4 random products that only belong to the combos category. These products change every 
+time the website is reloaded.
+* **An info bar:** This section contains 3 elements whose purpose is to provide some information to the user, and also 
+aims to motivate customers to continue browsing through the online store.
+
+#### 4. Info
+
+* **About Us:** This page shows information about the online store, such as company goals and business vision.
+* **Contact:** The contact page is designed to create direct communication between customers and the company, 
+for this the user must fill out a contact form with his/her data such as name and email, also he/she must write 
+the subject and the message he/she wants to write. If the user is logged in, the name and email text fields are 
+automatically filled with the data provided at the time of registering with the online store. Once the message 
+is sent, it will be received by the company's email, and the web site staff must answer the messages within 48hrs.
+* **Shipping:** This page is responsible to provide information about the shipping system that has the online store. 
+Here you will find information such as how long it takes to process the shipments, how the shipping price is calculated, 
+how much the user has to spend to get free delivery, among other useful information.
+
+#### 5. Blog
+
+On the **Blog page** you will find a variety of **blogposts** related to interesting topics about Argentine culture. Each blogpost 
+has an image, date of publication and a brief description truncated in 195 characters, and in oder to read this blogpost, 
+the user will have to press the button that says *"Read more"*.
+
+Once inside the selected blogpost, the user will find a title, date of publication, an image, and the content itself. In 
+the final part of the blogpost appears the name of the user who wrote it, and 2 buttons that will take you back to the 
+*blog page* or *home page*.
+
+Each blogpost has a **comments section**, where only users who have an account created, can leave a comment on it. 
+
+#### 6. Reviews
+
+On the Reviews page you will find the rating that users have made about the quality of service offered by the online store. 
+The ratings range from 1 to 5 stars. Each review shows the user's profile picture, full name, date of publication, number 
+of stars given, and finally, the comment written by the user.
+
+In order to leave a review, the user must have created an account with the website, otherwise, when clicking on the 
+*"write my review"* button, the user will be redirected to the login page.
+
+To write a review, the user must fill out a form, which will ask the full name and email (which are autocompleted with 
+the data provided at the time of registering on the website), comment and finally rate with stars.
+
+Once the comment is written, **it must wait to be moderated by the online store staff**.
+
+#### 7. Products
+
+The website has more than *80 products*, which are sorted by **category, price** and **name**. Each product appears with an image, 
+its category (9 categories), its name and price. The product of interest can be accessed by clicking on its image.
+
+The categories are as follows:
+
+- Accessories
+- Alfajores
+- Candies
+- Combos
+- Cookies
+- Dulce de Leche
+- Empanadas
+- Misc
+- Yerba Mate
+
+When the user types a keyword in the **search bar**, it will search through all the products on the website, trying to match that word with a 
+product, otherwise, a message will appear that will let the user know that there is nothing related to the search done.
+
+Inside each selected product you will find an image of it, the product name, its price, its category, a brief description of it, an input field 
+to select the desired quantity, and 2 buttons, one to return and continue shopping and the other is to add the product into the shopping cart.
+
+#### 8. Shopping Cart
+
+The shopping cart page displays all the items selected by the user. In this instance the user is responsible for adjusting the shopping cart to 
+his/her needs, for example the customer can update the quantity of a selected product by pressing the *"update"* button, or delete products from 
+the shopping cart by pressing the *"remove"* button. 
+
+In addition the shopping cart displays information about the shopping order such as information about the **selected items, weight, subtotal, 
+delivery costs** and **total price**. It also has 2 buttons, one for *"continue shopping"* and the other for *"proceed to checkout"*.
+At the bottom of the shopping cart page is an information bar, which consists of motivating the customer to continue shopping.
+
+If there are **no items in the shopping cart**, an image of an empty shopping cart will appear with a message warning that there are no items 
+selected, and at the bottom there will appear a button whose purpose is to motivate the user to continue shopping.
+
+#### 9. Checkout
+
+On the Checkout page, the user must fill out a form with essential information to be able to make the purchase and these are:
+
+* *Your Details*
+    - Full Name
+    - Email Address
+
+* *Shipping Information*
+    - Phone Number
+    - Street Address 1
+    - Street Address 2
+    - Town or city
+    - County
+    - Postal Code
+    - Select Country
+* *Payment*
+
+In the form will appear a checkbox that will allow to save this information in the user's profile in case he/she is logged in. 
+Also if the user is logged in, in the text fields of full name and email will be filled with information provided at the time 
+of registering with the website.
+
+At the end of the form 2 buttons will appear. The first one is to adjust the shopping cart and the second one to finalize the purchase.
+
+Also the customer will be able to see a small summary of the products he/she is going to buy.
+
+Once the purchase has been successful, the user will be taken to a page where the **order confirmation will be displayed**. Besides 
+that, the user will receive a message in his/her email confirming that the purchase has been successfully completed.
+
+#### 10. Register an Account
+
+The user has the possibility to register for free and create his/her own account. To do so, this project makes use of the 
+**Django-Allauth** library for account authentication. To do this the user must fill out a form containing the following data:
+
+- Email Address
+- Email Address Confirmation
+- Username
+- First Name
+- Last Name
+- Password
+- Password (again)
+
+Once the account is registered, the user will receive a confirmation email so he/she can start using the profile account created.
+
+#### 11. Log In
+
+Once the user has created an account, he/she has the possibility to log in as many times as needed by entering his/her email 
+address or user name and adding his/her password. 
+
+#### 12. Reset Password
+
+If the user for some reason has forgotten his/her password, the website gives him/her the possibility to reset his/her password. 
+To do so, the user must fill in a small form with his/her email address and click on the button that confirms that he/she wants 
+to reset the password. When he/she does this, he/she will receive a message in his/her e-mail, with a link that will allow 
+him/her to reset his/her password.
+
+#### 13. User Profile
+
+Inside the user's profile page you will find the following features:
+
+- A cover image, with a card on top that welcomes the user with his/her username, you will also find an avatar image there.
+
+- About me box, in which the user has the possibility to write a little about him/herself.
+
+- A form with text fields prefilled by the user and containing information about deliveries.
+
+- A section of historical orders placed by the user, which can be reviewed as many times as needed by the customer.
+
+The user can update his/her profile as many times as he/she wants, for this purpose there is a button that says *"Edit my profile"*, 
+which when pressed, will show a modal window with the data that he/she wants to modify. The data that can be modified are the following:
+
+- Select an image
+- Edit Bio
+- Edit delivery information
+
+Users who have a profile account created, have access to extra features offered by the website, and these are the following:
+
+- Comment within a blogpost (once the comment is made, the user must wait for his comment to be moderated by the website staff).
+- Leave a review about the service offered by the online store (the user must also wait for the review to be moderated).
+- Each time the customer makes a purchase, the checkout form will be autocompleted.
+
+#### 14. Super User Profile
+
+This profile contains the same as the common user profiles, but with the difference that this user can manage the website 
+products or manage blogpost.
+
+When this user logs in, the following links will appear in the profile icon:
+- Product Management
+- Blog Management
+- My Profile
+- Logout
+
+**The product management** consists of the following:
+
+* Inside Product management you will find a form to complete in order to add new products. The form contains the following fields:
+    - Category
+    - Product Code
+    - Product Name
+    - Description
+    - Price
+    - Weight
+    - Weight Unit
+    - Select Image
+
+* Inside the product page, below each product you will find 2 links, one is "edit" and the other is "delete'. The edit link 
+will take you to a form similar to the one for adding products, but if you select the delete link, an alert message will appear 
+asking if you want to delete the selected product.
+* When viewing a product in detail, 2 extra buttons will appear under the product description. The first button is to edit the product, 
+and the second is to delete the product. When you press the delete button, a message will appear in a modal window asking if you want 
+to delete the selected product.
+
+**The blog management** consists of the following:
+
+* Inside Blog Management you will find a form to add new blogposts. The form contains the following:
+    - Title
+    - Slug
+    - Author
+    - Content
+    - Snippet
+    - Status
+    - Select Image
+
+* Inside the blog page, below each blog you will find 2 links, one is "edit" and the other is "delete'. The edit link will take you to a 
+form similar to the one to add blogposts, but if you select the delete link, an alert message will appear asking if you want to delete the 
+selected blogpost.
+* When viewing a blogpost in detail, 2 extra buttons will appear next to the buttons to return to the blog page or to return to the home page. 
+The first button is for editing a blogpost, and the second is for deleting a blogpost. When you press the delete button, a message will appear 
+in a modal window asking if you want to delete the selected blogpost.
+
+#### 15. Admin Panel
+
+This feature is part of the **Django framework**. Inside the panel are all the modules created and that are part of this website. The Admin panel 
+is composed of:
+
+* *Accounts*
+    - Email Address
+* *Authentication and Authorization*
+    - Groups
+    - Users
+* *Blog*
+    - Comments
+    - Posts
+* *Checkout*
+    - Orders
+* *Products*
+    - Products
+    - Categories
+* *Profiles*
+    - User profiles
+* *Reviews*
+    - Reviews
+* *Sites*
+    - Sites
+* *Social Accounts*
+    - Social accounts
+    - Social application tokens
+    - Social Applications
+
+In the Admin panel you can change the status of blogposts, as well as moderate comments and reviews left by users.
+
 ### Features Left to Implement
+
+The only feature contemplated at the beginning of this project, but due to website features implementation priorities was the 
+integration of **3 buttons to share the products on social networks**. It is an interesting feature that I would like to implement 
+in the near future.
+
+### Future Features Ideas
+
+Later on I would like to implement the following features:
+
+- The possibility to evaluate the products quality with stars (from 1 to 5 stars).
+- Allow users to leave reviews within each product.
+- Add a button that allows users to save a product in favorites, and these appear within their user profile.
+- Add buttons to share products on social networks.
+- Add a like and dislike button within the blog posts.
+
 ##### [Back to top](#contents)
 ---
 ## Technologies Used
@@ -524,7 +846,7 @@ storages to INSTALLED_APPS.
         USE_AWS = <True>
 
 20. Login in your **Stripe** account, navigate to Developers section, and get your API keys. Then
-Type your secret keys  your Heroku config vars.
+type your secret keys in your Heroku config vars.
 
         AWS_ACCESS_KEY_ID = <Your aws access key>
         AWS_SECRET_ACCESS_KEY = <Your secret aws access key>
