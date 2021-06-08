@@ -233,8 +233,35 @@ The most popular and loved products by Argentineans were chosen, and the most re
 ### Wireframes
 
 To make the wireframes for this project, I used Pencil software version 3.1.0. They were made as part of the design process and were saved as a pdf document 
-and stored in the separate folder; wireframes. All pages are shown how the project would look like on different screen sizes (desktop, tablets and mobiles). 
-<a href="" target="_blank">Click here to see the wireframes.</a>
+and stored in separate folder; wireframes. All pages are shown how the project would look like on different screen sizes (desktop, tablets and mobiles).
+
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/001-home-page.pdf" target="_blank">Home Page</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/002-products.pdf" target="_blank">Products</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/003-product_detail.pdf" target="_blank">Product Detail</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/004-empty_shopping_cart.pdf" target="_blank">Empty Shopping Cart</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/005-shopping_cart.pdf" target="_blank">Shopping Cart</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/006-checkout.pdf" target="_blank">Checkout</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/007-checkout_user_logged.pdf" target="_blank">Checkout / User logged</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/008-order_confirmation.pdf" target="_blank">Order Confirmation</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/009-signup.pdf" target="_blank">Sign Up</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/010-signin.pdf" target="_blank">Sign In</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/011-reset_password.pdf" target="_blank">Reset Password</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/012-profile.pdf" target="_blank">Profile</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/013-superuser_profile.pdf" target="_blank">Super User Profile</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/014-product_management.pdf" target="_blank">Product Management</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/015-blog_management.pdf" target="_blank">Blog Management</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/016-blog.pdf" target="_blank">Blog</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/017-blogpost.pdf" target="_blank">Blogpost Detail</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/018-blogpost_user_logged.pdf" target="_blank">Blogpost Detail / User Logged</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/019-reviews.pdf" target="_blank">Reviews</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/020-add_a_review.pdf" target="_blank">Add a Review</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/021-contact.pdf" target="_blank">Contact Page</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/022-about_us.pdf" target="_blank">About Us Page</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/023-shipping.pdf" target="_blank">Shipping</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/024-privacy_policy.pdf" target="_blank">Privacy Policy</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/025-refund_policy.pdf" target="_blank">Refund Policy</a>
+* <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/wireframes/026-terms_of_service.pdf" target="_blank">Terms of Service</a>
+
 
 ##### [Back to top](#contents)
 ---
@@ -254,12 +281,12 @@ user is not logged in and the second icon is a shopping cart, which shows the am
 
 The second part of the navigation bar contains the following navigation links:
 
-* *Home*
-* *Info*
+* **Home**
+* **Info**
     - About Us
     - Contact
     - Shipping
-* *Shop*
+* **Shop**
     - Dulce de Leche
     - Yerba Mate
     - Alfajores
@@ -269,12 +296,12 @@ The second part of the navigation bar contains the following navigation links:
     - Accessories
     - Misc
     - Combos
-* *All Products*
+* **All Products**
     - By Price
     - By Category
     - All Products
-* *Blog*
-* *Reviews*
+* **Blog**
+* **Reviews**
 
 In addition, when the website is viewed from mobile devices or tablets, the navbar is fully responsive, adapting all elements to the new 
 screen size. The website logo appears in the middle and the information bar is above it. The search bar is compressed into a magnifying 
@@ -285,12 +312,12 @@ the search bar icon. Navigation links will appear in a toggle button on the left
 
 The footer is composed of 2 parts of different blue shades. The first part consists of 3 components which are:
 
-* *Information*
+* **Information**
     - Privacy Policy
     - Refund Policy
     - Terms of Service
-* *About Us*: Contains a brief description of the website.
-* *Contact Us*: Provides information such as address, phone number and email address of the website.
+* **About Us**: Contains a brief description of the website.
+* **Contact Us**: Provides information such as address, phone number and email address of the website.
 
 Also, when the footer is viewed from mobile devices or tablets, it is responsive, and the same components can be 
 viewed with accordion folding buttons.
@@ -390,11 +417,11 @@ selected, and at the bottom there will appear a button whose purpose is to motiv
 
 On the Checkout page, the user must fill out a form with essential information to be able to make the purchase and these are:
 
-* *Your Details*
+* **Your Details**
     - Full Name
     - Email Address
 
-* *Shipping Information*
+* **Shipping Information**
     - Phone Number
     - Street Address 1
     - Street Address 2
@@ -402,7 +429,8 @@ On the Checkout page, the user must fill out a form with essential information t
     - County
     - Postal Code
     - Select Country
-* *Payment*
+
+* **Payment**
 
 In the form will appear a checkbox that will allow to save this information in the user's profile in case he/she is logged in. 
 Also if the user is logged in, in the text fields of full name and email will be filled with information provided at the time 
@@ -520,26 +548,26 @@ in a modal window asking if you want to delete the selected blogpost.
 This feature is part of the **Django framework**. Inside the panel are all the modules created and that are part of this website. The Admin panel 
 is composed of:
 
-* *Accounts*
+* **Accounts**
     - Email Address
-* *Authentication and Authorization*
+* **Authentication and Authorization**
     - Groups
     - Users
-* *Blog*
+* **Blog**
     - Comments
     - Posts
-* *Checkout*
+* **Checkout**
     - Orders
-* *Products*
+* **Products**
     - Products
     - Categories
-* *Profiles*
+* **Profiles**
     - User profiles
-* *Reviews*
+* **Reviews**
     - Reviews
-* *Sites*
+* **Sites**
     - Sites
-* *Social Accounts*
+* **Social Accounts**
     - Social accounts
     - Social application tokens
     - Social Applications
