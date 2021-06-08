@@ -1,3 +1,4 @@
+![Mockups](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/mockups.jpg?raw=true)
 # Your Argentine Shop
 ## Code Institute: Milestone Project 4
 
@@ -226,6 +227,8 @@ The most popular and loved products by Argentineans were chosen, and the most re
 - Oswald 
 
 **Logotype**
+
+![logotype](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/logo_project_transparent_500px.png?raw=true)
 
 ### Wireframes
 
