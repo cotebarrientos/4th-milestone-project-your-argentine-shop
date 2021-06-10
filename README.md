@@ -678,6 +678,9 @@ Later on I would like to implement the following features:
 ##### [Back to top](#contents)
 ---
 ## Testing
+
+Please view the complete testing process in this separate document <a href="" target="_blank">here</a>.
+
 ##### [Back to top](#contents)
 ---
 ## Deployment
@@ -750,7 +753,7 @@ link it to the Heroku app.
 6. In the section Automatic Deploys, click on Enable automatic deploys, from master branch.
 7. Go to *setting.py* and update the `ALLOWED_HOSTS` as follows:
 
-        ALLOWED_HOSTS = ['your-argentine-shop.herokuapp.com', '127.0.0.1']
+        ALLOWED_HOSTS = ['your-argentine-shop.herokuapp.com', 'localhost', '127.0.0.1']
 8. Then, we have to temporarily disable collectstatic by using Heroku config set or using the CLI-terminal.  
     - Heroku config vars
         
