@@ -679,7 +679,7 @@ Later on I would like to implement the following features:
 ---
 ## Testing
 
-Please view the complete testing process in this separate document <a href="" target="_blank">here</a>.
+Please view the complete testing process in this separate document <a href="https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/TESTING.md" target="_blank">here</a>.
 
 ##### [Back to top](#contents)
 ---

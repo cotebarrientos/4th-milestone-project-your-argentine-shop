@@ -17,9 +17,9 @@
                 <hr>
                 <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
                 {% if post.image%}
-                    <img  class="img-fluid d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
+                    <img  class="img-fluid img-post-detail d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
                 {% else %}
-                    <img class="img-fluid d-block mx-auto my-auto" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
+                    <img class="img-fluid img-post-detail d-block mx-auto my-auto" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
                 {% endif %}
                 
             </div>

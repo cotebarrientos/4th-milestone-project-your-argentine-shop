@@ -15,12 +15,23 @@
     object-fit: cover;
 }
 
+.img-post-detail {
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
+}
 /* -------------------------------- Media Queries */
 
 @media (max-width: 991.98px) {
     .img-post {
         width: 500px;
         height: 300px;
+        object-fit: cover;
+    }
+
+    .img-post-detail {
+        width: 600px;
+        height: 400px;
         object-fit: cover;
     }
 }
@@ -30,13 +41,41 @@
         width: 300px;
         height: 200px;
         object-fit: cover;
-    }    
+    }
+    
+    .img-post-detail {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .img-post-detail {
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+    } 
 }
 
 @media (max-width: 400px) {
     .img-post {
         width: 200px;
         height: 150px;
+        object-fit: cover;
+    } 
+
+    .img-post-detail {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    } 
+}
+
+@media (max-width: 320px) {
+    .img-post-detail {
+        width: 300px;
+        height: 180px;
         object-fit: cover;
     } 
 }

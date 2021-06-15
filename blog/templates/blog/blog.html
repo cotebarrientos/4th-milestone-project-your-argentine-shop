@@ -27,9 +27,9 @@
                     <hr>    
                     <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
                     {% if post.image%}
-                        <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}{{ post.image }}">
+                        <img class="img-post d-block mx-auto my-auto img-fluid rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}{{ post.image }}">
                     {% else %}
-                        <img class="img-post d-block mx-auto my-auto rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
+                        <img class="img-post d-block mx-auto my-auto img-fluid rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}blog_no_image.jpg">
                     {% endif %}
                     <hr> 
                     <p class="lead text-justify text-secondary mt-3 mb-5">{{ post.snippet|truncatechars:190}}</p>

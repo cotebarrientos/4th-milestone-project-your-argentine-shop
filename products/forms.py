@@ -8,6 +8,14 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+        # Restrict the total character inside this form field
+        widgets = {
+            'description' : forms.Textarea(attrs={
+                'rows': '8',
+                'cols': '90',
+                'maxlength': '1000',
+            }),
+        }
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
