@@ -25,8 +25,26 @@ A thorough manual testing has been carried out in the construction of this proje
 ## Validation Services
 
 ### HTML 5
+
+I used <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a> to validate my HTML by direct input.
+ - All the **.html** files were checked.
+ - **profile.html** has an **error** attributed to the crispy forms, due to duplicate IDs. This happens because the **attribute lazyload**.
+ - **cart.html** has an **error** attributed to the input quantity field, due to duplicate IDs. This error is to be expected 
+ because the project uses jinja template.
+ - **checkout.html** has a **warning** attributed to an empty heading. This warning is to be expected 
+ because the project uses jinja template.
+ - the following html files present an **error** about duplicate IDs. This error is to be expected due to the crispy form 
+ and custom widget templates files.
+ - All the .html files present a **warning** related to the *type attribute is unnecessary for JavaScript resources*.
+
 ### CSS 3
+
+I used <a href="https://jigsaw.w3.org/css-validator/validator.html.en" target="_blank">W3C CSS Validator</a> to validate my CSS by direct input.
+
 ### Javascript
+
+I used <a href="https://jshint.com/" target="_blank">JShint</a> to validate my JS by direct input.
+
 ### Python
 
 ##### [Back to top](#testing-contents)

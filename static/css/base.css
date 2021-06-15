@@ -239,15 +239,6 @@ a.category-badge > span.badge:hover {
     font-family: 'Oswald', sans-serif;
 }
 
-#box-shopping-cart {
-    background-color: #ececec;
-    min-height: 5rem;
-    margin-top: 1.875rem;
-    margin-bottom: 1.875rem;
-    padding-top: 1.25rem;
-    font-family: 'Oswald', sans-serif;
-}
-
 #box-info li i {
     font-size: 3.75rem;
 }
@@ -418,12 +409,27 @@ a.category-badge > span.badge:hover {
     object-fit: cover;
 }
 
-#products-img a img,
-#index-products-1 a img,
-#index-products-2 a img{
+.products-img,
+.index-products-1,
+.index-products-2{
     width: 300px;
     height: 300px;
     object-fit: cover;    
+}
+
+/* Shopping Cart*/
+
+#box-shopping-cart {
+    background-color: #ececec;
+    min-height: 5rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.shopping-cart-img {
+    width: 60px;
 }
 
 /* -------------------------------- Media Queries */
@@ -489,9 +495,9 @@ a.category-badge > span.badge:hover {
 /* Adjusts the size of elements within the carousel when collapsed on mobile devices */
 
 @media (max-width: 1500px) {
-    #products-img a img,
-    #index-products-1 a img,
-    #index-products-2 a img{
+    .products-img,
+    .index-products-1,
+    .index-products-2{
         width: 250px;
         height: 250px;
         object-fit: cover;    
@@ -619,9 +625,9 @@ a.category-badge > span.badge:hover {
 }
 
 @media (max-width: 320px) {
-    #products-img a img,
-    #index-products-1 a img,
-    #index-products-2 a img{
+    .products-img,
+    .index-products-1,
+    .index-products-2{
         width: 200px;
         height: 200px;
         object-fit: cover;    
