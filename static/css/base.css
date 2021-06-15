@@ -259,7 +259,7 @@ a.category-badge > span.badge:hover {
     width: 500px;
     display: block;
     margin: 0 auto;
-    padding: 30px 15px;
+    padding: 1.875rem 0.938rem;
   }
 
 /* ------------------------------- bootstrap toasts */

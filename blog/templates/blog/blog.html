@@ -21,11 +21,22 @@
         </div>
         <!-- Blog Posts column -->
         <div class="row border border-muted shadow ml-2 mr-2 pl-3 pr-3 mb-4">
+            <!-- If not yet published on the blog -->
+            {% if posts|length == 0 %}
+            <div class="col-12 bg-light mb-1 rounded">
+                <h3 class="text-uppercase text-center blog-title-color mt-4 pb-3">No blog posts yet</h3>
+                <hr>
+                <h5 class="text-muted text-center pb-5">
+                    We're sorry, but we haven't created any blog posts yet, but don't worry, we'll have interesting content to share with you soon.
+                </h5>
+                <img src="{{ MEDIA_URL }}no_blogposts.png" class="no-blogpost-img d-block mx-auto my-auto img-fluid" alt="Ups, no results"/>   
+            </div>
+            {% else %}
             <div class="col-12 bg-light mb-1 rounded">
                 {% for post in posts %}
                     <h3 class="text-uppercase text-center blog-title-color mt-4 pb-3">{{ post.title }}</h3>
                     <hr>    
-                    <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
+                    <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.created_on }}</p>
                     {% if post.image%}
                         <img class="img-post d-block mx-auto my-auto img-fluid rounded" alt="{{ post.title }}" src="{{ MEDIA_URL }}{{ post.image }}">
                     {% else %}
@@ -50,6 +61,7 @@
                     <hr>
                 {% endfor %}
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

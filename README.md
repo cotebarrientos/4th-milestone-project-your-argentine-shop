@@ -918,6 +918,7 @@ The products used, as well as the written content within the blog page, as well 
 - Some images used (Reviews cover, carousel images, About us, Reviews form cover) were made using Adobe Photoshop.
 - Logotype and images for errors 404 and 500 were made using Adobe Illustrator and Affinity Designer.
 - The images from <a href="https://unsplash.com/" target="_blank">Unsplash</a>  were used to create generic fake profile avatars.
+- The images from <a href="https://www.iconfinder.com/" target="_blank">Iconfinder</a> were used for the shopping cart information bar and blog page.
 
 #### Code
 * These websites were really useful to troubleshooting the issues I faced:

@@ -15,7 +15,7 @@
                 <hr>
                 <h2 class="text-center text-uppercase mb-4">{{ post.title }}</h2>
                 <hr>
-                <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.updated_on }}</p>
+                <p class="font-italic"><i class="fas fa-calendar-plus mr-2"></i>{{ post.created_on }}</p>
                 {% if post.image%}
                     <img  class="img-fluid img-post-detail d-block mx-auto my-auto" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
                 {% else %}
