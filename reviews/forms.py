@@ -3,15 +3,18 @@ from .models import Review
 
 
 class ReviewCommentForm(forms.ModelForm):
-
+    """
+    This form allows users to leave a review about the service
+    provided by the online store.
+    """
     class Meta:
         model = Review
         fields = ('name', 'email', 'comment', 'rating')
         widgets = {
-            'comment' : forms.Textarea(attrs={
+            'comment': forms.Textarea(attrs={
                 'rows': '6',
                 'cols': '90',
-                'placeholder': 'Comment your review here, no more than 1000 characters.',
+                'placeholder': 'Comment your review, no more than 1000 char.',
                 'maxlength': '1000',
             }),
         }
@@ -24,6 +27,6 @@ class ReviewCommentForm(forms.ModelForm):
         self.fields['email'].label = "Your Email "
         self.fields['comment'].label = "Your Comment "
         self.fields['rating'].label = "Your Rating "
-        
+
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'  
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'

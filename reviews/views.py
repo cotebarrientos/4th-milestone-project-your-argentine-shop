@@ -17,8 +17,9 @@ def review(request):
     }
     return render(request, template, context)
 
+
 @login_required
-def write_review (request):
+def write_review(request):
     """ Add a customer review about the website """
 
     new_review = None
@@ -26,10 +27,10 @@ def write_review (request):
     if request.method == 'POST':
         review_form = ReviewCommentForm(data=request.POST or None)
         if review_form.is_valid():
-            name = request.POST.get( 'name')
-            email = request.POST.get( 'email')
-            rating = request.POST.get( 'rating')
-            comment = request.POST.get( 'comment')
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            rating = request.POST.get('rating')
+            comment = request.POST.get('comment')
             new_review = Review.objects.create(
                 user=request.user,
                 name=name,
@@ -38,14 +39,21 @@ def write_review (request):
                 comment=comment
             )
             new_review.save()
-            messages.success(request, 'Successfully added your review. Your comment is awaiting moderation. Thank you so much!')
+            messages.success(
+                request,
+                """
+                Successfully added your review. Your comment is awaiting
+                moderation. Thank you so much!
+                """)
             return redirect(reverse('review'))
         else:
-            messages.error(request, 'Failed to add your review. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add your review. Please ensure the form is valid.')
     else:
         review_form = ReviewCommentForm()
 
-    # Attempt to pre-fill the review form with the information that the user 
+    # Attempt to pre-fill the review form with the information that the user
     # maintains in his/her profile.
     if request.user.is_authenticated:
             profile = UserProfile.objects.get(user=request.user)

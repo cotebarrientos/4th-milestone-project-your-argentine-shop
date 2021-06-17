@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Display the Products data in the Admin panel.
+    """
     list_display = (
         'product_code',
         'name',
@@ -16,7 +18,11 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('product_code',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Display the Products Category data in the Admin panel.
+    """
     list_display = (
         'friendly_name',
         'name',

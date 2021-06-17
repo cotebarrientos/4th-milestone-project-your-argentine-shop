@@ -12,16 +12,18 @@ def profile(request):
     """ Display the user's profile. """
 
     profile = get_object_or_404(UserProfile, user=request.user)
-    
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
-        customForm = UserCustomizedForm(request.POST or None, request.FILES, instance=profile)
+        customForm = UserCustomizedForm(
+            request.POST or None, request.FILES, instance=profile)
         if form.is_valid() or customForm.is_valid():
             form.save()
             customForm.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
         customForm = UserCustomizedForm(instance=profile)
@@ -30,7 +32,7 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'customForm':customForm,
+        'customForm': customForm,
         'orders': orders,
         'profile': profile,
         'on_profile_page': True

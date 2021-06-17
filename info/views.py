@@ -8,49 +8,43 @@ from profiles.models import UserProfile
 from .forms import ContactForm
 
 
-
 def terms_of_service(request):
-     """ A view to return the terms of service of the website"""
-
-     return render(request, 'info/terms_of_service.html')
-
-
-def privacy_policy (request):
-    """ A view to return the privacy policy of the website""" 
-
-    return render(request,'info/privacy_policy.html')
+    """ A view to return the terms of service of the website"""
+    return render(request, 'info/terms_of_service.html')
 
 
-def refund_policy (request):
-    """ A view to return the refund policy of the website""" 
-
-    return render(request,'info/refund_policy.html')
-
-
-def about_us (request):
-    """ A view to return the About Us page""" 
-
-    return render(request,'info/about_us.html')
+def privacy_policy(request):
+    """ A view to return the privacy policy of the website"""
+    return render(request, 'info/privacy_policy.html')
 
 
-def shipping (request):
-    """ A view to return the Shipping page""" 
+def refund_policy(request):
+    """ A view to return the refund policy of the website"""
+    return render(request, 'info/refund_policy.html')
 
-    return render(request,'info/shipping.html')
+
+def about_us(request):
+    """ A view to return the About Us page"""
+    return render(request, 'info/about_us.html')
 
 
-def contact (request):
+def shipping(request):
+    """ A view to return the Shipping page"""
+    return render(request, 'info/shipping.html')
+
+
+def contact(request):
     """ A view to return the Contact page and contact form"""
 
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            subject = contact_form.cleaned_data['subject'] 
+            subject = contact_form.cleaned_data['subject']
             body = {
-                'name': contact_form.cleaned_data['name'], 
-                'email': contact_form.cleaned_data['email_address'], 
-                'message':contact_form.cleaned_data['message'], 
-			}
+                'name': contact_form.cleaned_data['name'],
+                'email': contact_form.cleaned_data['email_address'],
+                'message': contact_form.cleaned_data['message'],
+                }
 
             message = render_to_string('info/email/contact_email.txt', body)
 
@@ -58,18 +52,15 @@ def contact (request):
                 send_mail(
                     subject,
                     message,
-                    settings.DEFAULT_FROM_EMAIL, 
-                    [settings.DEFAULT_FROM_EMAIL],) 
-			
+                    settings.DEFAULT_FROM_EMAIL,
+                    [settings.DEFAULT_FROM_EMAIL],)
             except BadHeaderError:
-                return HttpResponse('Invalid header found.') 
-
+                return HttpResponse('Invalid header found.')
             messages.success(
                 request,
-                """Your message was successfully sent. 
-                All email enquiries will be answered within 48 hours. 
+                """Your message was successfully sent.
+                All email enquiries will be answered within 48 hours.
                 Thank you very much!""")
-                
             return redirect('home')
     else:
         contact_form = ContactForm()

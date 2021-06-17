@@ -55,7 +55,12 @@ I used <a href="https://jigsaw.w3.org/css-validator/validator.html.en" target="_
 - All the **.css** files were checked.
 - All the **.css** passed without an **error**.
 - **checkout.css**  has a **warning**.
+
+ ![css warning 1](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/css_warnings.jpg?raw=true)
+
 - **base.css** has 14 **warnings**.
+
+ ![css warning 2](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/css_warnings2.jpg?raw=true)
 
 ### Javascript
 
@@ -98,6 +103,32 @@ I used <a href="https://jshint.com/" target="_blank">JShint</a> to validate my J
 ### Python
 
 I used <a href="http://pep8online.com/" target="_blank">PEP8 Online</a> to validate my python files by direct input.
+- All the **.py** files were checked.
+- **blog/widgets.py** has 1 exception:
+    - Line 9: line too long (83 > 79 characters)
+    - This line contains the path to a template, so I decided not to modify it.
+- **checkout/webhook_handler.py** has 2 exception:
+    - Line 74: line too long (80 > 79 characters)
+    - Line 75: line too long (80 > 79 characters)
+    - I decided not modify those lines, since when I tried to do it, the code was broken.
+- **checkout/webhooks.py** has 1 exception:
+    - Line 42: 	line too long (86 > 79 characters)
+    - I decided to leave this line unchanged, in order not to break the code.
+- **ms4/settings.py** has 4 exception:
+    - Line 148: line too long (91 > 79 characters)
+    - Line 151: line too long (81 > 79 characters)
+    - Line 154: line too long (82 > 79 characters)
+    - Line 157: line too long (83 > 79 characters)
+    - I didn't change these lines of code, because these are part of `AUTH_PASSWORD_VALIDATORS` so as to avoid forcing a break in the code.
+- **products/widgets.py** has 1 exception:
+    - Line 9: line too long (87 > 79 characters)
+    - As with the widgets.py file above, this line contains the path to a template, so I decided not to change it.
+- **profiles/widgets.py** has 1 exception:
+    - Line 9: line too long (87 > 79 characters)
+    - This line contains the path to a template, so I decided not to change it.
+- I haven't modified any files inside the **migrations folders**, in order to not break the code or cause problems to the database. 
+In general the **.py** files follow all the rules, only with some exceptions where some lines are too long.
+- The rest of the **.py** files are fully compliant with the **PEP8** requirements. 
 
 ##### [Back to top](#testing-contents)
 ---

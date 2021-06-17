@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
+# The model fields are displayed in the orders within Checkout admin.
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)

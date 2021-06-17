@@ -5,6 +5,7 @@ from products.models import Product
 
 
 def cart_contents(request):
+    '''add shopping cart items to session'''
 
     cart_items = []
     subtotal = 0
@@ -24,7 +25,8 @@ def cart_contents(request):
         })
 
     if subtotal < settings.FREE_DELIVERY_LIMIT:
-        delivery = subtotal * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery = subtotal * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery = settings.FREE_DELIVERY_LIMIT - subtotal
     else:
         delivery = 0
@@ -37,8 +39,8 @@ def cart_contents(request):
         'subtotal': subtotal,
         'product_count': product_count,
         'product_count_weight': product_count_weight,
-        'free_delivery' : free_delivery,
-        'free_delivery_limit' : settings.FREE_DELIVERY_LIMIT,
+        'free_delivery': free_delivery,
+        'free_delivery_limit': settings.FREE_DELIVERY_LIMIT,
         'delivery': delivery,
         'total': total,
     }

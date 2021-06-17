@@ -3,6 +3,10 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    Form to allow  User to submit his/her information in orden to
+    place his/her order.
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',

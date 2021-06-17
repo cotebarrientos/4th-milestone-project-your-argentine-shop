@@ -6,16 +6,16 @@ from profiles.models import UserProfile
 from .forms import BlogPostForm, CommentForm
 
 
-
 def post_list(request):
     """ A view to show all blog posts"""
 
     posts = Post.objects.filter(status=1).order_by('-created_on')
     template = 'blog/blog.html'
     context = {
-        'posts':posts
+        'posts': posts
     }
     return render(request, template, context)
+
 
 def post_detail(request, post_id):
     """ A view to show individual blog post details with its comments"""
@@ -25,28 +25,28 @@ def post_detail(request, post_id):
     new_comment = None
 
     # Comment posted
-    # Code based and modified from 
+    # Code based and modified from
     # https://djangocentral.com/creating-comments-system-with-django/
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST or None)
         if comment_form.is_valid():
 
-            name = request.POST.get( 'name')
-            email = request.POST.get( 'email')
-            body = request.POST.get( 'body')
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            body = request.POST.get('body')
             new_comment = Comment.objects.create(
-                post=post, 
-                user=request.user, 
-                name=name, 
+                post=post,
+                user=request.user,
+                name=name,
                 email=email,
                 body=body
              )
-             
+
             new_comment.save()
     else:
         comment_form = CommentForm()
 
-    # Attempt to pre-fill the comment form with the information that the user 
+    # Attempt to pre-fill the comment form with the information that the user
     # maintains in his/her profile.
     if request.user.is_authenticated:
             profile = UserProfile.objects.get(user=request.user)
@@ -60,12 +60,13 @@ def post_detail(request, post_id):
     template = 'blog/post_detail.html'
     context = {
         'post': post,
-        'comments':comments,
-        'comment_form':comment_form,
-        'new_comment':new_comment,
+        'comments': comments,
+        'comment_form': comment_form,
+        'new_comment': new_comment,
     }
 
     return render(request, template, context)
+
 
 @staff_member_required
 def add_post(request):
@@ -78,16 +79,19 @@ def add_post(request):
             messages.success(request, 'Successfully added a new post!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, 'Failed to add this post. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add this post. Please ensure the form is valid.')
     else:
         form = BlogPostForm()
 
     template = 'blog/add_post.html'
     context = {
-        'form':form,
+        'form': form,
     }
 
     return render(request, template, context)
+
 
 @staff_member_required
 def edit_post(request, post_id):
@@ -101,7 +105,9 @@ def edit_post(request, post_id):
             messages.success(request, 'Successfully updated your blog post!')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, 'Failed to update this blog post. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update this post. Please ensure the form is valid.')
     else:
         form = BlogPostForm(instance=post)
         messages.info(request, f'You are editing {post.title}')
@@ -113,6 +119,7 @@ def edit_post(request, post_id):
     }
 
     return render(request, template, context)
+
 
 @staff_member_required
 def delete_post(request, post_id):
