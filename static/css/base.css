@@ -39,6 +39,14 @@ main {
     font-family: 'Oswald', sans-serif;
 }
 
+.nav-paragraph {
+    font-size: 0.875rem;
+}
+
+.footer-paragraph-contact {
+    font-size: 1rem;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -448,11 +456,19 @@ a.category-badge > span.badge:hover {
     }
 
     .nav-link {
-        padding: 0.15rem;
+        padding-top: 0.15rem;
+        padding-bottom: 0.15rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 
     .nav-link i.fa-lg {
         font-size: 1rem;
+    }
+
+    #accordion-info h4 {
+        font-size: 1.125rem;
+        padding: 0.313rem;
     }
 
     .navbar-toggler {
@@ -534,6 +550,10 @@ a.category-badge > span.badge:hover {
     .carousel-caption h6 {
         font-size: 1.125rem;
     }
+
+    .footer-paragraph-contact {
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -575,6 +595,14 @@ a.category-badge > span.badge:hover {
 }
 
 @media (max-width: 600px) {
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 0.875rem;
+    }
+
     #product-detail a img{
         width: 300px;
         height: 300px;
@@ -586,17 +614,17 @@ a.category-badge > span.badge:hover {
     }
 
     .carousel-caption h2 {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .carousel-caption h6 {
-        font-size: 8px;
+        font-size: 0.5rem;
     }
 
     .carousel-caption a {
-        margin-top: 2px;
-        font-size: 8px;
-        padding: 4px 5px;
+        margin-top: 0.125rem;
+        font-size: 0.5rem;
+        padding: 0.25rem 0.313rem;
     }
 }
 

@@ -2,7 +2,7 @@
     <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <p class="my-0 nav-paragraph">Search</p>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -24,20 +24,20 @@
     <a class="nav-link d-block d-lg-none" href="#" id="user-options2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0 nav-paragraph ">My Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options2">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                <a href="{% url 'add_post' %}" class="dropdown-item">Blog Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item nav-paragraph">Product Management</a>
+                <a href="{% url 'add_post' %}" class="dropdown-item nav-paragraph">Blog Management</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'profile' %}" class="dropdown-item nav-paragraph">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item nav-paragraph">Logout</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item nav-paragraph">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item nav-paragraph">Login</a>
         {% endif %}
     </div>
 </li>
@@ -45,7 +45,7 @@
     <a class="{% if total %}{% else %}{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-            <p class="my-0">
+            <p class="my-0 nav-paragraph">
                 {% if total %}
                     €{{ total|floatformat:2 }}
                 {% else %}
