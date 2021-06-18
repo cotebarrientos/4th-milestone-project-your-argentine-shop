@@ -174,17 +174,38 @@ appearance, the elements within it are completely disassembled, and the appearan
 terrible, the performance of this browser is pretty poor and *it's not recommended to use it* because of everything 
 described above.
 
+**Chrome's DevTools Lighthouse Report**
+
+**1.** *Desktop*
+
+| Performance   | Accessibility | Best Practices| SEO  |
+| :-----------: | :-----------: | :-----------: | :-----------: |
+| 77% | 88% | 93% | 90% |
+
+**2.** *Mobile*
+
+| Performance   | Accessibility | Best Practices| SEO  |
+| :-----------: | :-----------: | :-----------: | :-----------: |
+| 66% | 88% | 93% | 92% |
+
+**Note:** Website performance drops during testing with Chrome's DevTools Lighthouse because it takes a while for the online store 
+images to load. Another factor that influenced during the tests was the speed of my home internet provider (especially with GoMo 
+the performance of the website was very slow). These tests were performed with Three's internet provider.
 
 ##### [Back to top](#testing-contents)
 ---
 ## Responsiveness
 
-I made the following response tests in order to ensure that the website operates correctly and at the same time that its components are seen harmoniously 
-arranged in different screen sizes, so that I used the following tools to help me.
+I made the following response tests in order to ensure that the website operates correctly and at the same time that its components 
+are seen harmoniously arranged in different screen sizes, so that I used the following tools to help me.
 
-* **Mozilla Firefox DevTools**: This browser was used to check the behavior of the web page in different screen sizes using the Developer Tools. Tests consisted in testing the appearance of the fonts used, the aspect of colors and backgrounds, the order and space used by the different elements that make up the web page.
+* **Mozilla Firefox DevTools**: This browser was used to check the behavior of the web page in different screen sizes using the Developer Tools. 
+Tests consisted in testing the appearance of the fonts used, the aspect of colors and backgrounds, the order and space used by the different 
+elements that make up the web page.
 
-* **Google Chrome DevTools**: This browser was used to check the behavior of the web page in different screen sizes using the Developer Tools. As in the previous browser, different tests were performed checking the aspect of the font used, colors and backgrounds, and finally, the space used by the elements of the website. In addition, a contrast was made between both browsers, checking for any existing differences.
+* **Google Chrome DevTools**: This browser was used to check the behavior of the web page in different screen sizes using the Developer Tools. 
+As in the previous browser, different tests were performed checking the aspect of the font used, colors and backgrounds, and finally, the space 
+used by the elements of the website. In addition, a contrast was made between both browsers, checking for any existing differences.
 
 * **Xiaomi Mi A1**: This mobile device was used to test the behavior of the website, using browsers such as *Chrome, Mozilla Firefox* and *DuckDuckGo*.
 
@@ -205,8 +226,8 @@ arranged in different screen sizes, so that I used the following tools to help m
 | Iphone 6/7/8 plus | Good | Virtual |
 | Iphone 6/7/8      | Good | Virtual |
 | Iphone 5          | Good | Virtual |
-| Xiaomi Mi A1      |  | Physical Device |
-| Xiaomi Poco x3    | Good | Physical Device |
+| Xiaomi Mi A1      | Good | Physical Device |
+| Xiaomi Poco x3 NFC   | Good | Physical Device |
 | Iphone S20        | Good | Physical Device |
 | Ipad Mini 2       | Good | Physical Device |
 
@@ -216,10 +237,31 @@ arranged in different screen sizes, so that I used the following tools to help m
 ## Manual Testing
 
 ### Links Functionality
+
+The following tests were performed to verify that all links responded as expected:
+
+* Menu bar items were clicked on from each page to make sure that they navigate to the correct page.
+* Clicking on the logo in the menu bar leads the user back to the home page.
+* The search bar, user profile and shopping cart icons work correctly on different screen sizes.
+* All links within the website lead you to the assigned page.
+* All buttons (e.g. buttons to return to home page) have been clicked to check that these
+ buttons return the user to the correct page.
+* The back to top button on all pages works correctly.
+
 ### User Stories Functionality
 ### Defensive Design
 ### Issues during project development
 ### Tested devices
+
+The following devices were used to perform different tests throughout the development of this project:
+
+* Lenovo Ideapad S410p (Laptop)
+* My Custom PC (Desktop)
+* Asus FX505D (Laptop)
+* Xiaomi Mi A1 (Mobile)
+* Xiaomi Poco x3 NFC (Mobile)
+* Iphone S20 (Mobile)
+* Ipad Mini 2 (Tablet)
 
 ##### [Back to top](#testing-contents)
 ---
