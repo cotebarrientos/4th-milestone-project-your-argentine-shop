@@ -137,14 +137,43 @@ In general the **.py** files follow all the rules, only with some exceptions whe
 In order to ensure that the website would work properly in the following browsers, responsiveness tests, button and link checks were done, as well 
 as tests on the look of the website to ensure that the colors, images and fonts used would display correctly.
 
-| Browser       | Responsiveness | Appearance    |
-| :-----------: | :-----------:  | :-----------: |
-| Chrome        |  |  |
-| Firefox       |  |  |
-| Avast Secure  |  |  |
-| Edge          |  |  |
-| IE            |  |  |
-| Safari        |  |  |
+| Browser       | Responsiveness | Appearance    | Performance   |
+| :-----------: | :-----------:  | :-----------: | :-----------: |
+| Chrome        | Good | Good | Good |
+| Firefox       | Good | Good | Good |
+| Avast Secure  | Good | Good | Good |
+| Edge          | Good | Good | Good |  
+| Safari        | Fair | Fair | Fair |
+| IE            | Poor | Poor | Poor |
+
+* **Chrome:** The website works very well, and it was the main browser I used during the development of this project. 
+The website elements adapt perfectly to the different screen sizes, the fonts and images look pretty good, and all 
+the functionalities of the online store are working properly.
+
+* **Mozilla Firefox:** This browser behaves very well in general. This was the secondary browser I used during the 
+development of this online store, and it served as a point of comparison with the Chrome browser. Some of the most 
+noticeable differences with Chrome is that the fonts used look slightly larger and thicker, changing the appearance 
+of the website, this difference forced me to further adapt the css classes used.
+
+* **Avast Secure:** Of all the browsers used, this is the one that gave the best appearance to the website. The 
+images look very high quality, and the fonts used look perfect. In general all the functions of the website work 
+correctly, the only drawback is that it loads the website content much slower than *Chrome* and *Mozilla Firefox*.
+
+* **Edge:** The website in this browser looks pretty good, and in addition to all the browsers used, in this one 
+the online store contents loaded faster, especially the images that are one of the most demanding elements in the 
+browser performance. On the other hand, Stripe elements take a little longer to load compared to *Chrome* and *Mozilla 
+Firefox*. The web page works correctly in this browser.
+
+* **Safari:** The website works, but it has a fair performance, and it doesn't stand out from the rest. First of all, 
+this browser takes longer than usual to load the website, it doesn't take some css classes well either, and the images 
+and fonts used don't look as good compared to browsers like *Chrome* or *Mozilla Firefox*.
+
+* **Internet Explorer (IE):** The website is **completely broken** in this browser. Stripe doesn't work, it doesn't allow 
+to update the items in the shopping cart, and it doesn't allow to delete items in it either. In the website's physical 
+appearance, the elements within it are completely disassembled, and the appearance of both images and fonts used, look 
+terrible, the performance of this browser is pretty poor and *it's not recommended to use it* because of everything 
+described above.
+
 
 ##### [Back to top](#testing-contents)
 ---
@@ -168,18 +197,18 @@ arranged in different screen sizes, so that I used the following tools to help m
 
 | Device            | Responsiveness | Type           |
 | :---------------: | :------------: | :------------: |  
-| Desktop >1200px   |  | Virtual |
-| Desktop 1024px    |  | Virtual |
-| Ipad PRO          |  | Virtual |
-| Ipad              |  | Virtual |
-| Ipad Mini         |  | Virtual |
-| Iphone 6/7/8 plus |  | Virtual |
-| Iphone 6/7/8      |  | Virtual |
-| Iphone 5          |  | Virtual |
+| Desktop >1200px   | Good | Virtual |
+| Desktop 1024px    | Good | Virtual |
+| Ipad PRO          | Good | Virtual |
+| Ipad              | Good | Virtual |
+| Ipad Mini         | Good | Virtual |
+| Iphone 6/7/8 plus | Good | Virtual |
+| Iphone 6/7/8      | Good | Virtual |
+| Iphone 5          | Good | Virtual |
 | Xiaomi Mi A1      |  | Physical Device |
-| Xiaomi Poco x3    |  | Physical Device |
-| Iphone S20        |  | Physical Device |
-| Ipad Mini 2       |  | Physical Device |
+| Xiaomi Poco x3    | Good | Physical Device |
+| Iphone S20        | Good | Physical Device |
+| Ipad Mini 2       | Good | Physical Device |
 
 
 ##### [Back to top](#testing-contents)
