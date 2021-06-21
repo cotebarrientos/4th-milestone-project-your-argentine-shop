@@ -30,6 +30,9 @@ class ProductForm(forms.ModelForm):
         # Restrict editing this field within the form
         self.fields['weight_unit'].widget.attrs['readonly'] = True
 
+        # Set a field as a required field
+        self.fields['product_code'].required = True
+
         # Add placeholders into the Product Form
         self.fields['product_code'].widget.attrs[
             'placeholder'] = 'ALF-12U-CHO-660'
@@ -42,6 +45,7 @@ class ProductForm(forms.ModelForm):
 
         # Overwrite the field labels into the Product Form
         self.fields['name'].label = "Product Name "
+        self.fields['product_code'].label = "Product code "
         self.fields['description'].label = "Description "
         self.fields['price'].label = "Price "
         self.fields['weight'].label = "Weight "

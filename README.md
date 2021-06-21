@@ -940,7 +940,7 @@ The products used, as well as the written content within the blog page, as well 
     - <a href="https://www.youtube.com/channel/UClXcbBNNhFU9ATAcXB6U7eQ" target="_blank">Lara Code</a>
     - <a href="https://www.youtube.com/channel/UCmOpHGj4JRWCdXhllVTZCVw" target="_blank">The Code Creative</a>
     - <a href="https://www.youtube.com/channel/UC4zS7t0ymP3cqBgDd-e-94A" target="_blank">On Dev</a>
-
+* Part of coding written for this project was based on the source code of the module provided by <a href="https://github.com/ckz8780/boutique_ado_v1" target="_blank">Code Institute Source Code</a>.
 #### Acknowledgements
 
 Thank you to the following people who helped with support, inspiration and guidance at different stages in the project:

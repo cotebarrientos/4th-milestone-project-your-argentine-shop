@@ -25,9 +25,13 @@ class BlogPostForm(forms.ModelForm):
         self.fields['slug'].widget.attrs[
             'placeholder'] = 'Write here. max 200 char. e.g. blog-post-title'
 
+        # Set a field as a required field
+        self.fields['content'].required = True
+
         # Overwrite the field labels into the Blog Form
         self.fields['title'].label = "Title "
         self.fields['slug'].label = "Slug "
+        self.fields['content'].label = "Content "
         self.fields['author'].label = "Author "
         self.fields['snippet'].label = "Snippet "
         self.fields['status'].label = "Status "
