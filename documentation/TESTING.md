@@ -182,11 +182,15 @@ described above.
 | :-----------: | :-----------: | :-----------: | :-----------: |
 | 77% | 88% | 93% | 90% |
 
+ ![Lighthouse Report for Desktop](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/lighthouse_desktop.jpg?raw=true)
+
 **2.** *Mobile*
 
 | Performance   | Accessibility | Best Practices| SEO  |
 | :-----------: | :-----------: | :-----------: | :-----------: |
 | 66% | 88% | 93% | 92% |
+
+![Lighthouse Report for mobile](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/lighthouse_mobile.jpg?raw=true)
 
 **Note:** Website performance drops during testing with Chrome's DevTools Lighthouse because it takes a while for the online store 
 images to load. Another factor that influenced during the tests was the speed of my home internet provider (especially with GoMo 
@@ -196,7 +200,7 @@ the performance of the website was very slow). These tests were performed with T
 ---
 ## Responsiveness
 
-I made the following response tests in order to ensure that the website operates correctly and at the same time that its components 
+I made the following responsiveness tests in order to ensure that the website operates correctly and at the same time that its components 
 are seen harmoniously arranged in different screen sizes, so that I used the following tools to help me.
 
 * **Mozilla Firefox DevTools**: This browser was used to check the behavior of the web page in different screen sizes using the Developer Tools. 
@@ -248,9 +252,470 @@ The following tests were performed to verify that all links responded as expecte
  buttons return the user to the correct page.
 * The back to top button on all pages works correctly.
 
+**Test Outcome**: PASSED
+
 ### User Stories Functionality
+
+The tests performed in this section were mainly focused on checking that all the expected functions 
+within the user stories worked correctly.
+
+#### Home Page
+
+1. The home page displays images with different buttons that invite the user to buy a product related 
+to the image itself. The user when clicking on the **"shop now"** button should be redirected to the selected 
+product category.
+    * **First slide image**: The button inside this image redirects the user to a page showing *all the 
+    website's products*.
+    * **Second slide image**: The button inside this image redirects the user to a page which displays 
+    products with the *"Yerba Mate"* category.
+    * **Third slide image**: The button inside this image redirects the user to a page which displays 
+    products with the *"Empanadas"* category.
+    * **Fourth slide image**: The button inside this image redirects the user to a page which displays 
+    products with the *"Alfajores"* category.
+    * **Fifth slide image**: The button inside this image redirects the user to a page which displays 
+    products with the *"Dulce de leche"* category.
+
+2. The Home page, every time that it is reloaded, should show random products, which when pressed, redirect 
+the user to the selected product, and these are:
+    * **Featured products:** It shows a total of 8 random products, except for the "combos" category.
+    * **Combos:** It displays a total of 4 products that only belong to this category.
+
+**Test Outcome**: PASSED
+
+#### Products page view
+
+To access the products page, the user can do it from the navigation bar by selecting the **"shop"** nav link 
+(which has products sorted by categories) or select the **"All products"** nav link, which shows all products 
+according to the selected order (by price, by category and all products). Explained this, the following 
+tests were made to the products page.
+
+1. Select the different sorting options from the top dropdown box one by one, confirm that the products are 
+sorted with the selected option.
+2. Select the different sorting options in the **"Shop"** navigation menu one by one, and confirm that the products 
+are sorted in the selected category. For example, clicking on *"Alfajores"* selects all products related to this 
+category. Check that each category is displayed and that these indeed show the related products.
+3. Select the different sorting options in the **"All Products"** navigation menu one by one, and confirm that the products 
+are sorted in the selected option. For example, clicking on *"By Price"* will display all products in the online store 
+sorted by price. As a bonus, you can select in the dropdown box to sort the products by low to high price or by high 
+to low price.
+4. Select a product of your interest from the product page. The expected result should be effectively a detailed view 
+of the selected product.
+
+**Test Outcome**: PASSED
+
+#### Search for products by keyword in the search bar.
+
+1. Type a word related to the website's products (e.g. "milk"), the search bar should be able to display all products related 
+to your query.
+2. Type any word in the search bar and which doesn't relate to any product on the website (e.g. "vegetarian snack"), 
+the expected behavior is that a special message is shown indicating that there are no results for your search.
+
+**Test Outcome**: PASSED
+
+#### product detail view 
+
+1. Select a product by clicking on the image from the product page.
+2. Once inside the page that allows you to see the product in detail, select the desired product quantity (for example 2) 
+from the input quantity field and verify that this quantity appears in the shopping cart icon.
+3. Then go to the product page, select another item and add the desired quantity (e.g. 1). Then check that this product with 
+the selected quantity appears in the shopping cart icon.
+4. Once this is done, press the button that says "Go to checkout" (which is inside the message that is displayed once you have 
+pressed the "Add to Cart" button), to access the shopping cart. The expected result is that the user can in fact access the 
+shopping cart.
+
+**Test Outcome**: PASSED
+
+#### Shopping cart functionality
+
+1. Check inside the shopping cart to make sure that all the selected products are in the shopping cart.
+2. Increase the quantity of any product that is in the shopping cart from the input quantity field, then click on the *"update"* 
+link whose function is to update the selected item's quantity. The expected result is that the selected product's quantity will 
+be effectively updated.
+3. Decrease the quantity of any product in the shopping cart from the input quantity field, then click on the *"update"* link. 
+The expected result is that effectively the selected product quantity  will be updated.
+4. To calculate the delivery price, 10% of the total quantity is calculated, but after 60 euros, the delivery is free. For products 
+in the shopping cart, be sure to make more than 60 euros to check that the promotion is fulfilled.
+5. Delete all the products in the shopping cart by clicking on the link that says *"remove"*, then check that the items in the 
+shopping cart have been removed. The expected result is that the items in the shopping cart are removed and at the same time a 
+special message appears when the shopping cart is empty.
+6. Again add more products into the shopping cart and adjust it to your needs, then press the button that says *"Proceed to Checkout"* 
+and verify that you can indeed access the checkout page. The expected result is that the user can indeed access the checkout page 
+and start finalizing his/her order.
+
+**Test Outcome**: PASSED
+
+#### Checkout page functionality
+
+In order to perform the tests corresponding to this functionality, you must take in consideration the following:
+
+- The payment method used by the online store is **Stripe API**, but in its **TEST** version (only for development). 
+- To make the payments, you must enter the following card number: **4242 4242 4242 4242 424 242 42424**
+- Filling out this information should look something like this:
+
+![Card number example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/card_example.jpg?raw=true)
+
+The following tests have been performed:
+
+1. Verify that the form is displayed.
+2. Check that all items added to the shopping cart appear on this page.
+3. Try to checkout without filling out some of the required fields. The expected result is that the user will not 
+be allowed to proceed with the purchase and messages will appear prompting the user to fill out these form fields.
+4. Fills the email field with an invalid one (e.g. anything without the @). The expected result is that it won't 
+allow the user to complete the purchase and a message will appear telling the user to fill in that field correctly.
+5. Fill out the form with all the required information.
+6. Try to make the purchase with an invalid card, for example: **2424 2424 2424 2424**. The expected result would be 
+a message below the Stripe field saying *"Your card number is invalid"*.
+7. Make the purchase with the test card data at the top of this section, also check that a message appears in red 
+letters that says *"Your card will be charged €(order total)"* making sure that the total shown is correct, and 
+then finish by pressing the button that says *"Complete Order"*. The expected outcome is that the user is redirected 
+to the checkout success page, which shows a purchase summary, also the shopping cart should be reset (no items in it) 
+and most importantly the user **should receive a confirmation email**.
+
+Order confirmation example:
+
+![Order confirmation example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/order_confirmation_email_example.jpg?raw=true)
+
+**Test Outcome**: PASSED
+
+#### Create an account
+
+1. Go to the user icon, click on it and choose the option that says *"Register"*.
+2. Check that the registration form is displayed.
+3. Fill in the form with a username already existing in the database (for example **Manu1992**), confirm that the user 
+is informed that the username already exists. The expected result is the user cannot register.
+4. Fill in the form with an email already existing in the database by typing the following: **pesaro8770@relumyx.com**, then confirm 
+that the user is informed of someone already registered with that email. The expected result results with the user be unable to register.
+5. Fill in the email entry with an address which is invalid in this form field (which doesn't have the @), then confirm the user is informed 
+of an error message saying he/she has typed an invalid email address. The expected result is that the user won't be able to register.
+6. Complete the form with 2 different passwords, and check that the user is informed of the error. The result of this is that the 
+user cannot register.
+7. Try to type a password that is as follows: **12345678**. By doing this the user will be informed that his/her password is too weak and that he/she 
+should type another one. The expected result is that the user will fail to register.
+8. Complete the registration form with all the required data correctly. When doing this the expected result is that the user must confirm his/her 
+email, for that he/she will receive a confirmation email in which he/she will find a link that will redirect him/her to confirm it. After that, 
+the user must click on the button that says *"confirm"*, he/she will get to the sign in page.
+Here is an example of an email received by the user when registering to the website.
+
+![Email confirmation example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/email_confirmation_link.jpg?raw=true)
+
+**Test Outcome**: PASSED
+
+#### Log in
+
+1. Go to the user icon, click on it and choose the option that says *"Login"*.
+2. Check that the sign in form is displayed.
+3. Attempt to log in with an incorrect username or email address. The expected result is that a special message appears warning that 
+the username, email or password is incorrect.
+4. Try to log in with the newly created account and type an incorrect password. The expected result is a message warning the user that 
+he/she could not log in.
+5. Type the username or email of the newly created account, and also type the correct password. The expected result is that the user will be 
+able to log in and will be redirected to the home page, and a message will appear warning that the user has been able to log in.
+
+**Test Outcome**: PASSED
+
+#### User profile functionality
+
+The user profile has the following elements:
+- A cover image with a card containing a welcome message to the user and a profile avatar image.
+- A Bio section to write anything relevant to the user.
+- A form with the user's data about the deliveries.
+- A section with the orders placed historically.
+
+Having explained this, the tests performed are as follows:
+
+**Reviewing the user's profile**
+
+1. Click on the user icon and select the option *"My profile"*.
+2. Once inside the user profile, check that all the elements described above are present on the page.
+3. Click on the *"Edit my profile"* button and only edit the following fields:
+    - Select an image for your profile
+    - Write a little bit about yourself in the bio field.
+4. Then click on the button that says *"Update information"*.
+5. Check that the image appears next to what you wrote in the bio section.
+6. Then go back to the website and start shopping like any other user (important note, do not fill in 
+the other data to test the autocompletion using the user registration data in the checkout form).
+
+**Test Outcome**: PASSED
+
+**Make a purchase without filling the data before in the user profile.**
+
+1. Add all the desired items into the shopping cart, then go to checkout. Check that the form pre-fills the 
+fields for the user's full name and email address used at the time of registration. The expected result is that 
+those fields are indeed filled in.
+2. Then start filling in the other data inside the checkout form and make sure that the checkbox that allows you 
+to save the desired data is selected. When you have selected that checkbox the expected result is that after the 
+purchase, those data will be saved in the user's profile.
+3. Complete the card data with the test card and finalize the purchase. Once this is done the expected result is 
+that the user is lead to the success checkout page and the order is saved in the user profile.
+4. Go to the user profile and check that the order is indeed placed and that the data entered has been saved. 
+The expected result is indeed displayed and the user can access it to check what was purchased and also the purchase 
+data has been saved.
+
+**Test Outcome**: PASSED
+
+**Some more tests within the user profile**
+
+1. Press the *"Edit my profile"* button and start editing the user profile again, for example remove the profile 
+picture or simply upload another one of your choice. Also edit the bio and some fields inside the form with the 
+delivery details, and finish by pressing the *"Update Information"* button. The expected result is that all the 
+changes made within the user's profile will appear.
+
+2. Click on the order number to access the purchase made. The expected result is that the user can effectively 
+check the content of the order made.
+
+**Test Outcome**: PASSED
+
+#### Log out
+
+1. Click on the user icon and select the option *"Logout"*.
+2. A message will appear asking if you as a user want to log out, for testing purposes click on the *"Cancel"*
+button. The expected result is that the user remains logged in and is redirected to the home page.
+3. Again, click on the user icon, and select the *"Logout"* option.
+4. When the message appears again asking if the user wants to logout, now press the *"Logout"* button. The expected 
+result is that the user will effectively be logged out and will be redirected to the home page.
+
+**Test Outcome**: PASSED
+
+#### Reset account password
+
+1. Try to log in again with the created account, but pretend you have forgotten the password. To do this, click on the link 
+that says *"Forgot Password?"* in order to recover the account. The expected result is that the user will be redirected to a 
+form to perform this action.
+2. Inside the reset password form enter the email with which you registered to the website, then click on the *"reset my password"* 
+button. The expected result is that the user receives an email with a link to create a new password, and that email looks like 
+the following:
+
+![Reset password link example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/reset_password_link.jpg?raw=true)
+
+3. Once the link to reset the password is clicked, you must enter a new password 2 times in the form that appears. The expected 
+result is that the user has indeed changed the password.
+4. Finish trying to log in again with the new password. The expected result is that the user will indeed be able to log in to 
+his/her created account using the newly created password.
+
+**Test Outcome**: PASSED
+
+#### Read a Blog post and comment on it
+
+All website users can read the blog posts published on there, the difference resides in the fact that **only users who have a profile 
+account created** and are **logged in** can write a comment within the blog posts. Explained this the technical tests consist of the following:
+
+1. Go to the nav bar and click on the **"Blog"** nav link. The expected result is that the user should be able to access the blog page and 
+see all the published blog posts.
+2. Browse into the blog page and click on the *"Read more"* button on the selected blog post. The expected result is indeed the user will 
+be redirected to a page that displays the selected blog post in detail.
+3. Once inside the blog post in detail, check that it has an image, the blog post content, 2 buttons at the bottom (one to go back to the 
+blog page and another to go to the home page), comments (if this blog post has any), and if there are no comments, a message should appear 
+warning the user that there are no comments. The expected result is that all the mentioned elements appear on this page.
+4. Then check that indeed the form to write a comment is displayed, and also has autocomplete 2 fields of the form that would be the user's 
+name and email. The expected result is that the logged in user has access to the form to leave comments. If a user is not logged in, only a 
+message will appear inviting the customer to create an account to leave a comment on the blog post.
+5. Now type something in the comment form field. Once done, click on the *"Submit"* button to leave your comment inside the blog post. The 
+expected result is that a message will appear with a green background indicating to the user that his/her comment is awaiting moderation 
+by the online store.
+
+**Note:** to activate the newly published comment, is necessary to *log in as a super user* and activate it from the administration panel. 
+
+**Test Outcome**: PASSED
+
+#### Read website reviews and write a review
+
+All online store users have access to read the reviews about the service provided by the website, the difference is that **only users who have 
+an account created** and are **logged in** can write a review evaluating the service of the e-commerce website. Having explained this, the tests 
+performed are the following:
+
+1. Go to the navigation bar and click on the nav link **"Reviews"**. The expected result is that the user can access all posted reviews 
+in the online store.
+2. Check that the following elements are present: 
+    - A cover image should appear at the top of the page.
+    - All the reviews written by users should appear, and should indicate the total number of reviews.
+    - Each review must have a user profile image (or upload a default image if the user hasn't uploaded any image yet), the user's name, date of 
+    publication, number of stars given and finally a comment evaluating the quality of the service offered.
+3. Once you have checked the above, you must now click on the *"write my review"* button. The expected result if the user is logged in is being 
+redirected to the review form, but in case the user is not logged in or doesn't have an account created, he/she will be redirected to the 
+sign in page.
+4. After the above, check that the form to write a review is indeed displayed. The expected result is that the page to write a review has a 
+cover image, and a form is displayed to perform the task of writing a review.
+5. Check the form fields of name and email are autofilled with the data provided by the user at the time of registration. The expected result 
+is that the form fields are effectively pre-filled.
+6. Attempts to leave a review without completing a form field. The expected result is that a message appears indicating that the user must 
+fill in that field and cannot leave the review on the website.
+7. Write a review about the service provided and also select the number of stars you want to give (the scale is from 1 to 5 stars). 
+Then click on the *"Add my review"* button. The expected result is that the user will be redirected to the reviews page, and a message 
+will appear telling the user that his/her review is being moderated by the website administrators.
+
+**Note:** to activate the newly published review, is necessary to *log in as a super user* and activate it from the administration panel. 
+
+**Test Outcome**: PASSED
+
+#### Contact page functionality
+
+The contact page can be used as a method of direct communication between the website users and the online store administrators. This page has 
+a contact form that the customer must fill in in order to send a message to the website administrators. Having explained that, the tests performed 
+are the following:
+
+1. Go to the navbar and click on the nav link **Info** and select the option of **Contact**. The expected result is that the user can access to the
+contact page.
+2. Check that the contact page has a cover image at the top and that the contact form is displayed. The expected result is that it effectively 
+has the elements described above and also if the user is logged in, 2 fields of the form must be pre-filled, which are the full name and email, 
+since these fields use the data provided by the user at the time of registration.
+3. Try to send a message without filling any of the form fields. The expected result is that the form warns that some form fields are missing and 
+the user is not allowed to send a message.
+4. Fill in all the form fields and then press the *"Send message"* button. The expected result is that the message is indeed sent, and is received 
+by the website administrators in the website email. In addition the user will be redirected to the home page and a message will appear advising the 
+user that his/her message was successfully sent and that the website administrators will contact him/her within 48 hours at the latest.
+
+**Note:** In order to check that indeed the website email receives the messages sent by the users I've taken the following screenshots:
+
+Contact form screenshot
+
+![Contact form example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/contact_email_example_form.jpg?raw=true)
+
+Contact email screenshot
+
+![Contact email example](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/documentation/contact_email_example.jpg?raw=true)
+
+For security reasons, **I cannot give any sensitive data** such as the password of the email address used by the website, therefore the screenshot 
+above is a reliable proof that the contact form is indeed working properly.
+
+**Test Outcome**: PASSED
+
+#### Products Management
+
+This is a feature that only members of the online store staff can use. This functionality is CRUD compliant and in order to access this feature, 
+**the person must be logged in as a super user**. Explained this, the tests consist of the following:
+
+**Add a new product**
+
+1. Click on the user profile icon and select the **"Product Management"** option. The expected result is that the Admin user will be taken 
+to a page containing a form to enter a new product.
+2. Check the Add Product form is indeed displayed. The expected result is that the administrator user can see the form and it contains some 
+placeholders giving some examples of how to fill in each form field.
+3. Start filling the form and leave some required fields uncompleted. The expected result is that the form warns that some missing fields 
+must be completed and at the same time it won't be possible to add a new product.
+4. Try to modify the form field for *"Weight Unit"*. The expected result is that it cannot be modified since all products on the website are 
+stored in kilograms (this also includes products containing liquids).
+5. Complete the form to add a new product, but with the exception that you must not upload any picture. The reason to do this is to test 
+if indeed in the case of no image is uploaded, the website will display a default image. Once this is done, click on the *"Add product"* 
+button to add the new product. The expected result is that the product will indeed be saved in the database and the super user will be 
+redirected to the page that hosts the new product.
+6. Search for the newly added product within the category you selected when you added it, or simply search for it by its name in the search bar. 
+The expected result is that the new product will indeed be found with the other products and that the default image will have the same 
+dimensions as the products with custom images.
+
+**Test Outcome**: PASSED
+
+**Edit a product**
+
+The products can be edited from the product page, which contains 2 links (to edit or delete the product) or from the product detail page 
+itself which contains 2 additional buttons (one to edit and another to delete the product itself) and which only appear if the super user is 
+logged in. That explained, the tests to be performed are the following:
+
+1. From the product page, click on the *"edit"* link to modify the product. The expected result is that the administrator will be redirected 
+to a page containing the form to edit the product.
+2. Check that the form is indeed displayed and contains the data you entered when adding the product. The expected result is that the form 
+actually loads the data previously entered.
+3. Modify a little the field of the form that is for the product description and also add an image for the newly created product. Then click 
+on the *"Update product"* button. The expected result is that the user will be redirected to the page containing the product itself and the 
+modifications made should be saved.
+4. Search again for the product within the category or using the search bar, in order to check if indeed the newly saved image looks good and
+has the same size as the images of the rest of the products in the online store.
+
+**Test Outcome**: PASSED
+
+**Delete a product**
+
+1. Click on the product image of your recently added product, and go to view the product in detail. The expected result is that inside the 
+page containing the product itself 2 buttons will appear, one to edit and another to delete the product.
+2. Click on the *"Delete product"* button. The expected result is that a modal window will appear asking the website administrator if 
+he/she wants to delete the selected product.
+3. Click on the *"Delete"* button. The expected result is that the product will be deleted and at the same time the administrator will be 
+redirected to the product page, and a message will appear warning that the product has been deleted.
+
+**Test Outcome**: PASSED
+
+#### Blog Management
+
+This is a feature that only members of the online store staff can use. This functionality is CRUD compliant and in order to access this feature, 
+**the person must be logged in as a super user**. Explained this, the tests consist of the following:
+
+**Add a blog post**
+
+1. Click on the user profile icon and select the **"Blog Management"** option. The expected result is that the Admin user will be taken 
+to a page containing a form to enter a new blog post.
+2. Check that the form to add a blog post is indeed displayed. The expected result is that the administrator user can see the form and it 
+contains some placeholders that give some examples of how to fill in each form field and also there is a special field with a text editor 
+for the content form field.
+3. Try to add a blog entry without completing one of the required fields. The expected result is that an error message will appear advising 
+the website administrator that you have not completed a field or that you have completed one incorrectly. 
+4. Select *"Admin"* as the author (you can select any website user, but it would look odd to select another user), and also complete the other 
+fields leaving the image field blank. The reason for this is to test that the website will display a default image in case no image is uploaded 
+to the published post, also select the *"Publish"* option in the status field. Then press the "Add post" button. The expected result is that the 
+new blog post will be added and the administrator will be redirected to the page containing the new blog post.
+5. Look for the newly published post within the blog page. The expected result is that the new blog post will indeed appear and the default 
+image will be displayed and will have the same dimensions as the custom images of each blog.
+
+**Test Outcome**: PASSED
+
+**Edit a blog post**
+
+The blog posts can be edited from the blog page, which contains 2 links (to edit or delete a post) or from the blog post detail page 
+itself which contains 2 additional buttons (one to edit and another to delete the post itself) and which only appear if the super user is 
+logged in. That explained, the tests to be performed are the following:
+
+1. From the blog page, click on the *"edit"* link to modify the blog post. The expected result is that the administrator will be redirected 
+to a page containing the form to edit the blog post.
+2. Check that the form is indeed displayed and contains the data you entered when adding the new blog post. The expected result is that the form 
+actually loads the data previously entered.
+3.  Modify a little the form field that contains the content and also add an image for the newly created blog post. Then click 
+on the *"Update post"* button. The expected result is that the user will be redirected to the page containing the blog post itself and the 
+modifications made should be saved.
+4.  Search the blog post inside the blog page, in order to check if indeed the newly saved image looks good and
+has the same size as the images of the rest of the blog posts in the online store.
+
+**Test Outcome**: PASSED
+
+**Delete a blog post**
+
+1. Click on the blog post image of your recently added post, and go to view the blog post in detail. The expected result is that inside the 
+page containing the blog post itself 2 buttons will appear, one to edit and another to delete the post.
+2. Click on the *"Delete post"* button. The expected result is that a modal window will appear asking the website administrator if 
+he/she wants to delete the selected post.
+3. Click on the *"Delete"* button. The expected result is that the blog post will be deleted and at the same time the administrator will be 
+redirected to the blog page, and a message will appear warning that the blog post has been deleted.
+
+**Test Outcome**: PASSED
+
+#### Moderation functionality
+
+This is a feature that **only the super user can access from the administration panel**. In order to enable or disable comments or reviews, the 
+tests consist of the following: 
+
+**Comments Moderation**
+
+1. Login to the administration panel, and go to the Blog section. Click on the "comments" link in order to check if there are new comments 
+posted. The expected result is that new comments will appear as inactive.
+2. Select the comment to moderate and select the *"approve comments"* option in the action field. then press the *"Go"* button. The expected 
+result is that the comment has indeed been activated and therefore should appear within the blog post that was commented.
+3. Go to the blog post that contains the comment you just activated, and check that it is indeed displayed. The expected result is that the 
+new comment appears within the corresponding blog post.
+
+**Test Outcome**: PASSED
+
+**Reviews Moderation**
+
+1. Login to the administration panel, and go to the Reviews section. Click on the *"reviews"* link in order to check if there are new reviews 
+posted. the expected result is that new reviews will appear as inactive.
+2. Select the review to moderate and select the *"approve reviews"* option in the action field. then press the *"Go"* button. The expected 
+result is that the review has been activated and should appear on the reviews page.
+3. Go to the reviews page, and check that the new review is indeed displayed. The expected result is that the new review appears on 
+the review page.
+
+**Test Outcome**: PASSED
+
 ### Defensive Design
+
 ### Issues during project development
+
 ### Tested devices
 
 The following devices were used to perform different tests throughout the development of this project:
@@ -265,3 +730,5 @@ The following devices were used to perform different tests throughout the develo
 
 ##### [Back to top](#testing-contents)
 ---
+> Note: in order to be able to test features related to the website's super user or admin, essential information 
+such as username and password will be given along with the submission form for this project. 
