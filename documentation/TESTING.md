@@ -770,6 +770,123 @@ decorators used in this project, **malicious users cannot access these features*
 
 ### Issues during project development
 
+As I progressed in the development of this project, I came across different situations that meant a challenge for me to solve them. Among all 
+the errors and difficulties I faced, these were the main ones:
+
+#### 1) Set up the virtual environment where to run my Django project
+
+During the course of my studies, Code Institute teaches you how to install and prepare the virtual environment necessary to run the projects that 
+you do throughout the course, for them they provide you with a base template and teach you how to use **Gitpod**. In my case I decided to use **VS code**, 
+because my internet connection was not stable, and I needed to start the project locally. It took me a bit longer than it should have taken me to 
+start my project, because I had to read documentation of this program in order to start programming. I feel proud that I finally did it and finally 
+I was able to finish my final project for Code Institute.
+
+#### 2) Problems running stripe components in VS Studio
+
+During the course of my studies, we were taught how to test with Stripe using an Endpoint, which was connected to the **Gitpod** editor, unfortunately 
+this way didn't work for me, since you can't add local environment urls. For this I first had to install **python-dotenv** (for the secret keys) and 
+the Stripe CLI (in order to create a temporary endpoint using that extension). Thanks to that, I was able to create a virtual environment for stripe 
+testing locally and view the webhooks from the text editor console. By doing all previous actions, I was able to perform the relevant tests and verify 
+that the payments were indeed being made successfully in Stripe.
+
+#### 3) Problems with footer positioning
+
+This was a relevant problem in the frontend, because the footer was adapted according to the elements that had the page itself, the problem was when a 
+page didn't have many elements, which caused that the footer didn't stay in its position (at the bottom of each page). I tried several ways to fix the 
+problem, but none of them worked, until I tried the following solution:
+
+**CSS code**
+
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+Then inside the base template (templates/base.html), I wrapped the content block inside the **"`<main>`"** tag, and the html code looked like this:
+
+**HTML code**
+
+        <main>
+        {% block content %}
+        {% endblock %}
+        </main>
+
+
+When I applied the code explained above, the annoying problem with the footer position was completely solved.
+
+#### 4) Issues implementing image rescaling functionality
+
+Users can upload an image to his/her profile, and this functionality works correctly, but during the development of this project, I wanted to go 
+further and create some mechanism to reduce the size and weight of the images before being published. Unfortunately this functionality had to be 
+**DISCARDED** because it generated too many problems and bugs, there were so many that I generated the error 500. Even so, I want to share in this 
+section part of the process that meant me to implement this functionality, and that although it didn't work, I learned a lot during that process.
+
+1. I wrote the following function under the UserProfile class (profiles/models.py), which worked great for me while I was starting the project 
+locally, since it effectively saved the images with smaller size.
+
+
+        from PIL import Image
+
+        # Resize image avatar before submitting
+        # Code based from Lara Code YouTube Channel
+        # https://www.youtube.com/channel/UClXcbBNNhFU9ATAcXB6U7eQ
+
+        def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        SIZE = 300, 300
+
+        if self.avatar:
+            pic = Image.open(self.avatar.path)
+            pic.thumbnail(SIZE, Image.LANCZOS)
+            pic.save(self.avatar.path)
+
+2. The problem started when I deployed the project in Heroku and the static elements and images in AWS. Almost all the website functions failed 
+(for example the checkout functions), and I only got error 500. I also discovered that the function was not rescaling the images when I checked 
+the images saved inside the website bucket. I changed the DEVELOPMENT= True variable to see what was going on, and it turned out that Pillow and 
+AWS servers do not support **absolute paths**.
+
+3. In response to this, I preferred to comment on the code which was causing these problems and started to look for possible solutions. In order 
+to avoid breaking the original code, I was working on an alternative branch and started testing locally. Eventually I started using the following 
+function and it worked fine at first:
+
+        from django.core.files.storage import default_storage as storage
+        from PIL import Image
+
+        # Resize image avatar before submitting
+        https://stackoverflow.com/questions/45148879/django-pillow-notimplementederror-absolute-paths
+        def save(self, *args, **kwargs):
+        # super(UserProfile, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
+
+        SIZE = 300, 300
+
+        if self.avatar:
+            pic = Image.open(self.avatar)
+            pic.thumbnail(SIZE, Image.ANTIALIAS)
+            storage_path = storage.open(self.avatar.name, "wb")
+            pic.save(storage_path, 'png')
+            storage_path.close()
+
+
+4. The images were being saved at a smaller size, the problem arose when a user updated their profile, e.g. made a purchase and their order was 
+saved, or if he/she updated any element of his/her profile, the image was overwritten again which meant that it was corrupted. 
+
+5. Given all the above, I decided to discard this functionality, since the most important thing is that the project itself works as an E commerce 
+website and I must submit the project before the deadline. This functionality was delaying me with the finalization of the project itself.
+
+6. To avoid the images to look different sizes and to prevent the pages from breaking apart, I chose to use css classes in order to solve this 
+possible problem.
+
 ### Tested devices
 
 The following devices were used to perform different tests throughout the development of this project:
