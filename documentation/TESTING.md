@@ -259,7 +259,7 @@ The following tests were performed to verify that all links responded as expecte
 The tests performed in this section were mainly focused on checking that all the expected functions 
 within the user stories worked correctly.
 
-#### Home Page
+#### 1) Home Page
 
 1. The home page displays images with different buttons that invite the user to buy a product related 
 to the image itself. The user when clicking on the **"shop now"** button should be redirected to the selected 
@@ -282,7 +282,7 @@ the user to the selected product, and these are:
 
 **Test Outcome**: PASSED
 
-#### Products page view
+#### 2) Products page view
 
 To access the products page, the user can do it from the navigation bar by selecting the **"shop"** nav link 
 (which has products sorted by categories) or select the **"All products"** nav link, which shows all products 
@@ -303,7 +303,7 @@ of the selected product.
 
 **Test Outcome**: PASSED
 
-#### Search for products by keyword in the search bar.
+#### 3) Search for products by keyword in the search bar.
 
 1. Type a word related to the website's products (e.g. "milk"), the search bar should be able to display all products related 
 to your query.
@@ -312,7 +312,7 @@ the expected behavior is that a special message is shown indicating that there a
 
 **Test Outcome**: PASSED
 
-#### product detail view 
+#### 4) product detail view 
 
 1. Select a product by clicking on the image from the product page.
 2. Once inside the page that allows you to see the product in detail, select the desired product quantity (for example 2) 
@@ -325,7 +325,7 @@ shopping cart.
 
 **Test Outcome**: PASSED
 
-#### Shopping cart functionality
+#### 5) Shopping cart functionality
 
 1. Check inside the shopping cart to make sure that all the selected products are in the shopping cart.
 2. Increase the quantity of any product that is in the shopping cart from the input quantity field, then click on the *"update"* 
@@ -344,7 +344,7 @@ and start finalizing his/her order.
 
 **Test Outcome**: PASSED
 
-#### Checkout page functionality
+#### 6) Checkout page functionality
 
 In order to perform the tests corresponding to this functionality, you must take in consideration the following:
 
@@ -377,13 +377,13 @@ Order confirmation example:
 
 **Test Outcome**: PASSED
 
-#### Create an account
+#### 7) Create an account
 
 1. Go to the user icon, click on it and choose the option that says *"Register"*.
 2. Check that the registration form is displayed.
 3. Fill in the form with a username already existing in the database (for example **Manu1992**), confirm that the user 
 is informed that the username already exists. The expected result is the user cannot register.
-4. Fill in the form with an email already existing in the database by typing the following: **pesaro8770@relumyx.com**, then confirm 
+4. Fill in the form with an email already existing in the database by typing the following: **`pesaro8770@relumyx.com`**, then confirm 
 that the user is informed of someone already registered with that email. The expected result results with the user be unable to register.
 5. Fill in the email entry with an address which is invalid in this form field (which doesn't have the @), then confirm the user is informed 
 of an error message saying he/she has typed an invalid email address. The expected result is that the user won't be able to register.
@@ -400,7 +400,7 @@ Here is an example of an email received by the user when registering to the webs
 
 **Test Outcome**: PASSED
 
-#### Log in
+#### 8) Log in
 
 1. Go to the user icon, click on it and choose the option that says *"Login"*.
 2. Check that the sign in form is displayed.
@@ -413,7 +413,7 @@ able to log in and will be redirected to the home page, and a message will appea
 
 **Test Outcome**: PASSED
 
-#### User profile functionality
+#### 9) User profile functionality
 
 The user profile has the following elements:
 - A cover image with a card containing a welcome message to the user and a profile avatar image.
@@ -465,7 +465,7 @@ check the content of the order made.
 
 **Test Outcome**: PASSED
 
-#### Log out
+#### 10) Log out
 
 1. Click on the user icon and select the option *"Logout"*.
 2. A message will appear asking if you as a user want to log out, for testing purposes click on the *"Cancel"*
@@ -476,7 +476,7 @@ result is that the user will effectively be logged out and will be redirected to
 
 **Test Outcome**: PASSED
 
-#### Reset account password
+#### 11) Reset account password
 
 1. Try to log in again with the created account, but pretend you have forgotten the password. To do this, click on the link 
 that says *"Forgot Password?"* in order to recover the account. The expected result is that the user will be redirected to a 
@@ -494,7 +494,7 @@ his/her created account using the newly created password.
 
 **Test Outcome**: PASSED
 
-#### Read a Blog post and comment on it
+#### 12) Read a Blog post and comment on it
 
 All website users can read the blog posts published on there, the difference resides in the fact that **only users who have a profile 
 account created** and are **logged in** can write a comment within the blog posts. Explained this the technical tests consist of the following:
@@ -517,7 +517,7 @@ by the online store.
 
 **Test Outcome**: PASSED
 
-#### Read website reviews and write a review
+#### 13) Read website reviews and write a review
 
 All online store users have access to read the reviews about the service provided by the website, the difference is that **only users who have 
 an account created** and are **logged in** can write a review evaluating the service of the e-commerce website. Having explained this, the tests 
@@ -547,7 +547,7 @@ will appear telling the user that his/her review is being moderated by the websi
 
 **Test Outcome**: PASSED
 
-#### Contact page functionality
+#### 14) Contact page functionality
 
 The contact page can be used as a method of direct communication between the website users and the online store administrators. This page has 
 a contact form that the customer must fill in in order to send a message to the website administrators. Having explained that, the tests performed 
@@ -579,7 +579,7 @@ above is a reliable proof that the contact form is indeed working properly.
 
 **Test Outcome**: PASSED
 
-#### Products Management
+#### 15) Products Management
 
 This is a feature that only members of the online store staff can use. This functionality is CRUD compliant and in order to access this feature, 
 **the person must be logged in as a super user**. Explained this, the tests consist of the following:
@@ -633,7 +633,7 @@ redirected to the product page, and a message will appear warning that the produ
 
 **Test Outcome**: PASSED
 
-#### Blog Management
+#### 16) Blog Management
 
 This is a feature that only members of the online store staff can use. This functionality is CRUD compliant and in order to access this feature, 
 **the person must be logged in as a super user**. Explained this, the tests consist of the following:
@@ -685,7 +685,7 @@ redirected to the blog page, and a message will appear warning that the blog pos
 
 **Test Outcome**: PASSED
 
-#### Moderation functionality
+#### 17) Moderation functionality
 
 This is a feature that **only the super user can access from the administration panel**. In order to enable or disable comments or reviews, the 
 tests consist of the following: 
@@ -713,6 +713,60 @@ the review page.
 **Test Outcome**: PASSED
 
 ### Defensive Design
+
+#### 1) Special templates
+
+The website has 2 special templates that are deployed in case of **404 or 500** errors, using the following images:
+
+| Error 404 | Error 500 |
+| :-------: | :-------: |
+| ![404](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/media/error_404.png?raw=true)| ![500](https://github.com/cotebarrientos/4th-milestone-project-your-argentine-shop/blob/master/media/error_500.png?raw=true) |
+| Page Not Found | Internal Server Error |
+
+Several tests have been done to verify that these special templates are indeed displayed in the required situation. 
+For example I commented out some of the code in the main features looking to create a situation for error 500. To 
+trigger the template for error 404, it is as simple as typing anything in the website url with elements that 
+doesn't exist.
+
+#### 2) Precaution at the moment of displaying the images
+
+1. In order to make all images look with a similar and harmonious size, **css classes** have been added in order to 
+set a standard size when adding images in the following cases:
+
+    - When a user adds an avatar image.
+    - When the website administrator adds a new product with a custom product image, these will look the same size 
+    both in the detail view and in the product page.
+    - When the Admin user adds a new blog post, all images are the same size on both the blog page and the blog post 
+    detail page.
+    - In both comments and reviews, user images are the same size.
+
+    Code used example:
+
+            /* Products img*/
+
+            .products-img,
+            .index-products-1,
+            .index-products-2{
+                width: 300px;
+                height: 300px;
+                object-fit: cover;    
+            } 
+
+2. In case the user doesn't upload any profile image, a default image will be displayed.
+3. In case the super user adds a new product without image, the website will display a default image of the product. 
+The same happens when adding a new blog post.
+
+#### 3) Use of special decorators
+
+This project uses special decorators, whose purpose is to prevent users from accessing certain features reserved for certain types of users 
+and these are the following:
+
+- `@login_required`: Allows only logged-in users to access certain features of the website, for example, access to a profile.
+- `@staff_member_required`: Allows only the super user and online store staff members to access certain features of the website, 
+e.g., manage the online store products.
+
+Some tests were performed by manually typing in the web page url, looking for access to these components through this method. Thanks to the 
+decorators used in this project, **malicious users cannot access these features**.
 
 ### Issues during project development
 
