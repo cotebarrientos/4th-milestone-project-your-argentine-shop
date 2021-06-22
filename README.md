@@ -574,6 +574,14 @@ is composed of:
 
 In the Admin panel you can change the status of blogposts, as well as moderate comments and reviews left by users.
 
+16. Information pages
+
+These are located in the footer and consist of the following:
+
+- **Privacy Policy:** Contains all the privacy policies within the website.
+- **Refund Policy:** Contains the policies that are based on the online store at the time of applying any refund to a customer.
+- **Terms of Service:** Contains the terms of service that guide the use of the online store's service.
+
 ### Features Left to Implement
 
 The only feature contemplated at the beginning of this project, but due to website features implementation priorities was the 
